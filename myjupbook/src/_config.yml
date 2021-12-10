@@ -1,0 +1,45 @@
+# Title and Author as needed
+title: "XMM Analysis Logbook"
+author: "Jamie Marshall"
+
+logo: "assets/logo.png"
+
+# Auto-execute notebooks
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: "off"
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: logbook.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar: true
+  use_issues_button: true
+
+# Only render what is going to be shown
+only_build_toc_files: true
+
+# If compiling to LaTeX, which engine to use
+latex:
+  latex_engine: xelatex
+
+sphinx:
+  config:
+    html_css_files:
+      # Custom CSS styling
+      - "_static/astrodefault.css"
+
+
