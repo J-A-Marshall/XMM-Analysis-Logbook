@@ -1,0 +1,16 @@
+# Table of contents
+# See more https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: titlepage
+
+parts:
+  - caption: "A Sample Section"
+    numbered: true
+
+    chapters:
+
+    # File names can be arbitrary, but it is best to use something navigable
+    - file: PN data
+  
+    - file: MOS data
