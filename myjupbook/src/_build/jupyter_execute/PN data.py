@@ -118,7 +118,7 @@ evselect table=EPIC.fits withimageset=yes imageset=image.fits xcolumn=X ycolumn=
 ds9 image.fits &
 
 
-# ![MCG-6-30-15_SOURCE_IMAGE.png](attachment:MCG-6-30-15_SOURCE_IMAGE.png)
+# ![MCG-6-30-15_SOURCE_IMAGE](C:\Users\jamie\OneDrive\Documents\University\Year_4\Research_Project\Jupyter Notebooks\Figures\MCG-6-30-15_SOURCE_IMAGE.png)
 
 # The scale was set to **log** and the colour to **heat**.
 
