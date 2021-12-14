@@ -5,7 +5,7 @@ format: jb-book
 root: titlepage
 
 parts:
-  - caption: "A Sample Section"
+  - caption: "Analysis Notebooks"
     numbered: true
 
     chapters:
