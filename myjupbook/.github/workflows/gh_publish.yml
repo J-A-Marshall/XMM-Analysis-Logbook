@@ -1,7 +1,4 @@
-# Inspired by:
-# https://github.com/choldgraf/deploy_configurations/blob/master/.github/workflows/main.yml
-#
-# Fergus Baker - 10 Nov 2021
+
 
 name: "Publish"
 
