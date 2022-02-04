@@ -26,6 +26,12 @@
 
 # - - - -
 
+# In[1]:
+
+
+from IPython.display import Image
+
+
 # ### 1. Initialisation<a class="anchor" id="initialisation"></a>
 # 
 # #### 1.1 HEASOFT <a class="anchor" id="HEASOFT"></a>
@@ -118,7 +124,14 @@ evselect table=EPIC.fits withimageset=yes imageset=image.fits xcolumn=X ycolumn=
 ds9 image.fits &
 
 
-# ![MCG-6-30-15_SOURCE_IMAGE](C:\Users\jamie\OneDrive\Documents\University\Year_4\Research_Project\Jupyter Notebooks\Figures\MCG-6-30-15_SOURCE_IMAGE.png)
+# 
+# <img src="Figures/MCG-6-30-15_Source_Image.png"/>
+
+# In[4]:
+
+
+Image(filename="Figures/MCG-6-30-15_Source_Image.png")
+
 
 # The scale was set to **log** and the colour to **heat**.
 
@@ -147,7 +160,13 @@ evselect table=EPIC_filtered.fits withrateset=yes rateset=lightcurve_filtered.fi
 dsplot table=lightcurve_filtered.fits x=TIME y=RATE   
 
 
-# ![MCG-6-30-15_filtered_light_curve.png](attachment:MCG-6-30-15_filtered_light_curve.png)
+# <img src="Figures/MCG-6-30-15_filtered_light_curve.png"/>
+
+# In[5]:
+
+
+Image(filename="Figures/MCG-6-30-15_filtered_light_curve.png")
+
 
 # There is a clear cutoff of data at the right side of the graph indicating that there was a flaring event that was filtered out. For brevity, a lightcurve using the unfiltered data will be created.
 
@@ -163,7 +182,13 @@ evselect table=EPIC.fits withrateset=yes rateset=lightcurve_un-filtered.fits mak
 dsplot table=lightcurve_un-filtered.fits.fits x=TIME y=RATE   
 
 
-# ![MCG-6-30-15_un-filtered_light_curve.png](attachment:MCG-6-30-15_un-filtered_light_curve.png)
+# <img src="Figures/MCG-6-30-15_un-filtered_light_curve.png"/>
+
+# In[7]:
+
+
+Image(filename="Figures/MCG-6-30-15_un-filtered_light_curve.png")
+
 
 # There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.
 
@@ -188,15 +213,40 @@ evselect table=deepmin.fits withrateset=yes rateset=deepmin_lightcurve.fits make
 dsplot table=deepmin_lightcurve.fits x=TIME y=RATE
 
 
-# ![MCG-6-30-15_deepmin_light_curve.png](attachment:MCG-6-30-15_deepmin_light_curve.png)
+# <img src="Figures/MCG-6-30-15_deepmin_light_curve.png"/>
+
+# In[8]:
+
+
+Image(filename="Figures/MCG-6-30-15_deepmin_light_curve.png")
+
 
 # ### 5. Source Detection <a class="anchor" id="source"></a>
 
-# The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded.
+# The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded by using the regions "get information" option.
 
-# ![MCG-6-30-15_image_with_regions.png](attachment:MCG-6-30-15_image_with_regions.png)
+# <img src="Figures/MCG-6-30-15_image_with_regions.png"/>
 
-# ![Background%20circle.png](attachment:Background%20circle.png)![Source%20circle.png](attachment:Source%20circle.png)
+# In[9]:
+
+
+Image(filename="Figures/MCG-6-30-15_image_with_regions.png")
+
+
+# <img src="Figures/Background%20circle.png"/>
+# <img src="Figures/Source%20circle.png"/>
+
+# In[14]:
+
+
+Image(filename="Figures/Background circle.png")
+
+
+# In[15]:
+
+
+Image(filename="Figures/Source circle.png")
+
 
 # The spectrum of the source and background regions was then determined using `spectrumset`
 
@@ -235,7 +285,13 @@ epatplot set=EPIC_filtered.fits plotfile=EPIC_epat.ps useplotfile=yes withbackgr
 gv EPIC_epat.ps
 
 
-# ![MCG-6-30-15_Pileup.png](attachment:MCG-6-30-15_Pileup.png)
+# <img src="Figures/MCG-6-30-15_Pileup.png"/>
+
+# In[16]:
+
+
+Image(filename="Figures/MCG-6-30-15_Pileup.png")
+
 
 # ### 7. Preparing the Spectrum <a class="anchor" id="specprepare"></a>
 # The calibration files, arf and rmf were created and grouped together to make using xspec easier
@@ -294,7 +350,13 @@ XSPEC12> setplot energy
 XSPEC12> ignore 0.0-0.2 , 10.0-**
 
 
-# ![MCG-60-30-15_RAW_DATA.png](attachment:MCG-60-30-15_RAW_DATA.png)
+# <img src="Figures/MCG-60-30-15_RAW_DATA.png"/>
+
+# In[17]:
+
+
+Image(filename="Figures/MCG-60-30-15_RAW_DATA.png")
+
 
 # This is the filtered data from MCG-60-30-15. There seems to be a break in the data at around 2.2keV which is due to the gold coating on the mirrors creating an absorption edge. The arf and rmf should take this into account when fitting models to this data, however, the data below this will be ignored as it is not important to what we want to observe.
 
@@ -310,7 +372,13 @@ XSPEC12> ignore 0.0-2.5
 XSPEC12> plot ldata
 
 
-# ![MCG-60-30-15_Restricted_data.png](attachment:MCG-60-30-15_Restricted_data.png)
+# <img src="Figures/MCG-60-30-15_Restricted_data.png"/>
+
+# In[18]:
+
+
+Image(filename="Figures/MCG-60-30-15_Restricted_data.png")
+
 
 # This presents a much clearer view of the data and a slight hump at ~6keV can be seen. A simple power law model can now be fitted to the data to try and extract some information about the small hump.
 
@@ -346,7 +414,13 @@ XSPEC12> fit
 XSPEC12>plot ldata delchi
 
 
-# ![MCG-60-30-15_q=3_Powerlaw.png](attachment:MCG-60-30-15_q=3_Powerlaw.png)
+# <img src="Figures/MCG-60-30-15_q=3_Powerlaw.png"/>
+
+# In[19]:
+
+
+Image(filename="Figures/MCG-60-30-15_q=3_Powerlaw.png")
+
 
 # Here the iron emission line at 6.4keV can clearly be seen and is very strongly broadened to energies around ~5keV.
 
@@ -386,7 +460,13 @@ XSPEC12> ignore 0.0-2.5 , 3.0-8.0 , 10.0-**
 XSPEC12> plot ldata
 
 
-# ![MCG-6-30-15_iron-line-removed.png](attachment:MCG-6-30-15_iron-line-removed.png)
+# <img src="Figures/MCG-6-30-15_iron-line-removed.png"/>
+
+# In[20]:
+
+
+Image(filename="Figures/MCG-6-30-15_iron-line-removed.png")
+
 
 # In[ ]:
 
@@ -424,7 +504,13 @@ XSPEC12> notice 3.0-8.0
 XSPEC12> plot ldata delchi
 
 
-# ![MCG-6-30-15_fitted_model_iron_removed.png](attachment:MCG-6-30-15_fitted_model_iron_removed.png)
+# <img src="Figures/MCG-6-30-15_fitted_model_iron_removed.png"/>
+
+# In[21]:
+
+
+Image(filename="Figures/MCG-6-30-15_fitted_model_iron_removed.png")
+
 
 # In[ ]:
 
@@ -432,7 +518,13 @@ XSPEC12> plot ldata delchi
 XSPEC12> plot eeufs
 
 
-# ![MCG-6-30-15_unfolded_spec_v1.png](attachment:MCG-6-30-15_unfolded_spec_v1.png)
+# <img src="Figures/MCG-6-30-15_unfolded_spec_v1.png"/>
+
+# In[22]:
+
+
+Image(filename="Figures/MCG-6-30-15_unfolded_spec_v1.png")
+
 
 # The iron line can clearly be seen, however removing the continuum fit and rescaling the y axis needs to be done
 # 
@@ -455,7 +547,13 @@ PLT> Rescale Y 0.014 0.025
 PLT> Hardcopy /PS
 
 
-# ![MCG-6-30-15_unfolded_spec_v2.png](attachment:MCG-6-30-15_unfolded_spec_v2.png)
+# <img src="Figures/MCG-6-30-15_unfolded_spec_v2.png"/>
+
+# In[23]:
+
+
+Image(filename="Figures/MCG-6-30-15_unfolded_spec_v2.png")
+
 
 # In[ ]:
 
@@ -475,10 +573,22 @@ XSPEC12>
 
 # The image file was brought up with ds9 and a background region selected
 
-# ![background%20circle%20lightcurve.png](attachment:background%20circle%20lightcurve.png)
+# <img src="Figures/background%20circle%20lightcurve.png"/>
 
-# ![background%20circle%20detail.png](attachment:background%20circle%20detail.png)
+# In[25]:
+
+
+Image(filename="Figures/background circle lightcurve.png")
+
+
+# <img src="Figures/background%20circle%20detail.png"/>
 # 
+
+# In[26]:
+
+
+Image(filename="Figures/background circle detail.png")
+
 
 # In[ ]:
 
@@ -492,7 +602,13 @@ evselect table=EPIC_filt_time.fits withspectrumset=yes spectrumset=background_sp
 dsplot table=background_spectrum.fits
 
 
-# ![background%20graph.png](attachment:background%20graph.png)
+# <img src="Figures/background%20graph.png"/>
+
+# In[27]:
+
+
+Image(filename="Figures/background graph.png")
+
 
 # The background area was selected from the EPIC.fits file
 
@@ -516,4 +632,77 @@ evselect table=background_spec.fits withrateset=yes rateset=background_lightcurv
 dsplot table=background_lightcurve.fits x=TIME y=RATE &
 
 
-# ![background%20lightcurve.png](attachment:background%20lightcurve.png)
+# <img src="Figures/background%20lightcurve.png"/>
+
+# In[28]:
+
+
+Image(filename="Figures/background lightcurve.png")
+
+
+# # 10. Fitting a line model <a class="anchor" id="bck_light"></a>
+
+# https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html
+
+# The model kerrdisk suggests using a model such as diskline or laor to determine the best fit parameters intially. The PN spectrum group file was fitted with the diskline model in xspec initially using `show` to reveal the parameter values.
+# This produced the following:
+
+# 
+# 
+# Model Model Component  Parameter  Unit     Value 
+# par  comp
+# 
+#    1    1   diskline   LineE      keV      5.94046      +/-  2.64172E-03
+# 
+#   
+#    2    1   diskline   Betor10             -2.00000     frozen
+# 
+#    3    1   diskline   Rin_M               10.0000      frozen
+# 
+#    4    1   diskline   Rout_M              1000.00      frozen
+# 
+#    5    1   diskline   Incl       deg      89.9989      +/-  74.7981
+# 
+#    6    1   diskline   norm                1.14908E-03  +/-  6.13893E-06
+#    
+# 
+
+# A powerlaw + diskline was fitted
+
+# <img src="Figures/PN_powerlaw_diskline_params.png">
+
+# In[29]:
+
+
+Image(filename="Figures/PN_powerlaw_diskline_params.png")
+
+
+# the data was then fitted with kerrdisk using these params and the standard values
+
+# <img src="Figures/PN_kerrdisk_v1.png">
+
+# 
+
+# In[30]:
+
+
+Image(filename="Figures/PN_kerrdisk_v1.png")
+
+
+# <img src="Figures/PN_powerlaw_kerrdisk_v1.png">
+
+# In[31]:
+
+
+Image(filename="Figures/PN_powerlaw_kerrdisk_v1.png")
+
+
+# <img src="Figures/PN_powerlaw_kerrdisk_v1_graph.png">
+
+# In[32]:
+
+
+Image(filename="Figures/PN_powerlaw_kerrdisk_v1_graph.png")
+
+
+# 
