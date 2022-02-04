@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Analysing the MOS data &#8212; XMM Analysis Logbook</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/astrodefault.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/astrodefault.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="1. Initial Analysis of the PN Data" href="PN%20data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">XMM Analysis Logbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="titlepage.html">
+   XMM Anlaysis Logbook
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analysis Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PN%20data.html">
+   1.
+   <strong>
+    Initial Analysis of the PN Data
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4.
+   <strong>
+    Analysing the MOS data
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/MOS data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git/issues/new?title=Issue%20on%20page%20%2FMOS data.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/J-A-Marshall/XMM-Analysis-Logbook.git/main?urlpath=tree/MOS data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   4.1. Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generating-the-events-files-a-class-anchor-id-events-files-a">
+   4.2. 1. Generating the Events Files
+   <a class="anchor" id="events_files">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-image-a-class-anchor-id-image-a">
+   4.3. 2. Creating an image
+   <a class="anchor" id="image">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
+   4.4. 3. Creating a Lightcurve
+   <a class="anchor" id="lightcurve">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-filters-a-class-anchor-id-filters-a">
+     4.4.1. 3.1 Standard filters
+     <a class="anchor" id="filters">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#light-curve-a-class-anchor-id-lightcurve-a">
+     4.4.2. 3.2 Light Curve
+     <a class="anchor" id="lightcurve">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trimming-the-data-a-class-anchor-id-trim-a">
+     4.4.3. 3.3 Trimming the data
+     <a class="anchor" id="trim">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checking-for-pileup-a-class-anchor-id-pileup-a">
+   4.5. 4. Checking for Pileup
+   <a class="anchor" id="pileup">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-a">
+     4.5.1. 4.1 MOS1
+     <a class="anchor" id="mos1">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-a">
+     4.5.2. 4.2 MOS2
+     <a class="anchor" id="mos2">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
+   4.6. 5. Preparing the Spectrum
+   <a class="anchor" id="spec_prep">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-spec-prep-mos1-a">
+     4.6.1. 5.1 MOS1
+     <a class="anchor" id="spec_prep_mos1">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-spec-prep-mos2-a">
+     4.6.2. 5.2 MOS2
+     <a class="anchor" id="spec_prep_mos2">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xspec-a-class-anchor-id-xspec-a">
+   4.7. 6. XSPEC
+   <a class="anchor" id="xspec">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-xspec-mos1-a">
+     4.7.1. 6.1 MOS1
+     <a class="anchor" id="xspec_mos1">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
+       4.7.1.1. 6.1.1 mos1 unfolded spectrum
+       <a class="anchor" id="mos1_unfolded">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-xspec-mos2-a">
+     4.7.2. 6.2 MOS2
+     <a class="anchor" id="xspec_mos2">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
+     4.7.3. 6.2.1 MOS2 unfolded spectrum
+     <a class="anchor" id="mos2_eeufs">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-the-mos-data-a-class-anchor-id-merge-a">
+   4.8. 7. Merging the MOS data
+   <a class="anchor" id="merge">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generating-the-spectral-files-a-class-anchor-id-files-a">
+     4.8.1. 7.1 Generating the spectral files
+     <a class="anchor" id="files">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-files-a-class-anchor-id-files-mos1-a">
+       4.8.1.1. 7.1.1 mos1 files
+       <a class="anchor" id="files_mos1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-files-a-class-anchor-id-files-mos2-a">
+       4.8.1.2. 7.1.2 mos2 files
+       <a class="anchor" id="files_mos2">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a">
+     4.8.2. 7.2 Combining the Spectral Files
+     <a class="anchor" id="combining_files">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="analysing-the-mos-data">
+<h1><span class="section-number">4. </span><strong>Analysing the MOS data</strong><a class="headerlink" href="#analysing-the-mos-data" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="table-of-contents">
+<h2><span class="section-number">4.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#event_files">1. Generating the events files</a></p></li>
+<li><p><a class="reference external" href="#Image">2. Creating an Image</a></p></li>
+<li><p><a class="reference external" href="#lightcurve">3. Creating a Lightcurve</a></p>
+<ul>
+<li><p><a class="reference external" href="#filters">3.1 Standard Filters</a></p></li>
+<li><p><a class="reference external" href="#lightcurve">3.2 Light Curve</a></p></li>
+<li><p><a class="reference external" href="#trim">3.3 Trimming the Data</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#pileup"> 4. Checking for Pile Up</a></p>
+<ul>
+<li><p><a class="reference external" href="#mos1">4.1 MOS1</a></p></li>
+<li><p><a class="reference external" href="#mos2">4.2 MOS2</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#spec_prep">5. Preparing the Spectrum</a></p>
+<ul>
+<li><p><a class="reference external" href="#spec_prep_mos1">5.1 MOS1</a></p></li>
+<li><p><a class="reference external" href="#spec_prep_mos2">5.2 MOS1</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#xspec">6. XSPEC</a></p>
+<ul>
+<li><p><a class="reference external" href="#xspec_mos1">6.1 MOS1</a></p>
+<ul>
+<li><p><a class="reference external" href="#mos1_unfolded">6.1.1 Mos1 Unfolded Spectrum</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#xspec_mos2">6.2 MOS2</a></p>
+<ul>
+<li><p><a class="reference external" href="#mos2_eeufs">6.2.1 Mos2 Unfolded Spectrum</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="generating-the-events-files-a-class-anchor-id-events-files-a">
+<h2><span class="section-number">4.2. </span>1. Generating the Events Files<a class="anchor" id="events_files"></a><a class="headerlink" href="#generating-the-events-files-a-class-anchor-id-events-files-a" title="Permalink to this headline">¶</a></h2>
+<p>To analyse the MOS data, the imaging events files first needed to be created. First the ODF location needed to be established</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">SAS_ODF</span><span class="o">=</span><span class="s1">&#39;/data/cluster4/jamie_and_jeton/work_dir/0301_0029740101_data/0301_0029740101_SCX00000SUM.SAS&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">emproc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Got errors as it couldn’t find the ccf file. I re-ran <code class="docutils literal notranslate"><span class="pre">cifbuild</span></code> in the working directory and reset where the ccf.cif file was located by running the command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">SAS_CCF</span><span class="o">=</span><span class="s1">&#39;/data/cluster4/jamie_and_jeton/work_dir/0301_0029740101_data/ccf.cif&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">emproc</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>All the imaging and bad events files were created, there are a lot of bad imaging events files, I am not sure if this is an error or just how the data is. The imaging events files for the two cameras were renamed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="mi">0301_0029740101</span><span class="n">_EMOS1_S001_ImagingEvts</span><span class="o">.</span><span class="n">ds</span> <span class="n">mos1</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="mi">0301_0029740101</span><span class="n">_EMOS2_S002_ImagingEvts</span><span class="o">.</span><span class="n">ds</span> <span class="n">mos2</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-an-image-a-class-anchor-id-image-a">
+<h2><span class="section-number">4.3. </span>2. Creating an image<a class="anchor" id="image"></a><a class="headerlink" href="#creating-an-image-a-class-anchor-id-image-a" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">withimageset</span><span class="o">=</span><span class="n">yes</span> <span class="n">imageset</span><span class="o">=</span><span class="n">mos1_image</span><span class="o">.</span><span class="n">fits</span> <span class="n">xcolumn</span><span class="o">=</span><span class="n">X</span> <span class="n">ycolumn</span><span class="o">=</span><span class="n">Y</span> <span class="n">imagebinning</span><span class="o">=</span><span class="n">imageSize</span> <span class="n">ximagesize</span><span class="o">=</span><span class="mi">600</span> <span class="n">yimagesize</span><span class="o">=</span><span class="mi">600</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">mos1_image</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src=Figures/MOS1%20Image.png width="800" /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MOS1 Image.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_18_0.png" src="_images/MOS data_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">withimageset</span><span class="o">=</span><span class="n">yes</span> <span class="n">imageset</span><span class="o">=</span><span class="n">mos2_image</span><span class="o">.</span><span class="n">fits</span> <span class="n">xcolumn</span><span class="o">=</span><span class="n">X</span> <span class="n">ycolumn</span><span class="o">=</span><span class="n">Y</span> <span class="n">imagebinning</span><span class="o">=</span><span class="n">imageSize</span> <span class="n">ximagesize</span><span class="o">=</span><span class="mi">600</span> <span class="n">yimagesize</span><span class="o">=</span><span class="mi">600</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">mos2_image</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MOS2_Image.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MOS2_Image.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_22_0.png" src="_images/MOS data_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
+<h2><span class="section-number">4.4. </span>3. Creating a Lightcurve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="standard-filters-a-class-anchor-id-filters-a">
+<h3><span class="section-number">4.4.1. </span>3.1 Standard filters<a class="anchor" id="filters"></a><a class="headerlink" href="#standard-filters-a-class-anchor-id-filters-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN &lt;= 12)&amp;&amp;(PI in [200:12000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN &lt;= 12)&amp;&amp;(PI in [200:12000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="light-curve-a-class-anchor-id-lightcurve-a">
+<h3><span class="section-number">4.4.2. </span>3.2 Light Curve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#light-curve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MOS1%20lightcurve.png" /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MOS1 lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_31_0.png" src="_images/MOS data_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos2%20lightcurve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2 lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_35_0.png" src="_images/MOS data_35_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="trimming-the-data-a-class-anchor-id-trim-a">
+<h3><span class="section-number">4.4.3. </span>3.3 Trimming the data<a class="anchor" id="trim"></a><a class="headerlink" href="#trimming-the-data-a-class-anchor-id-trim-a" title="Permalink to this headline">¶</a></h3>
+<p>There is a flare in both the cameras after 1.1306e8 that will need to be removed</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">mos1_time</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">mos1_time</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; 0 1.1306e8 +&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">gtibuild</span> <span class="n">file</span><span class="o">=</span><span class="n">mos1_time</span><span class="o">.</span><span class="n">txt</span> <span class="n">table</span><span class="o">=</span><span class="n">gti</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;GTI(gti.fits,TIME)&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_clean_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1%20clean%20lightcurve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1 clean lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_46_0.png" src="_images/MOS data_46_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;GTI(gti.fits,TIME)&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_clean_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos2%20clean%20lightcurve.png"/>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2 clean lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_51_0.png" src="_images/MOS data_51_0.png" />
+</div>
+</div>
+<p>With the flares at the end of the observations removed, the overall behaviour of the observation can be more clearly seen, although there are still many sharp increases in count rates that may be to do with additional background flares. An analysis of the background lightcurve is needed to detemrine this.</p>
+</div>
+</div>
+<div class="section" id="checking-for-pileup-a-class-anchor-id-pileup-a">
+<h2><span class="section-number">4.5. </span>4. Checking for Pileup<a class="anchor" id="pileup"></a><a class="headerlink" href="#checking-for-pileup-a-class-anchor-id-pileup-a" title="Permalink to this headline">¶</a></h2>
+<p>First the source and background regions need to be determined.
+This thread was followed along with the abc guide:
+<a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-mos-spectrum">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-mos-spectrum</a></p>
+<div class="section" id="mos1-a-class-anchor-id-mos1-a">
+<h3><span class="section-number">4.5.1. </span>4.1 MOS1<a class="anchor" id="mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-mos1-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1%20regions.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1 regions.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_58_0.png" src="_images/MOS data_58_0.png" />
+</div>
+</div>
+<img src="Figures/mos1%20source%20circle.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1 source circle.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_60_0.png" src="_images/MOS data_60_0.png" />
+</div>
+</div>
+<img src="Figures/mos1%20back%20circle.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1 back circle.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_62_0.png" src="_images/MOS data_62_0.png" />
+</div>
+</div>
+<p>Extracting the source spectrum. There are 2 methods in the resources, 1 uses the “filtered” parameters, the other only uses the “spectrum” parameters</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_source_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211.16))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211.16))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Extracting the background spectrum</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_bkg_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26564,27511,242))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26564,27511,242))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This command to generate the pile up graphs only works if the steps above include the “filtered” parameters. I’m not sure if it will work if the last 2 terms are removed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epatplot</span> <span class="nb">set</span><span class="o">=</span><span class="n">mos1_filt</span><span class="o">.</span><span class="n">fits</span> <span class="n">plotfile</span><span class="o">=</span><span class="n">mos1_pileup</span><span class="o">.</span><span class="n">ps</span> <span class="n">useplotfile</span><span class="o">=</span><span class="n">yes</span> <span class="n">withbackgroundset</span><span class="o">=</span><span class="n">yes</span> <span class="n">backgroundset</span><span class="o">=</span><span class="n">mos1_bkg_filtered</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gv</span> <span class="n">mos1_pileup</span><span class="o">.</span><span class="n">ps</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1%20pileup.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1 pileup.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_75_0.png" src="_images/MOS data_75_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="mos2-a-class-anchor-id-mos2-a">
+<h3><span class="section-number">4.5.2. </span>4.2 MOS2<a class="anchor" id="mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-mos2-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos2%20regions.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2 regions.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_79_0.png" src="_images/MOS data_79_0.png" />
+</div>
+</div>
+<img src="Figures/mos2%20source%20region.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2 source region.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_81_0.png" src="_images/MOS data_81_0.png" />
+</div>
+</div>
+<img src="Figures/mos2%20back%20region.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2 back region.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_83_0.png" src="_images/MOS data_83_0.png" />
+</div>
+</div>
+<p>Extracting the source spectrum</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="s1">&#39;mos2_filt.fits&#39;</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26189,27993,216))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_bkg_filt</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547,27543,242))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epatplot</span> <span class="nb">set</span><span class="o">=</span><span class="n">mos2_filt</span><span class="o">.</span><span class="n">fits</span> <span class="n">plotfile</span><span class="o">=</span><span class="n">mos2_pileup</span><span class="o">.</span><span class="n">ps</span> <span class="n">useplotfile</span><span class="o">=</span><span class="n">yes</span> <span class="n">withbackgroundset</span><span class="o">=</span><span class="n">yes</span> <span class="n">backgroundset</span><span class="o">=</span><span class="n">mos2_bkg_filt</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gv</span> <span class="n">mos2_pileup</span><span class="o">.</span><span class="n">ps</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos2%20pileup.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2 pileup.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_90_0.png" src="_images/MOS data_90_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
+<h2><span class="section-number">4.6. </span>5. Preparing the Spectrum<a class="anchor" id="spec_prep"></a><a class="headerlink" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mos1-a-class-anchor-id-spec-prep-mos1-a">
+<h3><span class="section-number">4.6.1. </span>5.1 MOS1<a class="anchor" id="spec_prep_mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-spec-prep-mos1-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">rmf</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">arfset</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">arf</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">rmf</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">detmaptype</span><span class="o">=</span><span class="n">psf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specgroup</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">mincounts</span><span class="o">=</span><span class="mi">25</span> <span class="n">oversample</span><span class="o">=</span><span class="mi">3</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">rmf</span> <span class="n">arfset</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">arf</span> <span class="n">backgndset</span><span class="o">=</span><span class="n">mos1_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">groupedset</span><span class="o">=</span><span class="n">mos1_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mos2-a-class-anchor-id-spec-prep-mos2-a">
+<h3><span class="section-number">4.6.2. </span>5.2 MOS2<a class="anchor" id="spec_prep_mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-spec-prep-mos2-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">rmf</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_spec</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">arfset</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">arf</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">rmf</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">detmaptype</span><span class="o">=</span><span class="n">psf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specgroup</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">mincounts</span><span class="o">=</span><span class="mi">25</span> <span class="n">oversample</span><span class="o">=</span><span class="mi">3</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">rmf</span> <span class="n">arfset</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">arf</span> <span class="n">backgndset</span><span class="o">=</span><span class="n">mos2_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">groupedset</span><span class="o">=</span><span class="n">mos2_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="xspec-a-class-anchor-id-xspec-a">
+<h2><span class="section-number">4.7. </span>6. XSPEC<a class="anchor" id="xspec"></a><a class="headerlink" href="#xspec-a-class-anchor-id-xspec-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mos1-a-class-anchor-id-xspec-mos1-a">
+<h3><span class="section-number">4.7.1. </span>6.1 MOS1<a class="anchor" id="xspec_mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-xspec-mos1-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">data</span> <span class="n">mos1_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">cpd</span> <span class="o">/</span><span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">0.2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">plot</span> <span class="n">ldata</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_spectrum.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_spectrum.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_107_0.png" src="_images/MOS data_107_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">model</span> <span class="n">powerlaw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">PhoIndex</span><span class="o">&gt;</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">norm</span><span class="o">&gt;</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">plot</span> <span class="n">ldata</span> <span class="n">delchi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_spectrum_powerlaw.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_spectrum_powerlaw.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_114_0.png" src="_images/MOS data_114_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">2.2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span> <span class="n">delchi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_spec_zoomed.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_spec_zoomed.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_118_0.png" src="_images/MOS data_118_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span> <span class="n">delchi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_spec_v2.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_spec_v2.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_122_0.png" src="_images/MOS data_122_0.png" />
+</div>
+</div>
+<p>This is a very messy residual graph… maybe the unfolded spectrum will look better</p>
+<div class="section" id="mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
+<h4><span class="section-number">4.7.1.1. </span>6.1.1 mos1 unfolded spectrum<a class="anchor" id="mos1_unfolded"></a><a class="headerlink" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">data</span> <span class="n">mos1_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">setplot</span> <span class="n">energy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">cpd</span> <span class="o">/</span><span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">2.2</span> <span class="p">,</span> <span class="mf">3.0</span><span class="o">-</span><span class="mf">8.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_restricted_spec.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_restricted_spec.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_131_0.png" src="_images/MOS data_131_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">model</span> <span class="n">powerlaw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">PhoIndex</span><span class="o">&gt;-</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">norm</span><span class="o">&gt;</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">notice</span> <span class="mf">3.0</span><span class="o">-</span><span class="mf">8.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span> <span class="n">delchi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_unfolded_fitted.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_unfolded_fitted.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_139_0.png" src="_images/MOS data_139_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">eeufs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_eeufs.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_eeufs.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_142_0.png" src="_images/MOS data_142_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">iplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLT</span><span class="o">&gt;</span> <span class="n">Rescale</span> <span class="n">Y</span> <span class="mf">0.01</span> <span class="mf">0.03</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/mos1_eeufs_scaled.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_eeufs_scaled.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_146_0.png" src="_images/MOS data_146_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mos2-a-class-anchor-id-xspec-mos2-a">
+<h3><span class="section-number">4.7.2. </span>6.2 MOS2<a class="anchor" id="xspec_mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-xspec-mos2-a" title="Permalink to this headline">¶</a></h3>
+<img src="Figures/mos2_spectrum.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_spectrum.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_149_0.png" src="_images/MOS data_149_0.png" />
+</div>
+</div>
+<img src="Figures/mos2_powerlaw.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_powerlaw.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_151_0.png" src="_images/MOS data_151_0.png" />
+</div>
+</div>
+<img src="Figures/mos2_powerlaw_zoomed.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_powerlaw_zoomed.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_153_0.png" src="_images/MOS data_153_0.png" />
+</div>
+</div>
+<img src="Figures/mos2_powerlaw_zoomedv2.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_powerlaw_zoomedv2.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_155_0.png" src="_images/MOS data_155_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
+<h3><span class="section-number">4.7.3. </span>6.2.1 MOS2 unfolded spectrum<a class="anchor" id="mos2_eeufs"></a><a class="headerlink" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a" title="Permalink to this headline">¶</a></h3>
+<img src="Figures/mos2_restricted_spectrum.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_restricted_spectrum.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_158_0.png" src="_images/MOS data_158_0.png" />
+</div>
+</div>
+<img src="Figures/mos2_restricted_fit.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_restricted_fit.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_160_0.png" src="_images/MOS data_160_0.png" />
+</div>
+</div>
+<img src="Figures/mos2_eeufs.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_eeufs.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_162_0.png" src="_images/MOS data_162_0.png" />
+</div>
+</div>
+<img src="Figures/mos2_eeufs_rescaled.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_eeufs_rescaled.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_164_0.png" src="_images/MOS data_164_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="merging-the-mos-data-a-class-anchor-id-merge-a">
+<h2><span class="section-number">4.8. </span>7. Merging the MOS data<a class="anchor" id="merge"></a><a class="headerlink" href="#merging-the-mos-data-a-class-anchor-id-merge-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generating-the-spectral-files-a-class-anchor-id-files-a">
+<h3><span class="section-number">4.8.1. </span>7.1 Generating the spectral files<a class="anchor" id="files"></a><a class="headerlink" href="#generating-the-spectral-files-a-class-anchor-id-files-a" title="Permalink to this headline">¶</a></h3>
+<p>Following this thread:
+<a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging</a></p>
+<div class="section" id="mos1-files-a-class-anchor-id-files-mos1-a">
+<h4><span class="section-number">4.8.1.1. </span>7.1.1 mos1 files<a class="anchor" id="files_mos1"></a><a class="headerlink" href="#mos1-files-a-class-anchor-id-files-mos1-a" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211.16))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26564,27511,242))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">response_mos1</span><span class="o">.</span><span class="n">rmf</span> <span class="n">withenergybins</span><span class="o">=</span><span class="n">yes</span> <span class="n">energymin</span><span class="o">=</span><span class="mf">0.1</span> <span class="n">energymax</span><span class="o">=</span><span class="mi">12</span> <span class="n">nenergybins</span><span class="o">=</span><span class="mi">1190</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">arfset</span><span class="o">=</span><span class="n">arf_mos1</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">response_mos1</span><span class="o">.</span><span class="n">rmf</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mos2-files-a-class-anchor-id-files-mos2-a">
+<h4><span class="section-number">4.8.1.2. </span>7.1.2 mos2 files<a class="anchor" id="files_mos2"></a><a class="headerlink" href="#mos2-files-a-class-anchor-id-files-mos2-a" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26189,27993,216))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547,27543,242))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">response_mos2</span><span class="o">.</span><span class="n">rmf</span> <span class="n">withenergybins</span><span class="o">=</span><span class="n">yes</span> <span class="n">energymin</span><span class="o">=</span><span class="mf">0.1</span> <span class="n">energymax</span><span class="o">=</span><span class="mi">12</span> <span class="n">nenergybins</span><span class="o">=</span><span class="mi">1190</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">arfset</span><span class="o">=</span><span class="n">arf_mos2</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">response_mos2</span><span class="o">.</span><span class="n">rmf</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="combining-the-spectral-files-a-class-anchor-id-combining-files-a">
+<h3><span class="section-number">4.8.2. </span>7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a><a class="headerlink" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a" title="Permalink to this headline">¶</a></h3>
+<p>epicspeccombine pha=”src_spectrum_mos1.ds src_spectrum_mos2.ds” bkg=”bkg_spectrum_mos1.ds bkg_spectrum_mos2.ds” rmf=”response_mos1.rmf response_mos2.rmf” arf=”arf_mos1.arf arf_mos2.arf” filepha=”src_spectrum_combined.ds” filebkg=”bkg_spectrum_combined.ds” filersp=”response_combined.rmf” allowHEdiff=yes</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epicspeccombine</span> <span class="n">pha</span><span class="o">=</span><span class="s2">&quot;src_spectrum_mos1.ds src_spectrum_mos2.ds&quot;</span> <span class="n">bkg</span><span class="o">=</span><span class="s2">&quot;bkg_spectrum_mos1.ds bkg_spectrum_mos2.ds&quot;</span> <span class="n">rmf</span><span class="o">=</span><span class="s2">&quot;response_mos1.rmf response_mos2.rmf&quot;</span> <span class="n">arf</span><span class="o">=</span><span class="s2">&quot;arf_mos1.arf arf_mos2.arf&quot;</span> <span class="n">filepha</span><span class="o">=</span><span class="s2">&quot;src_spectrum_combined.ds&quot;</span> <span class="n">filebkg</span><span class="o">=</span><span class="s2">&quot;bkg_spectrum_combined.ds&quot;</span> <span class="n">filersp</span><span class="o">=</span><span class="s2">&quot;response_combined.rmf&quot;</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specgroup</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_combined</span><span class="o">.</span><span class="n">ds</span> <span class="n">mincounts</span><span class="o">=</span><span class="mi">25</span> <span class="n">oversample</span><span class="o">=</span><span class="mi">3</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">response_combined</span><span class="o">.</span><span class="n">rmf</span> <span class="n">backgndset</span><span class="o">=</span><span class="n">bkg_spectrum_combined</span><span class="o">.</span><span class="n">ds</span> <span class="n">groupedset</span><span class="o">=</span><span class="n">combined_spectrum</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="PN%20data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span><strong>Initial Analysis of the PN Data</strong></p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Jamie Marshall<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

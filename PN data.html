@@ -1,0 +1,1268 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Initial Analysis of the PN Data &#8212; XMM Analysis Logbook</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/astrodefault.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/astrodefault.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Analysing the MOS data" href="MOS%20data.html" />
+    <link rel="prev" title="XMM Anlaysis Logbook" href="titlepage.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">XMM Analysis Logbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="titlepage.html">
+   XMM Anlaysis Logbook
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analysis Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1.
+   <strong>
+    Initial Analysis of the PN Data
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MOS%20data.html">
+   4.
+   <strong>
+    Analysing the MOS data
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/PN data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git/issues/new?title=Issue%20on%20page%20%2FPN data.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/J-A-Marshall/XMM-Analysis-Logbook.git/main?urlpath=tree/PN data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1.
+   <strong>
+    Initial Analysis of the PN Data
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-of-contents">
+     1.1. Table of Contents
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation-a-class-anchor-id-initialisation-a">
+     1.2. 1. Initialisation
+     <a class="anchor" id="initialisation">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#heasoft-a-class-anchor-id-heasoft-a">
+       1.2.1. 1.1 HEASOFT
+       <a class="anchor" id="HEASOFT">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sas-a-class-anchor-id-sas-a">
+       1.2.2. 1.2 SAS
+       <a class="anchor" id="sas">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importing-the-odf-a-class-anchor-id-odf-a">
+     1.3. 2 Importing the ODF
+     <a class="anchor" id="ODF">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python-script-a-class-anchor-id-section-2-1-a">
+       1.3.1. 2.1 Python Script
+       <a class="anchor" id="section_2_1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#defining-the-path-directions-a-class-anchor-id-section-2-2-a">
+       1.3.2. 2.2 Defining the path directions
+       <a class="anchor" id="section_2_2">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-image-a-class-anchor-id-image-a">
+     1.4. 3. Creating Image
+     <a class="anchor" id="image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering-the-data-a-class-anchor-id-filter-a">
+     1.5. 4 Filtering the Data
+     <a class="anchor" id="Filter">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#standard-filters-a-class-anchor-id-std-filt-a">
+       1.5.1. 4.1 Standard filters
+       <a class="anchor" id="std filt">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#light-curve-a-class-anchor-id-lightcurve-a">
+       1.5.2. 4.2 Light curve
+       <a class="anchor" id="lightcurve">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deep-minimum-lightcurve-a-class-anchor-id-source-a">
+       1.5.3. 4.3 Deep Minimum Lightcurve
+       <a class="anchor" id="source">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-detection-a-class-anchor-id-source-a">
+     1.6. 5. Source Detection
+     <a class="anchor" id="source">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-for-pileup-a-class-anchor-id-pileup-a">
+     1.7. 6. Checking for Pileup
+     <a class="anchor" id="pileup">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparing-the-spectrum-a-class-anchor-id-specprepare-a">
+     1.8. 7. Preparing the Spectrum
+     <a class="anchor" id="specprepare">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xspec-a-class-anchor-id-xspec-a">
+     1.9. 8. XSPEC
+     <a class="anchor" id="xspec">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fitting-a-model-a-class-anchor-id-model-a">
+       1.9.1. Fitting a model
+       <a class="anchor" id="model">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a">
+       1.9.2. Creating the Unfolded Spectrum
+       <a class="anchor" id="unfolded">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background-lightcurve-a-class-anchor-id-bck-light-a">
+   2. 9. Background lightcurve
+   <a class="anchor" id="bck_light">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a">
+   3. 10. Fitting a line model
+   <a class="anchor" id="bck_light">
+   </a>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="initial-analysis-of-the-pn-data">
+<h1><span class="section-number">1. </span><strong>Initial Analysis of the PN Data</strong><a class="headerlink" href="#initial-analysis-of-the-pn-data" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="table-of-contents">
+<h2><span class="section-number">1.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#initialisation">1. Initialisation</a></p>
+<ul>
+<li><p><a class="reference external" href="#HEASOFT">1.1 HEASOFT</a></p></li>
+<li><p><a class="reference external" href="#sas">1.2 SAS</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#ODF">2. Importing the ODF</a></p>
+<ul>
+<li><p><a class="reference external" href="#section_2_1">2.1 Python Script</a></p></li>
+<li><p><a class="reference external" href="#section_2_2">2.2 Defining the path directions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#image">3. Creating Image</a></p></li>
+<li><p><a class="reference external" href="#filter">4. Filtering the Data</a></p>
+<ul>
+<li><p><a class="reference external" href="#lightcurve">4.1 Lightcurve</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#source">5. Source Detection</a></p></li>
+<li><p><a class="reference external" href="#pileup">6. Checking for Pileup</a></p></li>
+<li><p><a class="reference external" href="#specprepare">7. Preparing the Spectrum</a></p></li>
+<li><p><a class="reference external" href="#xspec">8. XSPEC</a></p>
+<ul>
+<li><p><a class="reference external" href="#model">8.1 Fitting a Model</a></p></li>
+<li><p><a class="reference external" href="#unfolded">8.2 Creating the Unfolded Spectrum</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#bck_light">9. Background Lightcurve</a></p></li>
+</ul>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="initialisation-a-class-anchor-id-initialisation-a">
+<h2><span class="section-number">1.2. </span>1. Initialisation<a class="anchor" id="initialisation"></a><a class="headerlink" href="#initialisation-a-class-anchor-id-initialisation-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="heasoft-a-class-anchor-id-heasoft-a">
+<h3><span class="section-number">1.2.1. </span>1.1 HEASOFT <a class="anchor" id="HEASOFT"></a><a class="headerlink" href="#heasoft-a-class-anchor-id-heasoft-a" title="Permalink to this headline">¶</a></h3>
+<p>To install and initialise HEASOFT, the following was entered into the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">scl_source</span> <span class="n">enable</span> <span class="n">devtoolset</span><span class="o">-</span><span class="mi">7</span>
+<span class="n">export</span> <span class="n">HEADAS</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">heasoft</span><span class="o">-</span><span class="mf">6.28</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">pc</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">-</span><span class="n">libc2</span><span class="o">.</span><span class="mi">17</span>
+<span class="n">alias</span> <span class="n">heainit</span><span class="o">=</span><span class="s2">&quot;. $HEADAS/headas-init.sh&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can then be initialised using the alias <code class="docutils literal notranslate"><span class="pre">heainit</span></code> whenever a new session is created</p>
+</div>
+<div class="section" id="sas-a-class-anchor-id-sas-a">
+<h3><span class="section-number">1.2.2. </span>1.2 SAS<a class="anchor" id="sas"></a><a class="headerlink" href="#sas-a-class-anchor-id-sas-a" title="Permalink to this headline">¶</a></h3>
+<p>To install and initialise SAS, the following was entered into the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">SAS_DIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">xmm_sas</span><span class="o">/</span><span class="n">xmmsas_20210317_1624</span>
+<span class="n">alias</span> <span class="n">sasinit</span><span class="o">=</span><span class="s2">&quot;. $SAS_DIR/sas-setup.sh&quot;</span>
+<span class="n">export</span> <span class="n">SAS_CCFPATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">XMM</span><span class="o">/</span><span class="n">ccf</span><span class="o">/</span>
+<span class="n">export</span> <span class="n">SAS_CCF</span><span class="o">=/</span><span class="n">data</span><span class="o">/</span><span class="n">cluster4</span><span class="o">/</span><span class="n">jamie_and_jeton</span><span class="o">/</span><span class="n">xmm_obs</span><span class="o">/</span><span class="n">ccf</span><span class="o">.</span><span class="n">cif</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can then be initialised using the alias <code class="docutils literal notranslate"><span class="pre">sasinit</span></code> whenever a new session is created</p>
+</div>
+</div>
+<div class="section" id="importing-the-odf-a-class-anchor-id-odf-a">
+<h2><span class="section-number">1.3. </span>2 Importing the ODF<a class="anchor" id="ODF"></a><a class="headerlink" href="#importing-the-odf-a-class-anchor-id-odf-a" title="Permalink to this headline">¶</a></h2>
+<p>Initially the ODF was imported into the working directory in the shared file using startsas. Following section <strong>Executing Startsas</strong> at <a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-startup-in-python">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-startup-in-python</a>
+To do this, a python script was made which uses and <em>odfid</em> to import the ODF into a selected destination.</p>
+<div class="section" id="python-script-a-class-anchor-id-section-2-1-a">
+<h3><span class="section-number">1.3.1. </span>2.1 Python Script <a class="anchor" id="section_2_1"></a><a class="headerlink" href="#python-script-a-class-anchor-id-section-2-1-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pysas.wrapper</span> <span class="k">import</span> <span class="n">Wrapper</span> <span class="k">as</span> <span class="n">w</span>
+<span class="n">work_dir</span> <span class="o">=</span> <span class="s1">&#39;/data/cluster4/jamie_and_jeton/work_dir/0301_0029740101_data&#39;</span>
+<span class="n">inargs</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="s1">&#39;odfid=0029740101&#39;</span><span class="p">,</span><span class="n">f</span><span class="s1">&#39;workdir=</span><span class="si">{work_dir}</span><span class="s1">&#39;</span><span class="p">]</span>
+<span class="n">w</span><span class="p">(</span><span class="s1">&#39;startsas&#39;</span><span class="p">,</span> <span class="n">inargs</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong><span style="color:red">
+For analysis of different ODFs, a different odfid and destination path will need to be defined before startsas is ran otherwise this will overwrite data!</span></strong></p>
+</div>
+<div class="section" id="defining-the-path-directions-a-class-anchor-id-section-2-2-a">
+<h3><span class="section-number">1.3.2. </span>2.2 Defining the path directions <a class="anchor" id="section_2_2"></a><a class="headerlink" href="#defining-the-path-directions-a-class-anchor-id-section-2-2-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">SAS_CCF</span><span class="o">=</span><span class="s1">&#39;/data/cluster4/jamie_and_jeton/work_dir/&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odfingest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">SAS_ODF</span><span class="o">=</span><span class="s1">&#39;/data/cluster4/jamie_and_jeton/work_dir/0301_0029740101_data/0301_0029740101_SCX00000SUM.SAS&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-image-a-class-anchor-id-image-a">
+<h2><span class="section-number">1.4. </span>3. Creating Image<a class="anchor" id="image"></a><a class="headerlink" href="#creating-image-a-class-anchor-id-image-a" title="Permalink to this headline">¶</a></h2>
+<p>To get a sense of what the data we are using looks like and comes from, an image of the source is made. 1st epproc is ran.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epproc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Imaging events file renamed to <code class="docutils literal notranslate"><span class="pre">EPIC.fits</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withimageset</span><span class="o">=</span><span class="n">yes</span> <span class="n">imageset</span><span class="o">=</span><span class="n">image</span><span class="o">.</span><span class="n">fits</span> <span class="n">xcolumn</span><span class="o">=</span><span class="n">X</span> <span class="n">ycolumn</span><span class="o">=</span><span class="n">Y</span> <span class="n">imagebinning</span><span class="o">=</span><span class="n">imageSize</span> <span class="n">ximagesize</span><span class="o">=</span><span class="mi">600</span> <span class="n">yimagesize</span><span class="o">=</span><span class="mi">600</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">image</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_Source_Image.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_Source_Image.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_26_0.png" src="_images/PN data_26_0.png" />
+</div>
+</div>
+<p>The scale was set to <strong>log</strong> and the colour to <strong>heat</strong>.</p>
+</div>
+<div class="section" id="filtering-the-data-a-class-anchor-id-filter-a">
+<h2><span class="section-number">1.5. </span>4 Filtering the Data <a class="anchor" id="Filter"></a><a class="headerlink" href="#filtering-the-data-a-class-anchor-id-filter-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="standard-filters-a-class-anchor-id-std-filt-a">
+<h3><span class="section-number">1.5.1. </span>4.1 Standard filters<a class="anchor" id="std filt"></a><a class="headerlink" href="#standard-filters-a-class-anchor-id-std-filt-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN &lt;= 4)&amp;&amp;(PI in [200:15000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">EPIC_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="light-curve-a-class-anchor-id-lightcurve-a">
+<h3><span class="section-number">1.5.2. </span>4.2 Light curve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#light-curve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h3>
+<p>Plotting a lightcurve using the filtered data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">lightcurve_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">lightcurve_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_filtered_light_curve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_filtered_light_curve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_35_0.png" src="_images/PN data_35_0.png" />
+</div>
+</div>
+<p>There is a clear cutoff of data at the right side of the graph indicating that there was a flaring event that was filtered out. For brevity, a lightcurve using the unfiltered data will be created.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">lightcurve_un</span><span class="o">-</span><span class="n">filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">lightcurve_un</span><span class="o">-</span><span class="n">filtered</span><span class="o">.</span><span class="n">fits</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_un-filtered_light_curve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_un-filtered_light_curve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_40_0.png" src="_images/PN data_40_0.png" />
+</div>
+</div>
+<p>There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.</p>
+</div>
+<div class="section" id="deep-minimum-lightcurve-a-class-anchor-id-source-a">
+<h3><span class="section-number">1.5.3. </span>4.3 Deep Minimum Lightcurve <a class="anchor" id="source"></a><a class="headerlink" href="#deep-minimum-lightcurve-a-class-anchor-id-source-a" title="Permalink to this headline">¶</a></h3>
+<p>To see how the data varies when the object is in a state of low flux, the data is restricted so that only counts taken between 1.13008x10<span class="math notranslate nohighlight">\(^{8}\)</span> and 1.13015x10<span class="math notranslate nohighlight">\(^{8}\)</span> are used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">deepmin</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(TIME &lt; 1.13015e8)&amp;&amp;(TIME &gt; 1.13008e8)&#39;</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">deepmin</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">deepmin_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">deepmin_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_deepmin_light_curve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_deepmin_light_curve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_47_0.png" src="_images/PN data_47_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="source-detection-a-class-anchor-id-source-a">
+<h2><span class="section-number">1.6. </span>5. Source Detection <a class="anchor" id="source"></a><a class="headerlink" href="#source-detection-a-class-anchor-id-source-a" title="Permalink to this headline">¶</a></h2>
+<p>The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded by using the regions “get information” option.</p>
+<img src="Figures/MCG-6-30-15_image_with_regions.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_image_with_regions.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_51_0.png" src="_images/PN data_51_0.png" />
+</div>
+</div>
+<img src="Figures/Background%20circle.png"/>
+<img src="Figures/Source%20circle.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Background circle.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_53_0.png" src="_images/PN data_53_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Source circle.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_54_0.png" src="_images/PN data_54_0.png" />
+</div>
+</div>
+<p>The spectrum of the source and background regions was then determined using <code class="docutils literal notranslate"><span class="pre">spectrumset</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNsource_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNbackg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(29365.842,25855.344,712.9))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNbackg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="checking-for-pileup-a-class-anchor-id-pileup-a">
+<h2><span class="section-number">1.7. </span>6. Checking for Pileup<a class="anchor" id="pileup"></a><a class="headerlink" href="#checking-for-pileup-a-class-anchor-id-pileup-a" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epatplot</span> <span class="nb">set</span><span class="o">=</span><span class="n">EPIC_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">plotfile</span><span class="o">=</span><span class="n">EPIC_epat</span><span class="o">.</span><span class="n">ps</span> <span class="n">useplotfile</span><span class="o">=</span><span class="n">yes</span> <span class="n">withbackgroundset</span><span class="o">=</span><span class="n">yes</span> <span class="n">backgroundset</span><span class="o">=</span><span class="n">bkg_filtered</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The output of this is plotted with <code class="docutils literal notranslate"><span class="pre">gv</span></code>. There is an error raised stating<span style="color:red">Warning: Missing charsets in String to FontSet conversion</span>
+This can be solved by issuing the command <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">LC_CTYPE=C</span></code>. This is not a permanent solution as it resets so there may be something missing in solva.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gv</span> <span class="n">EPIC_epat</span><span class="o">.</span><span class="n">ps</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_Pileup.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_Pileup.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_64_0.png" src="_images/PN data_64_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="preparing-the-spectrum-a-class-anchor-id-specprepare-a">
+<h2><span class="section-number">1.8. </span>7. Preparing the Spectrum <a class="anchor" id="specprepare"></a><a class="headerlink" href="#preparing-the-spectrum-a-class-anchor-id-specprepare-a" title="Permalink to this headline">¶</a></h2>
+<p>The calibration files, arf and rmf were created and grouped together to make using xspec easier</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNsource_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">PN</span><span class="o">.</span><span class="n">rmf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNsource_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">arfset</span><span class="o">=</span><span class="n">PN</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">PN</span><span class="o">.</span><span class="n">rmf</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">detmaptype</span><span class="o">=</span><span class="n">psf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specgroup</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNsource_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">mincounts</span><span class="o">=</span><span class="mi">25</span> <span class="n">oversample</span><span class="o">=</span><span class="mi">3</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">PN</span><span class="o">.</span><span class="n">rmf</span> <span class="n">arfset</span><span class="o">=</span><span class="n">PN</span><span class="o">.</span><span class="n">arf</span> <span class="n">backgndset</span><span class="o">=</span><span class="n">PNbackg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">groupedset</span><span class="o">=</span><span class="n">PN_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="xspec-a-class-anchor-id-xspec-a">
+<h2><span class="section-number">1.9. </span>8. XSPEC <a class="anchor" id="xspec"></a><a class="headerlink" href="#xspec-a-class-anchor-id-xspec-a" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xspec</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">data</span> <span class="n">PN_spectrum</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This .fits file contains the arf,rmf,source &amp; background files for convenience</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">cpd</span> <span class="o">/</span><span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">setplot</span> <span class="n">energy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The effective area of the telescope is zero below ~0.2keV and above 10keV, so this energy range will be ignored</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">0.2</span> <span class="p">,</span> <span class="mf">10.0</span><span class="o">-**</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-60-30-15_RAW_DATA.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-60-30-15_RAW_DATA.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_78_0.png" src="_images/PN data_78_0.png" />
+</div>
+</div>
+<p>This is the filtered data from MCG-60-30-15. There seems to be a break in the data at around 2.2keV which is due to the gold coating on the mirrors creating an absorption edge. The arf and rmf should take this into account when fitting models to this data, however, the data below this will be ignored as it is not important to what we want to observe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">2.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-60-30-15_Restricted_data.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-60-30-15_Restricted_data.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_83_0.png" src="_images/PN data_83_0.png" />
+</div>
+</div>
+<p>This presents a much clearer view of the data and a slight hump at ~6keV can be seen. A simple power law model can now be fitted to the data to try and extract some information about the small hump.</p>
+<div class="section" id="fitting-a-model-a-class-anchor-id-model-a">
+<h3><span class="section-number">1.9.1. </span>Fitting a model <a class="anchor" id="model"></a><a class="headerlink" href="#fitting-a-model-a-class-anchor-id-model-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">model</span> <span class="n">powerlaw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">PhoIndex</span><span class="o">&gt;-</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">norm</span><span class="o">&gt;</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">plot</span> <span class="n">ldata</span> <span class="n">delchi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-60-30-15_q=3_Powerlaw.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-60-30-15_q=3_Powerlaw.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_92_0.png" src="_images/PN data_92_0.png" />
+</div>
+</div>
+<p>Here the iron emission line at 6.4keV can clearly be seen and is very strongly broadened to energies around ~5keV.</p>
+</div>
+<div class="section" id="creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a">
+<h3><span class="section-number">1.9.2. </span>Creating the Unfolded Spectrum<a class="anchor" id="unfolded"></a><a class="headerlink" href="#creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a" title="Permalink to this headline">¶</a></h3>
+<p>Instructions given for how to produce a figure of the iron line:</p>
+<p>“To make a plot of the line flux you can create an “unfolded spectrum” see XSPEC plot ufs (or eeufs). You can either 1) ignore some energy range such as 3-8 keV, fit continuum, then notice 3-8 keV again for plotting purposes, or 2) fit a powerlaw plus Laor model (for now) and once you have a good fit set the Laor normalisation to zero for plotting purposes. That should give you a nice iron line plot to work with!”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">data</span> <span class="n">PN_spectrum_grp</span><span class="o">.</span><span class="n">fits</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">setplot</span> <span class="n">energy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">cpd</span> <span class="o">/</span><span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">2.5</span> <span class="p">,</span> <span class="mf">3.0</span><span class="o">-</span><span class="mf">8.0</span> <span class="p">,</span> <span class="mf">10.0</span><span class="o">-**</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_iron-line-removed.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_iron-line-removed.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_102_0.png" src="_images/PN data_102_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">model</span> <span class="n">powerlaw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">PhoIndex</span><span class="o">&gt;-</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="p">:</span><span class="n">powerlaw</span><span class="p">:</span><span class="n">norm</span><span class="o">&gt;</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">notice</span> <span class="mf">3.0</span><span class="o">-</span><span class="mf">8.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">ldata</span> <span class="n">delchi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_fitted_model_iron_removed.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_fitted_model_iron_removed.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_110_0.png" src="_images/PN data_110_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">eeufs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_unfolded_spec_v1.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_unfolded_spec_v1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_113_0.png" src="_images/PN data_113_0.png" />
+</div>
+</div>
+<p>The iron line can clearly be seen, however removing the continuum fit and rescaling the y axis needs to be done</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">iplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLT</span><span class="o">&gt;</span> <span class="n">Rescale</span> <span class="n">Y</span> <span class="mf">0.014</span> <span class="mf">0.025</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLT</span><span class="o">&gt;</span> <span class="n">Hardcopy</span> <span class="o">/</span><span class="n">PS</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/MCG-6-30-15_unfolded_spec_v2.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_unfolded_spec_v2.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_119_0.png" src="_images/PN data_119_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="background-lightcurve-a-class-anchor-id-bck-light-a">
+<h1><span class="section-number">2. </span>9. Background lightcurve <a class="anchor" id="bck_light"></a><a class="headerlink" href="#background-lightcurve-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
+<p>A lightcurve is made to determine the prescence of any flaring events. A background region needs to be selected and a lightcurve plotted</p>
+<p>The image file was brought up with ds9 and a background region selected</p>
+<img src="Figures/background%20circle%20lightcurve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background circle lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_126_0.png" src="_images/PN data_126_0.png" />
+</div>
+</div>
+<img src="Figures/background%20circle%20detail.png"/>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background circle detail.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_128_0.png" src="_images/PN data_128_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">background_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">background_spectrum</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/background%20graph.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_132_0.png" src="_images/PN data_132_0.png" />
+</div>
+</div>
+<p>The background area was selected from the EPIC.fits file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-2-84df1013b8a9&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>The lightcurve of the backgroud area was created and plotted</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">background_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">background_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img src="Figures/background%20lightcurve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_139_0.png" src="_images/PN data_139_0.png" />
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="fitting-a-line-model-a-class-anchor-id-bck-light-a">
+<h1><span class="section-number">3. </span>10. Fitting a line model <a class="anchor" id="bck_light"></a><a class="headerlink" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html">https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html</a></p>
+<p>The model kerrdisk suggests using a model such as diskline or laor to determine the best fit parameters intially. The PN spectrum group file was fitted with the diskline model in xspec initially using <code class="docutils literal notranslate"><span class="pre">show</span></code> to reveal the parameter values.
+This produced the following:</p>
+<p>Model Model Component  Parameter  Unit     Value
+par  comp</p>
+<p>1    1   diskline   LineE      keV      5.94046      +/-  2.64172E-03</p>
+<p>2    1   diskline   Betor10             -2.00000     frozen</p>
+<p>3    1   diskline   Rin_M               10.0000      frozen</p>
+<p>4    1   diskline   Rout_M              1000.00      frozen</p>
+<p>5    1   diskline   Incl       deg      89.9989      +/-  74.7981</p>
+<p>6    1   diskline   norm                1.14908E-03  +/-  6.13893E-06</p>
+<p>A powerlaw + diskline was fitted</p>
+<img src="Figures/PN_powerlaw_diskline_params.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_powerlaw_diskline_params.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_146_0.png" src="_images/PN data_146_0.png" />
+</div>
+</div>
+<p>the data was then fitted with kerrdisk using these params and the standard values</p>
+<img src="Figures/PN_kerrdisk_v1.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_kerrdisk_v1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_150_0.png" src="_images/PN data_150_0.png" />
+</div>
+</div>
+<img src="Figures/PN_powerlaw_kerrdisk_v1.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_powerlaw_kerrdisk_v1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_152_0.png" src="_images/PN data_152_0.png" />
+</div>
+</div>
+<img src="Figures/PN_powerlaw_kerrdisk_v1_graph.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_powerlaw_kerrdisk_v1_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_154_0.png" src="_images/PN data_154_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="titlepage.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>XMM Anlaysis Logbook</strong></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="MOS%20data.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span><strong>Analysing the MOS data</strong></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Jamie Marshall<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
