@@ -3,7 +3,7 @@
 
 # # **Analysing the MOS data**
 
-# In[1]:
+# In[2]:
 
 
 from IPython.display import Image
@@ -771,8 +771,6 @@ Image(filename="Figures/mos2_eeufs_rescaled.png")
 
 # ### 7. Merging the MOS data<a class="anchor" id="merge"></a>
 
-# #### 7.1 Generating the spectral files<a class="anchor" id="files"></a>
-
 # Following this thread:
 # https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging
 
@@ -867,3 +865,27 @@ epicspeccombine pha="src_spectrum_mos1.ds src_spectrum_mos2.ds" bkg="bkg_spectru
 
 specgroup spectrumset=src_spectrum_combined.ds mincounts=25 oversample=3 rmfset=response_combined.rmf backgndset=bkg_spectrum_combined.ds groupedset=combined_spectrum.fits
 
+
+# # 7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a>
+
+# ## 9. Fitting Models <a class="anchor" id="models"></a>
+
+# ### 9.1 Laor2 <a class="anchor" id="laor2"></a>
+
+# The unmerged data from the mos 1 is fitted with a laor 2 model, following the same parameters chosen in model 4 of the Fabian 2002 paper. 
+
+# In[3]:
+
+
+Image(filename="Figures/Mos1_laor2_param.png")
+
+
+# In[4]:
+
+
+Image(filename="Figures/Mos1_laor2_graph.png")
+
+
+# There seems to be either an issue with the model parameters or the mos data itself. As the data points are not significantly deviating from the continuum line at E~5keV, it seems that the data itslef is incorrect, as it should exhibit the same behaviour as the PN data.
+
+# 
