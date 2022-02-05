@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Analysing the MOS data &#8212; XMM Analysis Logbook</title>
+    <title>1. Analysing the MOS data &#8212; XMM Analysis Logbook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="1. Initial Analysis of the PN Data" href="PN%20data.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="PN%20data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,17 +103,9 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="PN%20data.html">
-   1.
-   <strong>
-    Initial Analysis of the PN Data
-   </strong>
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4.
+   1.
    <strong>
     Analysing the MOS data
    </strong>
@@ -223,176 +215,202 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   4.1. Table of Contents
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1.
+   <strong>
+    Analysing the MOS data
+   </strong>
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generating-the-events-files-a-class-anchor-id-events-files-a">
-   4.2. 1. Generating the Events Files
-   <a class="anchor" id="events_files">
-   </a>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-an-image-a-class-anchor-id-image-a">
-   4.3. 2. Creating an image
-   <a class="anchor" id="image">
-   </a>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
-   4.4. 3. Creating a Lightcurve
-   <a class="anchor" id="lightcurve">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#standard-filters-a-class-anchor-id-filters-a">
-     4.4.1. 3.1 Standard filters
-     <a class="anchor" id="filters">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-of-contents">
+     1.1. Table of Contents
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generating-the-events-files-a-class-anchor-id-events-files-a">
+     1.2. 1. Generating the Events Files
+     <a class="anchor" id="events_files">
      </a>
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#light-curve-a-class-anchor-id-lightcurve-a">
-     4.4.2. 3.2 Light Curve
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-an-image-a-class-anchor-id-image-a">
+     1.3. 2. Creating an image
+     <a class="anchor" id="image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
+     1.4. 3. Creating a Lightcurve
      <a class="anchor" id="lightcurve">
      </a>
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trimming-the-data-a-class-anchor-id-trim-a">
-     4.4.3. 3.3 Trimming the data
-     <a class="anchor" id="trim">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#checking-for-pileup-a-class-anchor-id-pileup-a">
-   4.5. 4. Checking for Pileup
-   <a class="anchor" id="pileup">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-a">
-     4.5.1. 4.1 MOS1
-     <a class="anchor" id="mos1">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-a">
-     4.5.2. 4.2 MOS2
-     <a class="anchor" id="mos2">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
-   4.6. 5. Preparing the Spectrum
-   <a class="anchor" id="spec_prep">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-spec-prep-mos1-a">
-     4.6.1. 5.1 MOS1
-     <a class="anchor" id="spec_prep_mos1">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-spec-prep-mos2-a">
-     4.6.2. 5.2 MOS2
-     <a class="anchor" id="spec_prep_mos2">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#xspec-a-class-anchor-id-xspec-a">
-   4.7. 6. XSPEC
-   <a class="anchor" id="xspec">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-xspec-mos1-a">
-     4.7.1. 6.1 MOS1
-     <a class="anchor" id="xspec_mos1">
-     </a>
-    </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
-       4.7.1.1. 6.1.1 mos1 unfolded spectrum
-       <a class="anchor" id="mos1_unfolded">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#standard-filters-a-class-anchor-id-filters-a">
+       1.4.1. 3.1 Standard filters
+       <a class="anchor" id="filters">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#light-curve-a-class-anchor-id-lightcurve-a">
+       1.4.2. 3.2 Light Curve
+       <a class="anchor" id="lightcurve">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#trimming-the-data-a-class-anchor-id-trim-a">
+       1.4.3. 3.3 Trimming the data
+       <a class="anchor" id="trim">
        </a>
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-xspec-mos2-a">
-     4.7.2. 6.2 MOS2
-     <a class="anchor" id="xspec_mos2">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
-     4.7.3. 6.2.1 MOS2 unfolded spectrum
-     <a class="anchor" id="mos2_eeufs">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#merging-the-mos-data-a-class-anchor-id-merge-a">
-   4.8. 7. Merging the MOS data
-   <a class="anchor" id="merge">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generating-the-spectral-files-a-class-anchor-id-files-a">
-     4.8.1. 7.1 Generating the spectral files
-     <a class="anchor" id="files">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-for-pileup-a-class-anchor-id-pileup-a">
+     1.5. 4. Checking for Pileup
+     <a class="anchor" id="pileup">
      </a>
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-a">
+       1.5.1. 4.1 MOS1
+       <a class="anchor" id="mos1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-a">
+       1.5.2. 4.2 MOS2
+       <a class="anchor" id="mos2">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
+     1.6. 5. Preparing the Spectrum
+     <a class="anchor" id="spec_prep">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-spec-prep-mos1-a">
+       1.6.1. 5.1 MOS1
+       <a class="anchor" id="spec_prep_mos1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-spec-prep-mos2-a">
+       1.6.2. 5.2 MOS2
+       <a class="anchor" id="spec_prep_mos2">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xspec-a-class-anchor-id-xspec-a">
+     1.7. 6. XSPEC
+     <a class="anchor" id="xspec">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-xspec-mos1-a">
+       1.7.1. 6.1 MOS1
+       <a class="anchor" id="xspec_mos1">
+       </a>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
+         1.7.1.1. 6.1.1 mos1 unfolded spectrum
+         <a class="anchor" id="mos1_unfolded">
+         </a>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-xspec-mos2-a">
+       1.7.2. 6.2 MOS2
+       <a class="anchor" id="xspec_mos2">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
+       1.7.3. 6.2.1 MOS2 unfolded spectrum
+       <a class="anchor" id="mos2_eeufs">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#merging-the-mos-data-a-class-anchor-id-merge-a">
+     1.8. 7. Merging the MOS data
+     <a class="anchor" id="merge">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mos1-files-a-class-anchor-id-files-mos1-a">
-       4.8.1.1. 7.1.1 mos1 files
+       1.8.1. 7.1.1 mos1 files
        <a class="anchor" id="files_mos1">
        </a>
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mos2-files-a-class-anchor-id-files-mos2-a">
-       4.8.1.2. 7.1.2 mos2 files
+       1.8.2. 7.1.2 mos2 files
        <a class="anchor" id="files_mos2">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a">
+       1.8.3. 7.2 Combining the Spectral Files
+       <a class="anchor" id="combining_files">
        </a>
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a">
-     4.8.2. 7.2 Combining the Spectral Files
-     <a class="anchor" id="combining_files">
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2. 7.2 Combining the Spectral Files
+   <a class="anchor" id="combining_files">
+   </a>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fitting-models-a-class-anchor-id-models-a">
+     2.1. 9. Fitting Models
+     <a class="anchor" id="models">
      </a>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laor2-a-class-anchor-id-laor2-a">
+       2.1.1. 9.1 Laor2
+       <a class="anchor" id="laor2">
+       </a>
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -408,7 +426,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="analysing-the-mos-data">
-<h1><span class="section-number">4. </span><strong>Analysing the MOS data</strong><a class="headerlink" href="#analysing-the-mos-data" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span><strong>Analysing the MOS data</strong><a class="headerlink" href="#analysing-the-mos-data" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -418,7 +436,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="table-of-contents">
-<h2><span class="section-number">4.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#event_files">1. Generating the events files</a></p></li>
 <li><p><a class="reference external" href="#Image">2. Creating an Image</a></p></li>
@@ -458,7 +476,7 @@
 </ul>
 </div>
 <div class="section" id="generating-the-events-files-a-class-anchor-id-events-files-a">
-<h2><span class="section-number">4.2. </span>1. Generating the Events Files<a class="anchor" id="events_files"></a><a class="headerlink" href="#generating-the-events-files-a-class-anchor-id-events-files-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>1. Generating the Events Files<a class="anchor" id="events_files"></a><a class="headerlink" href="#generating-the-events-files-a-class-anchor-id-events-files-a" title="Permalink to this headline">¶</a></h2>
 <p>To analyse the MOS data, the imaging events files first needed to be created. First the ODF location needed to be established</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -506,7 +524,7 @@
 </div>
 </div>
 <div class="section" id="creating-an-image-a-class-anchor-id-image-a">
-<h2><span class="section-number">4.3. </span>2. Creating an image<a class="anchor" id="image"></a><a class="headerlink" href="#creating-an-image-a-class-anchor-id-image-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>2. Creating an image<a class="anchor" id="image"></a><a class="headerlink" href="#creating-an-image-a-class-anchor-id-image-a" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">withimageset</span><span class="o">=</span><span class="n">yes</span> <span class="n">imageset</span><span class="o">=</span><span class="n">mos1_image</span><span class="o">.</span><span class="n">fits</span> <span class="n">xcolumn</span><span class="o">=</span><span class="n">X</span> <span class="n">ycolumn</span><span class="o">=</span><span class="n">Y</span> <span class="n">imagebinning</span><span class="o">=</span><span class="n">imageSize</span> <span class="n">ximagesize</span><span class="o">=</span><span class="mi">600</span> <span class="n">yimagesize</span><span class="o">=</span><span class="mi">600</span>
@@ -557,9 +575,9 @@
 </div>
 </div>
 <div class="section" id="creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
-<h2><span class="section-number">4.4. </span>3. Creating a Lightcurve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>3. Creating a Lightcurve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="standard-filters-a-class-anchor-id-filters-a">
-<h3><span class="section-number">4.4.1. </span>3.1 Standard filters<a class="anchor" id="filters"></a><a class="headerlink" href="#standard-filters-a-class-anchor-id-filters-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>3.1 Standard filters<a class="anchor" id="filters"></a><a class="headerlink" href="#standard-filters-a-class-anchor-id-filters-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN &lt;= 12)&amp;&amp;(PI in [200:12000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
@@ -576,7 +594,7 @@
 </div>
 </div>
 <div class="section" id="light-curve-a-class-anchor-id-lightcurve-a">
-<h3><span class="section-number">4.4.2. </span>3.2 Light Curve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#light-curve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.2. </span>3.2 Light Curve<a class="anchor" id="lightcurve"></a><a class="headerlink" href="#light-curve-a-class-anchor-id-lightcurve-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
@@ -627,7 +645,7 @@
 </div>
 </div>
 <div class="section" id="trimming-the-data-a-class-anchor-id-trim-a">
-<h3><span class="section-number">4.4.3. </span>3.3 Trimming the data<a class="anchor" id="trim"></a><a class="headerlink" href="#trimming-the-data-a-class-anchor-id-trim-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.3. </span>3.3 Trimming the data<a class="anchor" id="trim"></a><a class="headerlink" href="#trimming-the-data-a-class-anchor-id-trim-a" title="Permalink to this headline">¶</a></h3>
 <p>There is a flare in both the cameras after 1.1306e8 that will need to be removed</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -724,12 +742,12 @@
 </div>
 </div>
 <div class="section" id="checking-for-pileup-a-class-anchor-id-pileup-a">
-<h2><span class="section-number">4.5. </span>4. Checking for Pileup<a class="anchor" id="pileup"></a><a class="headerlink" href="#checking-for-pileup-a-class-anchor-id-pileup-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>4. Checking for Pileup<a class="anchor" id="pileup"></a><a class="headerlink" href="#checking-for-pileup-a-class-anchor-id-pileup-a" title="Permalink to this headline">¶</a></h2>
 <p>First the source and background regions need to be determined.
 This thread was followed along with the abc guide:
 <a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-mos-spectrum">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-mos-spectrum</a></p>
 <div class="section" id="mos1-a-class-anchor-id-mos1-a">
-<h3><span class="section-number">4.5.1. </span>4.1 MOS1<a class="anchor" id="mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-mos1-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>4.1 MOS1<a class="anchor" id="mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-mos1-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
@@ -838,7 +856,7 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="mos2-a-class-anchor-id-mos2-a">
-<h3><span class="section-number">4.5.2. </span>4.2 MOS2<a class="anchor" id="mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-mos2-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.2. </span>4.2 MOS2<a class="anchor" id="mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-mos2-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds9</span> <span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="o">&amp;</span>
@@ -918,9 +936,9 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
-<h2><span class="section-number">4.6. </span>5. Preparing the Spectrum<a class="anchor" id="spec_prep"></a><a class="headerlink" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6. </span>5. Preparing the Spectrum<a class="anchor" id="spec_prep"></a><a class="headerlink" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mos1-a-class-anchor-id-spec-prep-mos1-a">
-<h3><span class="section-number">4.6.1. </span>5.1 MOS1<a class="anchor" id="spec_prep_mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-spec-prep-mos1-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.1. </span>5.1 MOS1<a class="anchor" id="spec_prep_mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-spec-prep-mos1-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">rmf</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span>
@@ -944,7 +962,7 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="mos2-a-class-anchor-id-spec-prep-mos2-a">
-<h3><span class="section-number">4.6.2. </span>5.2 MOS2<a class="anchor" id="spec_prep_mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-spec-prep-mos2-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.2. </span>5.2 MOS2<a class="anchor" id="spec_prep_mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-spec-prep-mos2-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">rmf</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_spec</span><span class="o">.</span><span class="n">fits</span>
@@ -969,9 +987,9 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="xspec-a-class-anchor-id-xspec-a">
-<h2><span class="section-number">4.7. </span>6. XSPEC<a class="anchor" id="xspec"></a><a class="headerlink" href="#xspec-a-class-anchor-id-xspec-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>6. XSPEC<a class="anchor" id="xspec"></a><a class="headerlink" href="#xspec-a-class-anchor-id-xspec-a" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mos1-a-class-anchor-id-xspec-mos1-a">
-<h3><span class="section-number">4.7.1. </span>6.1 MOS1<a class="anchor" id="xspec_mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-xspec-mos1-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.1. </span>6.1 MOS1<a class="anchor" id="xspec_mos1"></a><a class="headerlink" href="#mos1-a-class-anchor-id-xspec-mos1-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">data</span> <span class="n">mos1_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
@@ -1105,7 +1123,7 @@ This thread was followed along with the abc guide:
 </div>
 <p>This is a very messy residual graph… maybe the unfolded spectrum will look better</p>
 <div class="section" id="mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
-<h4><span class="section-number">4.7.1.1. </span>6.1.1 mos1 unfolded spectrum<a class="anchor" id="mos1_unfolded"></a><a class="headerlink" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.7.1.1. </span>6.1.1 mos1 unfolded spectrum<a class="anchor" id="mos1_unfolded"></a><a class="headerlink" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span><span class="n">data</span> <span class="n">mos1_spectrum_grp</span><span class="o">.</span><span class="n">fits</span>
@@ -1247,7 +1265,7 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="mos2-a-class-anchor-id-xspec-mos2-a">
-<h3><span class="section-number">4.7.2. </span>6.2 MOS2<a class="anchor" id="xspec_mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-xspec-mos2-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.2. </span>6.2 MOS2<a class="anchor" id="xspec_mos2"></a><a class="headerlink" href="#mos2-a-class-anchor-id-xspec-mos2-a" title="Permalink to this headline">¶</a></h3>
 <img src="Figures/mos2_spectrum.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_spectrum.png&quot;</span><span class="p">)</span>
@@ -1290,7 +1308,7 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
-<h3><span class="section-number">4.7.3. </span>6.2.1 MOS2 unfolded spectrum<a class="anchor" id="mos2_eeufs"></a><a class="headerlink" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.7.3. </span>6.2.1 MOS2 unfolded spectrum<a class="anchor" id="mos2_eeufs"></a><a class="headerlink" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a" title="Permalink to this headline">¶</a></h3>
 <img src="Figures/mos2_restricted_spectrum.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_restricted_spectrum.png&quot;</span><span class="p">)</span>
@@ -1334,13 +1352,11 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="merging-the-mos-data-a-class-anchor-id-merge-a">
-<h2><span class="section-number">4.8. </span>7. Merging the MOS data<a class="anchor" id="merge"></a><a class="headerlink" href="#merging-the-mos-data-a-class-anchor-id-merge-a" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="generating-the-spectral-files-a-class-anchor-id-files-a">
-<h3><span class="section-number">4.8.1. </span>7.1 Generating the spectral files<a class="anchor" id="files"></a><a class="headerlink" href="#generating-the-spectral-files-a-class-anchor-id-files-a" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">1.8. </span>7. Merging the MOS data<a class="anchor" id="merge"></a><a class="headerlink" href="#merging-the-mos-data-a-class-anchor-id-merge-a" title="Permalink to this headline">¶</a></h2>
 <p>Following this thread:
 <a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging</a></p>
 <div class="section" id="mos1-files-a-class-anchor-id-files-mos1-a">
-<h4><span class="section-number">4.8.1.1. </span>7.1.1 mos1 files<a class="anchor" id="files_mos1"></a><a class="headerlink" href="#mos1-files-a-class-anchor-id-files-mos1-a" title="Permalink to this headline">¶</a></h4>
+<h3><span class="section-number">1.8.1. </span>7.1.1 mos1 files<a class="anchor" id="files_mos1"></a><a class="headerlink" href="#mos1-files-a-class-anchor-id-files-mos1-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211.16))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
@@ -1385,7 +1401,7 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 <div class="section" id="mos2-files-a-class-anchor-id-files-mos2-a">
-<h4><span class="section-number">4.8.1.2. </span>7.1.2 mos2 files<a class="anchor" id="files_mos2"></a><a class="headerlink" href="#mos2-files-a-class-anchor-id-files-mos2-a" title="Permalink to this headline">¶</a></h4>
+<h3><span class="section-number">1.8.2. </span>7.1.2 mos2 files<a class="anchor" id="files_mos2"></a><a class="headerlink" href="#mos2-files-a-class-anchor-id-files-mos2-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26189,27993,216))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
@@ -1429,9 +1445,8 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="combining-the-spectral-files-a-class-anchor-id-combining-files-a">
-<h3><span class="section-number">4.8.2. </span>7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a><a class="headerlink" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.8.3. </span>7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a><a class="headerlink" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a" title="Permalink to this headline">¶</a></h3>
 <p>epicspeccombine pha=”src_spectrum_mos1.ds src_spectrum_mos2.ds” bkg=”bkg_spectrum_mos1.ds bkg_spectrum_mos2.ds” rmf=”response_mos1.rmf response_mos2.rmf” arf=”arf_mos1.arf arf_mos2.arf” filepha=”src_spectrum_combined.ds” filebkg=”bkg_spectrum_combined.ds” filersp=”response_combined.rmf” allowHEdiff=yes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1447,6 +1462,37 @@ This thread was followed along with the abc guide:
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1><span class="section-number">2. </span>7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fitting-models-a-class-anchor-id-models-a">
+<h2><span class="section-number">2.1. </span>9. Fitting Models <a class="anchor" id="models"></a><a class="headerlink" href="#fitting-models-a-class-anchor-id-models-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="laor2-a-class-anchor-id-laor2-a">
+<h3><span class="section-number">2.1.1. </span>9.1 Laor2 <a class="anchor" id="laor2"></a><a class="headerlink" href="#laor2-a-class-anchor-id-laor2-a" title="Permalink to this headline">¶</a></h3>
+<p>The unmerged data from the mos 1 is fitted with a laor 2 model, following the same parameters chosen in model 4 of the Fabian 2002 paper.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Mos1_laor2_param.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_189_0.png" src="_images/MOS data_189_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Mos1_laor2_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_190_0.png" src="_images/MOS data_190_0.png" />
+</div>
+</div>
+<p>There seems to be either an issue with the model parameters or the mos data itself. As the data points are not significantly deviating from the continuum line at E~5keV, it seems that the data itslef is incorrect, as it should exhibit the same behaviour as the PN data.</p>
 </div>
 </div>
 </div>
@@ -1480,7 +1526,7 @@ This thread was followed along with the abc guide:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span><strong>Initial Analysis of the PN Data</strong></p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
         </div>
     </a>
 </div>
