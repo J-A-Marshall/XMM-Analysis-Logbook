@@ -26,7 +26,7 @@
 
 # - - - -
 
-# In[1]:
+# In[2]:
 
 
 from IPython.display import Image
@@ -704,5 +704,60 @@ Image(filename="Figures/PN_powerlaw_kerrdisk_v1.png")
 
 Image(filename="Figures/PN_powerlaw_kerrdisk_v1_graph.png")
 
+
+# ### 10.1 Kerrdisk + 2 gaussians <a class="anchor" id="kerrdisk_ext"></a>
+
+# Following the Fabian 2002 paper, a contiunuum with a thin and narrow gaussian was plotted with the kerrdisk model.
+
+# In[8]:
+
+
+Image(filename="Figures/PN_kerrdisk_gauss_table.png")
+
+
+# In[9]:
+
+
+Image(filename="Figures/PN_kerrdisk_gauss_graph.png")
+
+
+# This is very similar to the model that is shown in the paper.
+
+# ### 10.2 Laor2 line model <a class="anchor" id="laor2"></a>
+
+# The same process as above was repeated but using the laor2 model, allowing us to directly compare with the liturature. 
+# With this model, the majority of the parameters are frozen in, so fine tuning this could be quite time consuming. 
+# 
+# The model was fitted with the parameters from model 4 in the Fabian 2002 paper.
+
+# In[4]:
+
+
+Image(filename="Figures/Laor2_Fabian_params.png")
+
+
+# In[5]:
+
+
+Image(filename="Figures/Laor2_Fabian_params_graph.png")
+
+
+# It appears that the redwing is well described with these parameters, however the blue wing is very rounded and is not in good agreement. 
+# 
+# Some parameters were changed, with the inclination being increased to 40$^{\deg$}$
+
+# In[6]:
+
+
+Image(filename="Figures/PN_laor2_second_table.png")
+
+
+# In[7]:
+
+
+Image(filename="Figures/PN_laor2_second_graph.png")
+
+
+# This improves the fit of the blue wing marginally. The Fabain 2002 paper used MOS data for their fits, so this will be repeated with the mos cameras.
 
 # 
