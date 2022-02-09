@@ -55,7 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Analysing the MOS data" href="MOS%20data.html" />
+    <link rel="next" title="5. Analysing the MOS data" href="MOS%20data.html" />
     <link rel="prev" title="XMM Anlaysis Logbook" href="titlepage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -116,7 +116,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="MOS%20data.html">
-   4.
+   5.
    <strong>
     Analysing the MOS data
    </strong>
@@ -393,6 +393,29 @@
     <a class="reference internal nav-link" href="#laor2-line-model-a-class-anchor-id-laor2-a">
      3.2. 10.2 Laor2 line model
      <a class="anchor" id="laor2">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convoluted-models-a-class-anchor-id-conv-model-a">
+   4. 11. Convoluted Models
+   <a class="anchor" id="conv_model">
+   </a>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#laor-a-class-anchor-id-conv-laor-a">
+     4.1. 11.1 Laor
+     <a class="anchor" id="conv_laor">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#laor2-a-class-anchor-id-conv-laor2-a">
+     4.2. 11.2 Laor2
+     <a class="anchor" id="conv_laor2">
      </a>
     </a>
    </li>
@@ -1339,6 +1362,83 @@ With this model, the majority of the parameters are frozen in, so fine tuning th
 <p>These fits look slightly better as they are not a smooth and round curve as before, howewer in the graph above, one of the gaussians has a line energy of 8000 which is not physical.</p>
 </div>
 </div>
+<div class="tex2jax_ignore mathjax_ignore section" id="convoluted-models-a-class-anchor-id-conv-model-a">
+<h1><span class="section-number">4. </span>11. Convoluted Models <a class="anchor" id="conv_model"></a><a class="headerlink" href="#convoluted-models-a-class-anchor-id-conv-model-a" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Laor</span></code> and <code class="docutils literal notranslate"><span class="pre">Laor2</span></code> models were fitted to the PN data using the tbabs model as:</p>
+<p>tbabs(powerlaw + laor[2])</p>
+<div class="section" id="laor-a-class-anchor-id-conv-laor-a">
+<h2><span class="section-number">4.1. </span>11.1 Laor <a class="anchor" id="conv_laor"></a><a class="headerlink" href="#laor-a-class-anchor-id-conv-laor-a" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_laor_conv_param.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_177_0.png" src="_images/PN data_177_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_laor_conv_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_178_0.png" src="_images/PN data_178_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="laor2-a-class-anchor-id-conv-laor2-a">
+<h2><span class="section-number">4.2. </span>11.2 Laor2 <a class="anchor" id="conv_laor2"></a><a class="headerlink" href="#laor2-a-class-anchor-id-conv-laor2-a" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_laor2_conv_table.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_180_0.png" src="_images/PN data_180_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_laor2_conv_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_181_0.png" src="_images/PN data_181_0.png" />
+</div>
+</div>
+<p>This was exported into veusz by running the commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">we</span> <span class="p">[</span><span class="n">filename</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The continuum was then subtracted from the data and the model producing:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Laor2_continuum_subtracted.jpg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_186_0.jpeg" src="_images/PN data_186_0.jpeg" />
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1375,7 +1475,7 @@ With this model, the majority of the parameters are frozen in, so fine tuning th
     <a class='right-next' id="next-link" href="MOS%20data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span><strong>Analysing the MOS data</strong></p>
+        <p class="prev-next-title"><span class="section-number">5. </span><strong>Analysing the MOS data</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
