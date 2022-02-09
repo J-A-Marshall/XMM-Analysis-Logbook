@@ -28,7 +28,7 @@
 
 # - - - -
 
-# In[1]:
+# In[2]:
 
 
 from IPython.display import Image
@@ -789,3 +789,61 @@ Image(filename="Figures/PN_Laor2_2_gauss_2_graph.png")
 
 
 # These fits look slightly better as they are not a smooth and round curve as before, howewer in the graph above, one of the gaussians has a line energy of 8000 which is not physical. 
+
+# # 11. Convoluted Models <a class="anchor" id="conv_model"></a>
+
+# `Laor` and `Laor2` models were fitted to the PN data using the tbabs model as:
+# 
+# tbabs(powerlaw + laor[2])
+
+# ### 11.1 Laor <a class="anchor" id="conv_laor"></a>
+
+# In[7]:
+
+
+Image(filename="Figures/PN_laor_conv_param.png")
+
+
+# In[8]:
+
+
+Image(filename="Figures/PN_laor_conv_graph.png")
+
+
+# ### 11.2 Laor2 <a class="anchor" id="conv_laor2"></a>
+
+# In[9]:
+
+
+Image(filename="Figures/PN_laor2_conv_table.png")
+
+
+# In[10]:
+
+
+Image(filename="Figures/PN_laor2_conv_graph.png")
+
+
+# This was exported into veusz by running the commands:
+
+# In[ ]:
+
+
+iplot
+
+
+# In[ ]:
+
+
+we [filename]
+
+
+# The continuum was then subtracted from the data and the model producing:
+
+# In[12]:
+
+
+Image(filename="Figures/Laor2_continuum_subtracted.jpg")
+
+
+# 
