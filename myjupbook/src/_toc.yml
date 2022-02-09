@@ -11,5 +11,5 @@ parts:
     chapters:
 
     # File names can be arbitrary, but it is best to use something navigable
-    - file: PN  data
+    - file: PN data
     - file: MOS data

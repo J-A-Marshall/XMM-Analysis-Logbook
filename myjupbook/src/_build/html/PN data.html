@@ -376,9 +376,9 @@
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a">
+  <a class="reference internal nav-link" href="#fitting-a-line-model-a-class-anchor-id-model-a">
    3. 10. Fitting a line model
-   <a class="anchor" id="bck_light">
+   <a class="anchor" id="model">
    </a>
   </a>
   <ul class="visible nav section-nav flex-column">
@@ -443,6 +443,11 @@
 </ul>
 </li>
 <li><p><a class="reference external" href="#bck_light">9. Background Lightcurve</a></p></li>
+<li><p><a class="reference external" href="#model">10. Fitting a Model</a></p>
+<ul>
+<li><p><a class="reference external" href="#kerrdisk_ext">10.2 Kerrdisk + 2 gaussians</a></p></li>
+</ul>
+</li>
 </ul>
 <hr class="docutils" />
 <div class="cell docutils container">
@@ -1162,8 +1167,8 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="fitting-a-line-model-a-class-anchor-id-bck-light-a">
-<h1><span class="section-number">3. </span>10. Fitting a line model <a class="anchor" id="bck_light"></a><a class="headerlink" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="fitting-a-line-model-a-class-anchor-id-model-a">
+<h1><span class="section-number">3. </span>10. Fitting a line model <a class="anchor" id="model"></a><a class="headerlink" href="#fitting-a-line-model-a-class-anchor-id-model-a" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html">https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html</a></p>
 <p>The model kerrdisk suggests using a model such as diskline or laor to determine the best fit parameters intially. The PN spectrum group file was fitted with the diskline model in xspec initially using <code class="docutils literal notranslate"><span class="pre">show</span></code> to reveal the parameter values.
 This produced the following:</p>
@@ -1240,7 +1245,7 @@ par  comp</p>
 <img alt="_images/PN data_158_0.png" src="_images/PN data_158_0.png" />
 </div>
 </div>
-<p>This is very similar to the model that is shown in the paper.</p>
+<p>This is very similar to the model that is shown in the paper. Subtracting the continuum from this should produce a nice graph</p>
 </div>
 <div class="section" id="laor2-line-model-a-class-anchor-id-laor2-a">
 <h2><span class="section-number">3.2. </span>10.2 Laor2 line model <a class="anchor" id="laor2"></a><a class="headerlink" href="#laor2-line-model-a-class-anchor-id-laor2-a" title="Permalink to this headline">¶</a></h2>
@@ -1290,6 +1295,48 @@ With this model, the majority of the parameters are frozen in, so fine tuning th
 </div>
 </div>
 <p>This improves the fit of the blue wing marginally. The Fabain 2002 paper used MOS data for their fits, so this will be repeated with the mos cameras.</p>
+<p>A fit with a thin and thick gaussian was made</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_Laor2_2_gauss_1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_169_0.png" src="_images/PN data_169_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_Laor2_2_gauss_1_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_170_0.png" src="_images/PN data_170_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_Laor2_2_gauss_2_table.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_171_0.png" src="_images/PN data_171_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_Laor2_2_gauss_2_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_172_0.png" src="_images/PN data_172_0.png" />
+</div>
+</div>
+<p>These fits look slightly better as they are not a smooth and round curve as before, howewer in the graph above, one of the gaussians has a line energy of 8000 which is not physical.</p>
 </div>
 </div>
 

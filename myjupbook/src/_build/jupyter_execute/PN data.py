@@ -23,10 +23,12 @@
 #     * [8.1 Fitting a Model](#model)
 #     * [8.2 Creating the Unfolded Spectrum](#unfolded)
 # * [9. Background Lightcurve](#bck_light)
+# * [10. Fitting a Model](#model)
+#     * [10.2 Kerrdisk + 2 gaussians](#kerrdisk_ext)
 
 # - - - -
 
-# In[2]:
+# In[1]:
 
 
 from IPython.display import Image
@@ -640,7 +642,7 @@ dsplot table=background_lightcurve.fits x=TIME y=RATE &
 Image(filename="Figures/background lightcurve.png")
 
 
-# # 10. Fitting a line model <a class="anchor" id="bck_light"></a>
+# # 10. Fitting a line model <a class="anchor" id="model"></a>
 
 # https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html
 
@@ -721,7 +723,7 @@ Image(filename="Figures/PN_kerrdisk_gauss_table.png")
 Image(filename="Figures/PN_kerrdisk_gauss_graph.png")
 
 
-# This is very similar to the model that is shown in the paper.
+# This is very similar to the model that is shown in the paper. Subtracting the continuum from this should produce a nice graph
 
 # ### 10.2 Laor2 line model <a class="anchor" id="laor2"></a>
 
@@ -760,4 +762,30 @@ Image(filename="Figures/PN_laor2_second_graph.png")
 
 # This improves the fit of the blue wing marginally. The Fabain 2002 paper used MOS data for their fits, so this will be repeated with the mos cameras.
 
-# 
+# A fit with a thin and thick gaussian was made
+
+# In[3]:
+
+
+Image(filename="Figures/PN_Laor2_2_gauss_1.png")
+
+
+# In[4]:
+
+
+Image(filename="Figures/PN_Laor2_2_gauss_1_graph.png")
+
+
+# In[5]:
+
+
+Image(filename="Figures/PN_Laor2_2_gauss_2_table.png")
+
+
+# In[6]:
+
+
+Image(filename="Figures/PN_Laor2_2_gauss_2_graph.png")
+
+
+# These fits look slightly better as they are not a smooth and round curve as before, howewer in the graph above, one of the gaussians has a line energy of 8000 which is not physical. 
