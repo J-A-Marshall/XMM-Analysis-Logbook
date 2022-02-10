@@ -1367,28 +1367,28 @@ This thread was followed along with the abc guide:
 <h3><span class="section-number">5.8.1. </span>7.1.1 mos1 files<a class="anchor" id="files_mos1"></a><a class="headerlink" href="#mos1-files-a-class-anchor-id-files-mos1-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211.16))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211.16))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26564,27511,242))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26564,27511,242))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos1</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span>
 </pre></div>
 </div>
 </div>
@@ -1412,28 +1412,28 @@ This thread was followed along with the abc guide:
 <h3><span class="section-number">5.8.2. </span>7.1.2 mos2 files<a class="anchor" id="files_mos2"></a><a class="headerlink" href="#mos2-files-a-class-anchor-id-files-mos2-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26189,27993,216))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26189,27993,216))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">src_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547,27543,242))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547,27543,242))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">bkg_spectrum_mos2</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span>
 </pre></div>
 </div>
 </div>

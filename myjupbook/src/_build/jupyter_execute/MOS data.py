@@ -779,25 +779,25 @@ Image(filename="Figures/mos2_eeufs_rescaled.png")
 # In[ ]:
 
 
-evselect table=mos1.fits expression='((X,Y) IN circle(26201,27967,211.16))' withspectrumset=yes spectrumset=src_spectrum_mos1.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI 
+evselect table=mos1_clean.fits expression='((X,Y) IN circle(26201,27967,211.16))' withspectrumset=yes spectrumset=src_spectrum_mos1.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI 
 
 
 # In[ ]:
 
 
-backscale spectrumset=src_spectrum_mos1.ds badpixlocation=mos1.fits
+backscale spectrumset=src_spectrum_mos1.ds badpixlocation=mos1_clean.fits
 
 
 # In[ ]:
 
 
-evselect table=mos1.fits expression='((X,Y) IN circle(26564,27511,242))' withspectrumset=yes spectrumset=bkg_spectrum_mos1.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI
+evselect table=mos1_clean.fits expression='((X,Y) IN circle(26564,27511,242))' withspectrumset=yes spectrumset=bkg_spectrum_mos1.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI
 
 
 # In[ ]:
 
 
-backscale spectrumset=bkg_spectrum_mos1.ds badpixlocation=mos1.fits
+backscale spectrumset=bkg_spectrum_mos1.ds badpixlocation=mos1_clean.fits
 
 
 # In[ ]:
@@ -817,25 +817,25 @@ arfgen spectrumset=src_spectrum_mos1.ds arfset=arf_mos1.arf withrmfset=yes rmfse
 # In[ ]:
 
 
-evselect table=mos2.fits expression='((X,Y) IN circle(26189,27993,216))' withspectrumset=yes spectrumset=src_spectrum_mos2.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI 
+evselect table=mos2_clean.fits expression='((X,Y) IN circle(26189,27993,216))' withspectrumset=yes spectrumset=src_spectrum_mos2.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI 
 
 
 # In[ ]:
 
 
-backscale spectrumset=src_spectrum_mos2.ds badpixlocation=mos2.fits
+backscale spectrumset=src_spectrum_mos2.ds badpixlocation=mos2_clean.fits
 
 
 # In[ ]:
 
 
-evselect table=mos2.fits expression='((X,Y) IN circle(26547,27543,242))' withspectrumset=yes spectrumset=bkg_spectrum_mos2.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI
+evselect table=mos2_clean.fits expression='((X,Y) IN circle(26547,27543,242))' withspectrumset=yes spectrumset=bkg_spectrum_mos2.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI
 
 
 # In[ ]:
 
 
-backscale spectrumset=bkg_spectrum_mos2.ds badpixlocation=mos2.fits
+backscale spectrumset=bkg_spectrum_mos2.ds badpixlocation=mos2_clean.fits
 
 
 # In[ ]:
