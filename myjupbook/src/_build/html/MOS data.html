@@ -1607,6 +1607,70 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
 </div>
 <div class="section" id="mos2-a-class-anchor-id-mos2-bkg-a">
 <h3><span class="section-number">5.10.2. </span>8.2 mos2<a class="anchor" id="mos2_bkg"></a><a class="headerlink" href="#mos2-a-class-anchor-id-mos2-bkg-a" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547,27542,242))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_background_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_background_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_bkg_lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_215_0.png" src="_images/MOS data_215_0.png" />
+</div>
+</div>
+<p>These lightcurves seem to contribute very little to the overall lightcurve found earlier. For interest, the lightcurves of only the source regions are made</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201,27967,211))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_source_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_source_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_source_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_source_lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_221_0.png" src="_images/MOS data_221_0.png" />
+</div>
+</div>
+<p>This is very confusing as both the source and backgroud lightcurves here match the lightcurve seen with the PN data, but not the initial lightcurve found for both mos cameras previously. I am not sure why this lightcurve is so different from the other one, it appears that the flaring events that were present in the initial lightcurve are no longer present, but I have use the same files as before.</p>
 </div>
 </div>
 </div>

@@ -977,7 +977,59 @@ Image(filename="Figures/mos1_bkg_lightcurve.png")
 # In[ ]:
 
 
+evselect table=mos2_filtered.fits withfilteredset=yes expression='((X,Y) IN circle(26547,27542,242))' filteredset=mos2_background_spec.fits filtertype=expression keepfilteroutput=yes
 
 
+# In[ ]:
+
+
+evselect table=mos2_background_spec.fits withrateset=yes rateset=mos2_background_lightcurve.fits maketimecolumn=yes timecolumn=TIME timebinsize=100 makeratecolumn=yes
+
+
+# In[ ]:
+
+
+dsplot table=mos2_background_lightcurve.fits x=TIME y=RATE &
+
+
+# In[7]:
+
+
+Image(filename="Figures/mos2_bkg_lightcurve.png")
+
+
+# In[ ]:
+
+
+
+
+
+# These lightcurves seem to contribute very little to the overall lightcurve found earlier. For interest, the lightcurves of only the source regions are made
+
+# In[ ]:
+
+
+evselect table=mos1_filtered.fits withfilteredset=yes expression='((X,Y) IN circle(26201,27967,211))' filteredset=mos1_source_spec.fits filtertype=expression keepfilteroutput=yes
+
+
+# In[ ]:
+
+
+evselect table=mos1_source_spec.fits withrateset=yes rateset=mos1_source_lightcurve.fits maketimecolumn=yes timecolumn=TIME timebinsize=100 makeratecolumn=yes
+
+
+# In[ ]:
+
+
+dsplot table=mos1_source_lightcurve.fits x=TIME y=RATE &
+
+
+# In[8]:
+
+
+Image(filename="Figures/mos1_source_lightcurve.png")
+
+
+# This is very confusing as both the source and backgroud lightcurves here match the lightcurve seen with the PN data, but not the initial lightcurve found for both mos cameras previously. I am not sure why this lightcurve is so different from the other one, it appears that the flaring events that were present in the initial lightcurve are no longer present, but I have use the same files as before.
 
 # 
