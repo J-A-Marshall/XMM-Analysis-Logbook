@@ -866,11 +866,61 @@ epicspeccombine pha="src_spectrum_mos1.ds src_spectrum_mos2.ds" bkg="bkg_spectru
 specgroup spectrumset=src_spectrum_combined.ds mincounts=25 oversample=3 rmfset=response_combined.rmf backgndset=bkg_spectrum_combined.ds groupedset=combined_spectrum.fits
 
 
-# # 7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a>
+# #### 7.3 Fitting the Combined Spectrum<a class="anchor" id="fit_combined"></a>
 
-# ## 9. Fitting Models <a class="anchor" id="models"></a>
+# In[ ]:
 
-# ### 9.1 Laor2 <a class="anchor" id="laor2"></a>
+
+xspec> data src_spectrum_combined.ds
+
+
+# In[ ]:
+
+
+xspec> setplot e
+
+
+# In[ ]:
+
+
+xspec> cpd /xs
+
+
+# In[ ]:
+
+
+xpsec> pl ld
+
+
+# ***XSPEC Error: No energies defined for spectrum 1, but plot requested on energy/wavelength axis.
+#  Plot Group 1 will not be constructed
+# 
+
+# It seems that either the rmf or arf is not combining properly...
+
+# To get around this I added the combined response manually:
+
+# In[ ]:
+
+
+xspec> response response_combined.rmf
+
+
+# Ignoring the usual energy ranges and fitting this with a powerlaw yielded:
+# 
+
+# In[4]:
+
+
+Image(filename="Figures/mos_combined_graph.png")
+
+
+# This is a very messy graph and it is difficult to see any detail in the residual panel.
+# Hopefully removing the background flares in the lightcurve can remedy this.
+
+# ### 9. Fitting Models <a class="anchor" id="models"></a>
+
+# #### 9.1 Laor2 <a class="anchor" id="laor2"></a>
 
 # The unmerged data from the mos 1 is fitted with a laor 2 model, following the same parameters chosen in model 4 of the Fabian 2002 paper. 
 
@@ -887,5 +937,47 @@ Image(filename="Figures/Mos1_laor2_graph.png")
 
 
 # There seems to be either an issue with the model parameters or the mos data itself. As the data points are not significantly deviating from the continuum line at E~5keV, it seems that the data itslef is incorrect, as it should exhibit the same behaviour as the PN data.
+
+# ### 8 Removing Background Flares <a class="anchor" id="bkf_flares"></a>
+
+# In the lightcurve for both the mos1 and mos2 cameras, there are many flares which could be affecting the data. First, a lightcurve of the background regions for each camera will be made and compared to the overall lightcurve found earlier.
+# 
+# Then the lightcurve will be filtered to exclude the flaring events arising from background data.
+
+# #### 8.1 mos1<a class="anchor" id="mos1_bkg"></a>
+
+# A lightcurve for the background in the mos1 camera is made using the background region found earlier.
+
+# In[ ]:
+
+
+evselect table=mos1_filtered.fits withfilteredset=yes expression='((X,Y) IN circle(26564,27511,242.4))' filteredset=mos1_background_spec.fits filtertype=expression keepfilteroutput=yes
+
+
+# In[ ]:
+
+
+evselect table=mos1_background_spec.fits withrateset=yes rateset=mos1_background_lightcurve.fits maketimecolumn=yes timecolumn=TIME timebinsize=100 makeratecolumn=yes
+
+
+# In[ ]:
+
+
+dsplot table=mos1_background_lightcurve.fits x=TIME y=RATE &
+
+
+# In[5]:
+
+
+Image(filename="Figures/mos1_bkg_lightcurve.png")
+
+
+# #### 8.2 mos2<a class="anchor" id="mos2_bkg"></a>
+
+# In[ ]:
+
+
+
+
 
 # 
