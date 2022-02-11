@@ -419,14 +419,19 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-bkg-a">
-     5.10.1. 8.1 mos1
+     5.10.1. mos1
      <a class="anchor" id="mos1_bkg">
      </a>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changing-background-area">
+     5.10.2. Changing background Area
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-bkg-a">
-     5.10.2. 8.2 mos2
+     5.10.3. mos2
      <a class="anchor" id="mos2_bkg">
      </a>
     </a>
@@ -1571,7 +1576,7 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
 <p>In the lightcurve for both the mos1 and mos2 cameras, there are many flares which could be affecting the data. First, a lightcurve of the background regions for each camera will be made and compared to the overall lightcurve found earlier.</p>
 <p>Then the lightcurve will be filtered to exclude the flaring events arising from background data.</p>
 <div class="section" id="mos1-a-class-anchor-id-mos1-bkg-a">
-<h3><span class="section-number">5.10.1. </span>8.1 mos1<a class="anchor" id="mos1_bkg"></a><a class="headerlink" href="#mos1-a-class-anchor-id-mos1-bkg-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.10.1. </span>mos1<a class="anchor" id="mos1_bkg"></a><a class="headerlink" href="#mos1-a-class-anchor-id-mos1-bkg-a" title="Permalink to this headline">¶</a></h3>
 <p>A lightcurve for the background in the mos1 camera is made using the background region found earlier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1605,8 +1610,43 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
 </div>
 </div>
 </div>
+<div class="section" id="changing-background-area">
+<h3><span class="section-number">5.10.2. </span>Changing background Area<a class="headerlink" href="#changing-background-area" title="Permalink to this headline">¶</a></h3>
+<p>The region for the background area was taken to be everywhere on the chip excluding the source region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;!((X,Y) IN circle(26201.29,27967,211))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_background_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_background_lightcurve</span><span class="o">.</span><span class="n">fits</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_background_lightcurve_full_region.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_216_0.png" src="_images/MOS data_216_0.png" />
+</div>
+</div>
+</div>
 <div class="section" id="mos2-a-class-anchor-id-mos2-bkg-a">
-<h3><span class="section-number">5.10.2. </span>8.2 mos2<a class="anchor" id="mos2_bkg"></a><a class="headerlink" href="#mos2-a-class-anchor-id-mos2-bkg-a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.10.3. </span>mos2<a class="anchor" id="mos2_bkg"></a><a class="headerlink" href="#mos2-a-class-anchor-id-mos2-bkg-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547,27542,242))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
@@ -1635,7 +1675,7 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/MOS data_215_0.png" src="_images/MOS data_215_0.png" />
+<img alt="_images/MOS data_221_0.png" src="_images/MOS data_221_0.png" />
 </div>
 </div>
 <p>These lightcurves seem to contribute very little to the overall lightcurve found earlier. For interest, the lightcurves of only the source regions are made</p>
@@ -1667,7 +1707,7 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/MOS data_221_0.png" src="_images/MOS data_221_0.png" />
+<img alt="_images/MOS data_227_0.png" src="_images/MOS data_227_0.png" />
 </div>
 </div>
 <p>This is very confusing as both the source and backgroud lightcurves here match the lightcurve seen with the PN data, but not the initial lightcurve found for both mos cameras previously. I am not sure why this lightcurve is so different from the other one, it appears that the flaring events that were present in the initial lightcurve are no longer present, but I have use the same files as before.</p>

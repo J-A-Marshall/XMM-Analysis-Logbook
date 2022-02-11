@@ -3,7 +3,7 @@
 
 # # **Analysing the MOS data**
 
-# In[2]:
+# In[1]:
 
 
 from IPython.display import Image
@@ -944,7 +944,7 @@ Image(filename="Figures/Mos1_laor2_graph.png")
 # 
 # Then the lightcurve will be filtered to exclude the flaring events arising from background data.
 
-# #### 8.1 mos1<a class="anchor" id="mos1_bkg"></a>
+# ####  mos1<a class="anchor" id="mos1_bkg"></a>
 
 # A lightcurve for the background in the mos1 camera is made using the background region found earlier.
 
@@ -972,7 +972,35 @@ dsplot table=mos1_background_lightcurve.fits x=TIME y=RATE &
 Image(filename="Figures/mos1_bkg_lightcurve.png")
 
 
-# #### 8.2 mos2<a class="anchor" id="mos2_bkg"></a>
+# #### Changing background Area
+
+# The region for the background area was taken to be everywhere on the chip excluding the source region.
+
+# In[ ]:
+
+
+evselect table=mos1_filtered.fits withfilteredset=yes expression='!((X,Y) IN circle(26201.29,27967,211))' filteredset=mos1_background_spec.fits filtertype=expression keepfilteroutput=yes
+
+
+# In[ ]:
+
+
+evselect table=mos1_background_spec.fits withrateset=yes rateset=mos1_background_lightcurve.fits maketimecolumn=yes timecolumn=TIME timebinsize=100 makeratecolumn=yes
+
+
+# In[ ]:
+
+
+dsplot table=mos1_background_lightcurve.fits x=TIME y=RATE &
+
+
+# In[2]:
+
+
+Image(filename="Figures/mos1_background_lightcurve_full_region.png")
+
+
+# ####  mos2<a class="anchor" id="mos2_bkg"></a>
 
 # In[ ]:
 
