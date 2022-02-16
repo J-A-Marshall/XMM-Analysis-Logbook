@@ -13,3 +13,4 @@ parts:
     # File names can be arbitrary, but it is best to use something navigable
     - file: PN data
     - file: MOS data
+    - file: Revolution 30x
