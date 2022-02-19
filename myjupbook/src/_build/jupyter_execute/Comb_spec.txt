@@ -1,0 +1,18 @@
+evselect table=EPIC_filt_time.fits expression='(FLAG==0) && (PATTERN<=4) && ((X,Y) IN circle(26229.662,27962.992,565.3))' withspectrumset=yes spectrumset=301_pn_source_spectrum.ds spectralbinsize=5 specchannelmin=0 specchannelmax=20479 energycolumn=PI
+
+
+backscale spectrumset=301_pn_source_spectrum.ds badpixlocation=EPIC_filt_time.fits
+
+evselect table=EPIC_filt_time.fits expression='(FLAG==0) && (PATTERN<=4) && ((X,Y) IN circle(29365.842,25855.344,712.9))' withspectrumset=yes spectrumset=301_pn_bkg_spectrum.ds spectralbinsize=5 specchannelmin=0 specchannelmax=20479 energycolumn=PI
+
+
+backscale spectrumset=301_pn_bkg_spectrum.ds badpixlocation=EPIC_filt_time.fits
+
+rmfgen spectrumset=301_pn_source_spectrum.ds rmfset=301_pn_response.rmf withenergybins=yes energymin=0.1 energymax=15 nenergybins=1490
+
+arfgen spectrumset=301_pn_source_spectrum.ds arfset=301_pn_arf.arf withrmfset=yes rmfset=301_pn_response.rmf 
+
+evselect table=mos1_clean.fits expression='((X,Y) IN circle(26229.662,27962.992,565.3))' withspectrumset=yes spectrumset=301_mos1_source_spectrum.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI
+
+
+backscale spectrumset=301_pn_source_spectrum.ds badpixlocation=EPIC_filt_time.fits
