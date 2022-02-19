@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XMM Anlaysis Logbook &#8212; XMM Analysis Logbook</title>
+    <title>8. Combining all Spectra &#8212; XMM Analysis Logbook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Initial Analysis of the PN Data" href="PN%20data.html" />
+    <link rel="prev" title="7. Revolution 303" href="Rev_303.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -91,8 +91,8 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="titlepage.html">
    XMM Anlaysis Logbook
   </a>
  </li>
@@ -102,7 +102,7 @@
   Analysis Notebooks
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="PN%20data.html">
    1.
@@ -135,8 +135,8 @@
    </strong>
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Comb_spec.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    8. Combining all Spectra
   </a>
  </li>
@@ -181,9 +181,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/titlepage.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Comb_spec.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -201,7 +201,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git/issues/new?title=Issue%20on%20page%20%2Ftitlepage.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git/issues/new?title=Issue%20on%20page%20%2FComb_spec.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -222,6 +222,31 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revolution-301">
+   8.1. Revolution 301
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pn">
+     8.1.1. PN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mos1">
+     8.1.2. MOS1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -230,28 +255,72 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="xmm-anlaysis-logbook">
-<h1><strong>XMM Anlaysis Logbook</strong><a class="headerlink" href="#xmm-anlaysis-logbook" title="Permalink to this headline">¶</a></h1>
-<div class="sphinx-bs container pb-4 text-center docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 px-2 py-2 docutils">
-<div class="card w-100 docutils">
-<div class="card-header docutils">
-<p class="card-text"><strong>[Analysis of the PN data](PN data)</strong></p>
-</div>
-<div class="card-body docutils">
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 px-2 py-2 docutils">
-<div class="card w-100 docutils">
-<div class="card-body docutils">
+  <div class="tex2jax_ignore mathjax_ignore section" id="combining-all-spectra">
+<h1><span class="section-number">8. </span>Combining all Spectra<a class="headerlink" href="#combining-all-spectra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="revolution-301">
+<h2><span class="section-number">8.1. </span>Revolution 301<a class="headerlink" href="#revolution-301" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pn">
+<h3><span class="section-number">8.1.1. </span>PN<a class="headerlink" href="#pn" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+</pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
 </div>
 </div>
-<div class="toctree-wrapper compound">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(29365.842,25855.344,712.9))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_bkg_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_bkg_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">rmfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_response</span><span class="o">.</span><span class="n">rmf</span> <span class="n">withenergybins</span><span class="o">=</span><span class="n">yes</span> <span class="n">energymin</span><span class="o">=</span><span class="mf">0.1</span> <span class="n">energymax</span><span class="o">=</span><span class="mi">15</span> <span class="n">nenergybins</span><span class="o">=</span><span class="mi">1490</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">arfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_arf</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_response</span><span class="o">.</span><span class="n">rmf</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mos1">
+<h3><span class="section-number">8.1.2. </span>MOS1<a class="headerlink" href="#mos1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_mos1_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -279,13 +348,13 @@
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="PN%20data.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span><strong>Initial Analysis of the PN Data</strong></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Rev_303.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span><strong>Revolution 303</strong></p>
+        </div>
     </a>
 </div>
         
