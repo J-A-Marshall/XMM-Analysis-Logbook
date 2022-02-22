@@ -217,6 +217,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/J-A-Marshall/XMM-Analysis-Logbook.git/main?urlpath=tree/Comb_spec.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -238,9 +255,26 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1">
-     8.1.2. MOS1
+    <a class="reference internal nav-link" href="#combining-all-the-cameras">
+     8.1.2. Combining all the cameras
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combined-spectra">
+     8.1.3. Combined Spectra
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       8.1.3.1. PN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos">
+       8.1.3.2. MOS
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -255,68 +289,121 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="combining-all-spectra">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="combining-all-spectra">
 <h1><span class="section-number">8. </span>Combining all Spectra<a class="headerlink" href="#combining-all-spectra" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging</a></p>
+<p>The source &amp; background spectra were taken for each of the PN cameras for all 3 revolutions alongside their respective RMF and ARF files. The files for all the mos and pn cameras were moved into a separate directory where they were combined and plotted in xspec.</p>
 <div class="section" id="revolution-301">
 <h2><span class="section-number">8.1. </span>Revolution 301<a class="headerlink" href="#revolution-301" title="Permalink to this headline">¶</a></h2>
+<p>The code to generate the PN files is shown. For the mos data, this had already been generate previously, so was just renamed and moved into the other directory.</p>
 <div class="section" id="pn">
 <h3><span class="section-number">8.1.1. </span>PN<a class="headerlink" href="#pn" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(29365.842,25855.344,712.9))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_bkg_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(29365.842,25855.344,712.9))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_bkg_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_bkg_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_bkg_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">rmfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_response</span><span class="o">.</span><span class="n">rmf</span> <span class="n">withenergybins</span><span class="o">=</span><span class="n">yes</span> <span class="n">energymin</span><span class="o">=</span><span class="mf">0.1</span> <span class="n">energymax</span><span class="o">=</span><span class="mi">15</span> <span class="n">nenergybins</span><span class="o">=</span><span class="mi">1490</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">rmfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_response</span><span class="o">.</span><span class="n">rmf</span> <span class="n">withenergybins</span><span class="o">=</span><span class="n">yes</span> <span class="n">energymin</span><span class="o">=</span><span class="mf">0.1</span> <span class="n">energymax</span><span class="o">=</span><span class="mi">15</span> <span class="n">nenergybins</span><span class="o">=</span><span class="mi">1490</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">arfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_arf</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_response</span><span class="o">.</span><span class="n">rmf</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">arfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_arf</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_response</span><span class="o">.</span><span class="n">rmf</span> 
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="mos1">
-<h3><span class="section-number">8.1.2. </span>MOS1<a class="headerlink" href="#mos1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="combining-all-the-cameras">
+<h3><span class="section-number">8.1.2. </span>Combining all the cameras<a class="headerlink" href="#combining-all-the-cameras" title="Permalink to this headline">¶</a></h3>
+<p>For the mos data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_mos1_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epicspeccombine</span> <span class="n">pha</span><span class="o">=</span><span class="s2">&quot;301_mos1_source_spectrum.ds 301_mos2_source_spectrum.ds 302_mos1_source_spectrum.ds 302_mos2_source_spectrum.ds 303_mos1_source_spectrum.ds 303_mos2_source_spectrum.ds&quot;</span> <span class="n">bkg</span><span class="o">=</span><span class="s2">&quot;301_mos1_bkg_spectrum.ds 301_mos2_bkg_spectrum.ds 302_mos1_bkg_spectrum.ds 302_mos2_bkg_spectrum.ds 303_mos1_bkg_spectrum.ds 303_mos2_bkg_spectrum.ds&quot;</span> <span class="n">rmf</span><span class="o">=</span><span class="s2">&quot;301_mos1_response.rmf 301_mos2_response.rmf 302_mos1_response.rmf 302_mos2_response.rmf 303_mos1_response.rmf 303_mos2_response.rmf&quot;</span> <span class="n">arf</span><span class="o">=</span><span class="s2">&quot;301_mos1_arf.arf 301_mos2_arf.arf 302_mos1_arf.arf 302_mos2_arf.arf 303_mos1_arf.arf 303_mos2_arf.arf&quot;</span> <span class="n">filepha</span><span class="o">=</span><span class="s2">&quot;mos_source_all_revs.ds&quot;</span> <span class="n">filebkg</span><span class="o">=</span><span class="s2">&quot;mos_bkg_all_revs.ds&quot;</span> <span class="n">filersp</span><span class="o">=</span><span class="s2">&quot;mos_response_all_revs.rmf&quot;</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="section" id="combined-spectra">
+<h3><span class="section-number">8.1.3. </span>Combined Spectra<a class="headerlink" href="#combined-spectra" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4><span class="section-number">8.1.3.1. </span>PN<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;comb_figs/pn_combined_eeufs_laor2.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Comb_spec_18_0.png" src="_images/Comb_spec_18_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="mi">301</span><span class="n">_pn_source_spectrum</span><span class="o">.</span><span class="n">ds</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;comb_figs/pn_combined_ratio.png&quot;</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Comb_spec_19_0.png" src="_images/Comb_spec_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="mos">
+<h4><span class="section-number">8.1.3.2. </span>MOS<a class="headerlink" href="#mos" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;comb_figs/mos_combined_eeufs_laor2.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Comb_spec_21_0.png" src="_images/Comb_spec_21_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;comb_figs/mos_combined_ratio.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Comb_spec_22_0.png" src="_images/Comb_spec_22_0.png" />
 </div>
 </div>
 </div>
