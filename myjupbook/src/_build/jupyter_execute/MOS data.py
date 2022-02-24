@@ -133,6 +133,12 @@ evselect table=mos1.fits withfilteredset=yes expression='(PATTERN <= 12)&&(PI in
 evselect table=mos2.fits withfilteredset=yes expression='(PATTERN <= 12)&&(PI in [200:10000])' filteredset=mos2_filtered.fits filtertype=expression keepfilteroutput=yes updateexposure=yes filterexposure=yes
 
 
+# In[ ]:
+
+
+
+
+
 # #### 3.2 Light Curve<a class="anchor" id="lightcurve"></a>
 
 # In[ ]:
