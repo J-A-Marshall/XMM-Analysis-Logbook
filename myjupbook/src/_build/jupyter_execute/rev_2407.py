@@ -33,6 +33,12 @@ Image(filename="2407_figs/pn_pileup.png")
 
 # ##### MOS1
 
+# In[3]:
+
+
+Image(filename="2407_figs/mos1_image.png")
+
+
 # In[6]:
 
 
@@ -52,6 +58,12 @@ Image(filename="2407_figs/mos1_pileup.png")
 
 
 # ##### MOS2
+
+# In[4]:
+
+
+Image(filename="2407_figs/mos2_image.png")
+
 
 # In[10]:
 

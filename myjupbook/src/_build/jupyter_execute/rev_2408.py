@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 from IPython.display import Image
@@ -39,6 +39,12 @@ Image(filename="2408_figs/pn_pileup.png")
 
 # ##### MOS1
 
+# In[2]:
+
+
+Image(filename="2408_figs/mos1_image.png")
+
+
 # In[7]:
 
 
@@ -58,6 +64,12 @@ Image(filename="2408_figs/mos1_pileup.png")
 
 
 # ##### MOS2
+
+# In[3]:
+
+
+Image(filename="2408_figs/mos2_image.png")
+
 
 # In[10]:
 
