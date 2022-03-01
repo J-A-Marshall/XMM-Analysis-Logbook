@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12. Giorgio Combined Spectra &#8212; XMM Analysis Logbook</title>
+    <title>13. Giorgio Combined Spectra &#8212; XMM Analysis Logbook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="11. Revolution 2409" href="rev_2409.html" />
+    <link rel="prev" title="12. Revolution 2409" href="rev_2409.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,7 +121,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Rev_2.html">
-   6.
+   7.
    <strong>
     Revolution 302
    </strong>
@@ -129,7 +129,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Rev_303.html">
-   7.
+   8.
    <strong>
     Revolution 303
    </strong>
@@ -137,27 +137,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Comb_spec.html">
-   8. Combining all Spectra
+   9. Combining all Spectra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rev_2407.html">
-   9. Revolution 2407
+   10. Revolution 2407
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rev_2408.html">
-   10. Revolution 2408
+   11. Revolution 2408
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rev_2409.html">
-   11. Revolution 2409
+   12. Revolution 2409
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   12. Giorgio Combined Spectra
+   13. Giorgio Combined Spectra
   </a>
  </li>
 </ul>
@@ -266,22 +266,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combining-the-files">
-   12.1. Combining the Files
+   13.1. Combining the Files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pn-spectra">
-   12.2. PN Spectra
+   13.2. PN Spectra
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mos-data">
-   12.3. MOS Data
+   13.3. MOS Data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#simultaneous-fits">
-     12.3.1. Simultaneous fits
+     13.3.1. Simultaneous fits
     </a>
    </li>
   </ul>
@@ -298,7 +298,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="giorgio-combined-spectra">
-<h1><span class="section-number">12. </span>Giorgio Combined Spectra<a class="headerlink" href="#giorgio-combined-spectra" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">13. </span>Giorgio Combined Spectra<a class="headerlink" href="#giorgio-combined-spectra" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -307,7 +307,7 @@
 </div>
 </div>
 <div class="section" id="combining-the-files">
-<h2><span class="section-number">12.1. </span>Combining the Files<a class="headerlink" href="#combining-the-files" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1. </span>Combining the Files<a class="headerlink" href="#combining-the-files" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epicspeccombine</span> <span class="n">pha</span><span class="o">=</span><span class="s2">&quot;2407_pn_source_spectrum.ds 2408_pn_source_spectrum.ds 2409_pn_source_spectrum.ds&quot;</span> <span class="n">bkg</span><span class="o">=</span><span class="s2">&quot;2407_pn_bkg_spectrum.ds 2408_pn_bkg_spectrum.ds 2409_pn_bkg_spectrum.ds&quot;</span> <span class="n">rmf</span><span class="o">=</span><span class="s2">&quot;2407_pn_response.rmf 2408_pn_response.rmf 2409_pn_response.rmf&quot;</span> <span class="n">arf</span><span class="o">=</span><span class="s2">&quot;2407_pn_arf.arf 2408_pn_arf.arf 2409_pn_arf.arf&quot;</span> <span class="n">filepha</span><span class="o">=</span><span class="s2">&quot;giorgio_pn_source_all_revs.ds&quot;</span> <span class="n">filebkg</span><span class="o">=</span><span class="s2">&quot;giorgio_pn_bkg_all_revs.ds&quot;</span> <span class="n">filersp</span><span class="o">=</span><span class="s2">&quot;giorgio_pn_response_all_revs.rmf&quot;</span>
@@ -324,7 +324,7 @@
 </div>
 </div>
 <div class="section" id="pn-spectra">
-<h2><span class="section-number">12.2. </span>PN Spectra<a class="headerlink" href="#pn-spectra" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.2. </span>PN Spectra<a class="headerlink" href="#pn-spectra" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;giorgio_figs/pn_eeufs.png&quot;</span><span class="p">)</span>
@@ -347,7 +347,7 @@
 </div>
 </div>
 <div class="section" id="mos-data">
-<h2><span class="section-number">12.3. </span>MOS Data<a class="headerlink" href="#mos-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3. </span>MOS Data<a class="headerlink" href="#mos-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;giorgio_figs/mos_eeufs.png&quot;</span><span class="p">)</span>
@@ -369,7 +369,7 @@
 </div>
 </div>
 <div class="section" id="simultaneous-fits">
-<h3><span class="section-number">12.3.1. </span>Simultaneous fits<a class="headerlink" href="#simultaneous-fits" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">13.3.1. </span>Simultaneous fits<a class="headerlink" href="#simultaneous-fits" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;giorgio_figs/simultaneous.png&quot;</span><span class="p">)</span>
@@ -423,7 +423,7 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">11. </span>Revolution 2409</p>
+            <p class="prev-next-title"><span class="section-number">12. </span>Revolution 2409</p>
         </div>
     </a>
 </div>

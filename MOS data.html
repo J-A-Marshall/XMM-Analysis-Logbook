@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. Revolution 302" href="Rev_2.html" />
+    <link rel="next" title="7. Revolution 302" href="Rev_2.html" />
     <link rel="prev" title="1. Initial Analysis of the PN Data" href="PN%20data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -122,7 +122,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Rev_2.html">
-   6.
+   7.
    <strong>
     Revolution 302
    </strong>
@@ -130,7 +130,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Rev_303.html">
-   7.
+   8.
    <strong>
     Revolution 303
    </strong>
@@ -138,27 +138,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Comb_spec.html">
-   8. Combining all Spectra
+   9. Combining all Spectra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rev_2407.html">
-   9. Revolution 2407
+   10. Revolution 2407
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rev_2408.html">
-   10. Revolution 2408
+   11. Revolution 2408
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rev_2409.html">
-   11. Revolution 2409
+   12. Revolution 2409
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="giorgio_combined.html">
-   12. Giorgio Combined Spectra
+   13. Giorgio Combined Spectra
   </a>
  </li>
 </ul>
@@ -265,217 +265,249 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   5.1. Table of Contents
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5.
+   <strong>
+    Analysing the MOS data
+   </strong>
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generating-the-events-files-a-class-anchor-id-events-files-a">
-   5.2. 1. Generating the Events Files
-   <a class="anchor" id="events_files">
-   </a>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-an-image-a-class-anchor-id-image-a">
-   5.3. 2. Creating an image
-   <a class="anchor" id="image">
-   </a>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
-   5.4. 3. Creating a Lightcurve
-   <a class="anchor" id="lightcurve">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#standard-filters-a-class-anchor-id-filters-a">
-     5.4.1. 3.1 Standard filters
-     <a class="anchor" id="filters">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-of-contents">
+     5.1. Table of Contents
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generating-the-events-files-a-class-anchor-id-events-files-a">
+     5.2. 1. Generating the Events Files
+     <a class="anchor" id="events_files">
      </a>
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#light-curve-a-class-anchor-id-lightcurve-a">
-     5.4.2. 3.2 Light Curve
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-an-image-a-class-anchor-id-image-a">
+     5.3. 2. Creating an image
+     <a class="anchor" id="image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-lightcurve-a-class-anchor-id-lightcurve-a">
+     5.4. 3. Creating a Lightcurve
      <a class="anchor" id="lightcurve">
      </a>
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trimming-the-data-a-class-anchor-id-trim-a">
-     5.4.3. 3.3 Trimming the data
-     <a class="anchor" id="trim">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#checking-for-pileup-a-class-anchor-id-pileup-a">
-   5.5. 4. Checking for Pileup
-   <a class="anchor" id="pileup">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-a">
-     5.5.1. 4.1 MOS1
-     <a class="anchor" id="mos1">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-a">
-     5.5.2. 4.2 MOS2
-     <a class="anchor" id="mos2">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
-   5.6. 5. Preparing the Spectrum
-   <a class="anchor" id="spec_prep">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-spec-prep-mos1-a">
-     5.6.1. 5.1 MOS1
-     <a class="anchor" id="spec_prep_mos1">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-spec-prep-mos2-a">
-     5.6.2. 5.2 MOS2
-     <a class="anchor" id="spec_prep_mos2">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#xspec-a-class-anchor-id-xspec-a">
-   5.7. 6. XSPEC
-   <a class="anchor" id="xspec">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-xspec-mos1-a">
-     5.7.1. 6.1 MOS1
-     <a class="anchor" id="xspec_mos1">
-     </a>
-    </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
-       5.7.1.1. 6.1.1 mos1 unfolded spectrum
-       <a class="anchor" id="mos1_unfolded">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#standard-filters-a-class-anchor-id-filters-a">
+       5.4.1. 3.1 Standard filters
+       <a class="anchor" id="filters">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#light-curve-a-class-anchor-id-lightcurve-a">
+       5.4.2. 3.2 Light Curve
+       <a class="anchor" id="lightcurve">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#trimming-the-data-a-class-anchor-id-trim-a">
+       5.4.3. 3.3 Trimming the data
+       <a class="anchor" id="trim">
        </a>
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-xspec-mos2-a">
-     5.7.2. 6.2 MOS2
-     <a class="anchor" id="xspec_mos2">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-for-pileup-a-class-anchor-id-pileup-a">
+     5.5. 4. Checking for Pileup
+     <a class="anchor" id="pileup">
      </a>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-a">
+       5.5.1. 4.1 MOS1
+       <a class="anchor" id="mos1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-a">
+       5.5.2. 4.2 MOS2
+       <a class="anchor" id="mos2">
+       </a>
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
-     5.7.3. 6.2.1 MOS2 unfolded spectrum
-     <a class="anchor" id="mos2_eeufs">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparing-the-spectrum-a-class-anchor-id-spec-prep-a">
+     5.6. 5. Preparing the Spectrum
+     <a class="anchor" id="spec_prep">
      </a>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-spec-prep-mos1-a">
+       5.6.1. 5.1 MOS1
+       <a class="anchor" id="spec_prep_mos1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-spec-prep-mos2-a">
+       5.6.2. 5.2 MOS2
+       <a class="anchor" id="spec_prep_mos2">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xspec-a-class-anchor-id-xspec-a">
+     5.7. 6. XSPEC
+     <a class="anchor" id="xspec">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-xspec-mos1-a">
+       5.7.1. 6.1 MOS1
+       <a class="anchor" id="xspec_mos1">
+       </a>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#mos1-unfolded-spectrum-a-class-anchor-id-mos1-unfolded-a">
+         5.7.1.1. 6.1.1 mos1 unfolded spectrum
+         <a class="anchor" id="mos1_unfolded">
+         </a>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-xspec-mos2-a">
+       5.7.2. 6.2 MOS2
+       <a class="anchor" id="xspec_mos2">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-unfolded-spectrum-a-class-anchor-id-mos2-eeufs-a">
+       5.7.3. 6.2.1 MOS2 unfolded spectrum
+       <a class="anchor" id="mos2_eeufs">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#merging-the-mos-data-a-class-anchor-id-merge-a">
+     5.8. 7. Merging the MOS data
+     <a class="anchor" id="merge">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-files-a-class-anchor-id-files-mos1-a">
+       5.8.1. 7.1.1 mos1 files
+       <a class="anchor" id="files_mos1">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-files-a-class-anchor-id-files-mos2-a">
+       5.8.2. 7.1.2 mos2 files
+       <a class="anchor" id="files_mos2">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a">
+       5.8.3. 7.2 Combining the Spectral Files
+       <a class="anchor" id="combining_files">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fitting-the-combined-spectrum-a-class-anchor-id-fit-combined-a">
+       5.8.4. 7.3 Fitting the Combined Spectrum
+       <a class="anchor" id="fit_combined">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fitting-models-a-class-anchor-id-models-a">
+     5.9. 9. Fitting Models
+     <a class="anchor" id="models">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laor2-a-class-anchor-id-laor2-a">
+       5.9.1. 9.1 Laor2
+       <a class="anchor" id="laor2">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-background-flares-a-class-anchor-id-bkf-flares-a">
+     5.10. 8 Removing Background Flares
+     <a class="anchor" id="bkf_flares">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-bkg-a">
+       5.10.1. mos1
+       <a class="anchor" id="mos1_bkg">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#changing-background-area">
+       5.10.2. Changing background Area
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-bkg-a">
+       5.10.3. mos2
+       <a class="anchor" id="mos2_bkg">
+       </a>
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#merging-the-mos-data-a-class-anchor-id-merge-a">
-   5.8. 7. Merging the MOS data
-   <a class="anchor" id="merge">
-   </a>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lightcurve-correction">
+   6. Lightcurve Correction
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-files-a-class-anchor-id-files-mos1-a">
-     5.8.1. 7.1.1 mos1 files
-     <a class="anchor" id="files_mos1">
-     </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-region">
+     6.1. Source Region
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-files-a-class-anchor-id-files-mos2-a">
-     5.8.2. 7.1.2 mos2 files
-     <a class="anchor" id="files_mos2">
-     </a>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background-region">
+     6.2. Background Region
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#combining-the-spectral-files-a-class-anchor-id-combining-files-a">
-     5.8.3. 7.2 Combining the Spectral Files
-     <a class="anchor" id="combining_files">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fitting-the-combined-spectrum-a-class-anchor-id-fit-combined-a">
-     5.8.4. 7.3 Fitting the Combined Spectrum
-     <a class="anchor" id="fit_combined">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fitting-models-a-class-anchor-id-models-a">
-   5.9. 9. Fitting Models
-   <a class="anchor" id="models">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#laor2-a-class-anchor-id-laor2-a">
-     5.9.1. 9.1 Laor2
-     <a class="anchor" id="laor2">
-     </a>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#removing-background-flares-a-class-anchor-id-bkf-flares-a">
-   5.10. 8 Removing Background Flares
-   <a class="anchor" id="bkf_flares">
-   </a>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos1-a-class-anchor-id-mos1-bkg-a">
-     5.10.1. mos1
-     <a class="anchor" id="mos1_bkg">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-background-area">
-     5.10.2. Changing background Area
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mos2-a-class-anchor-id-mos2-bkg-a">
-     5.10.3. mos2
-     <a class="anchor" id="mos2_bkg">
-     </a>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correction">
+     6.3. Correction
     </a>
    </li>
   </ul>
@@ -1756,6 +1788,80 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
 </div>
 </div>
 </div>
+<div class="tex2jax_ignore mathjax_ignore section" id="lightcurve-correction">
+<h1><span class="section-number">6. </span>Lightcurve Correction<a class="headerlink" href="#lightcurve-correction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="source-region">
+<h2><span class="section-number">6.1. </span>Source Region<a class="headerlink" href="#source-region" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26201.29,27967,211))&#39;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_source_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26189,27993,216.36))&#39;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_source_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="background-region">
+<h2><span class="section-number">6.2. </span>Background Region<a class="headerlink" href="#background-region" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26564.17,27510.94,242.366))&#39;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_bkg_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(26547.3,27542.6,241.67))&#39;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_bkg_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="correction">
+<h2><span class="section-number">6.3. </span>Correction<a class="headerlink" href="#correction" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epiclccorr</span> <span class="n">srctslist</span><span class="o">=</span><span class="n">mos1_source_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">eventlist</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">outset</span><span class="o">=</span><span class="n">mos1_corrected_lc</span><span class="o">.</span><span class="n">lc</span> <span class="n">bkgtslist</span><span class="o">=</span><span class="n">mos1_bkg_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">withbkgset</span><span class="o">=</span><span class="n">yes</span> <span class="n">applyabsolutecorrections</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epiclccorr</span> <span class="n">srctslist</span><span class="o">=</span><span class="n">mos2_source_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">eventlist</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">outset</span><span class="o">=</span><span class="n">mos2_corrected_lc</span><span class="o">.</span><span class="n">lc</span> <span class="n">bkgtslist</span><span class="o">=</span><span class="n">mos2_bkg_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">withbkgset</span><span class="o">=</span><span class="n">yes</span> <span class="n">applyabsolutecorrections</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos1_corrected_lc.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_241_0.png" src="_images/MOS data_241_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/mos2_corrected_lc.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MOS data_242_0.png" src="_images/MOS data_242_0.png" />
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1792,7 +1898,7 @@ Hopefully removing the background flares in the lightcurve can remedy this.</p>
     <a class='right-next' id="next-link" href="Rev_2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span><strong>Revolution 302</strong></p>
+        <p class="prev-next-title"><span class="section-number">7. </span><strong>Revolution 302</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
