@@ -1067,3 +1067,61 @@ Image(filename="Figures/mos1_source_lightcurve.png")
 # This is very confusing as both the source and backgroud lightcurves here match the lightcurve seen with the PN data, but not the initial lightcurve found for both mos cameras previously. I am not sure why this lightcurve is so different from the other one, it appears that the flaring events that were present in the initial lightcurve are no longer present, but I have use the same files as before.
 
 # 
+
+# # Lightcurve Correction
+
+# #### Source Region
+
+# In[ ]:
+
+
+evselect table=mos1_filtered.fits energycolumn=PI expression='((X,Y) IN circle(26201.29,27967,211))'  withrateset=yes rateset=mos1_source_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
+
+
+# In[ ]:
+
+
+evselect table=mos2_filtered.fits energycolumn=PI expression='((X,Y) IN circle(26189,27993,216.36))'  withrateset=yes rateset=mos2_source_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
+
+
+# #### Background Region
+
+# In[ ]:
+
+
+evselect table=mos1_filtered.fits energycolumn=PI expression='((X,Y) IN circle(26564.17,27510.94,242.366))'  withrateset=yes rateset=mos1_bkg_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
+
+
+# In[ ]:
+
+
+evselect table=mos2_filtered.fits energycolumn=PI expression='((X,Y) IN circle(26547.3,27542.6,241.67))'  withrateset=yes rateset=mos2_bkg_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
+
+
+# #### Correction
+
+# In[ ]:
+
+
+epiclccorr srctslist=mos1_source_lightcurve_raw.lc eventlist=mos1_filtered.fits outset=mos1_corrected_lc.lc bkgtslist=mos1_bkg_lightcurve_raw.lc withbkgset=yes applyabsolutecorrections=yes
+
+
+# In[ ]:
+
+
+epiclccorr srctslist=mos2_source_lightcurve_raw.lc eventlist=mos2_filtered.fits outset=mos2_corrected_lc.lc bkgtslist=mos2_bkg_lightcurve_raw.lc withbkgset=yes applyabsolutecorrections=yes
+
+
+# In[2]:
+
+
+Image(filename="Figures/mos1_corrected_lc.png")
+
+
+# In[3]:
+
+
+Image(filename="Figures/mos2_corrected_lc.png")
+
+
+# 
