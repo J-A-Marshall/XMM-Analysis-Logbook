@@ -42,6 +42,14 @@ evselect table=pn_clean.fits withrateset=yes rateset=pn_clean_lightcurve.fits ma
 Image(filename="302_figs/pn_lc_filt.png")
 
 
+# #### Corrected Lightcurve
+
+# In[ ]:
+
+
+Image(filename="302_figs/mos1_corrected_lc.png")
+
+
 # #### Pileup
 
 # In[ ]:
@@ -71,7 +79,7 @@ backscale spectrumset=pn_backg_spec.fits badpixlocation=pn_clean.fits
 # In[ ]:
 
 
-epatplot set=pn_clean.fits plotfile=pn_pileup.ps useplotfile=yes withbackgroundset=yes backgroundset=pn_bkg_filtered.fits
+epatplot set=pn_source_filtered.fits plotfile=pn_pileup.ps useplotfile=yes withbackgroundset=yes backgroundset=pn_bkg_filtered.fits
 
 
 # In[ ]:
@@ -80,7 +88,7 @@ epatplot set=pn_clean.fits plotfile=pn_pileup.ps useplotfile=yes withbackgrounds
 gv mos1_pileup.ps &
 
 
-# In[5]:
+# In[3]:
 
 
 Image(filename="302_figs/pn_pileup.png")
@@ -185,5 +193,31 @@ Image(filename="302_figs/mos2_pileup.png")
 
 
 # The data for both mos cameras was merged as before.
+
+# 
+
+# #### Corrected Lightcurves
+
+# ##### MOS1
+
+# In[4]:
+
+
+Image(filename="302_figs/mos1_corrected_lc.png")
+
+
+# ##### MOS2
+
+# In[6]:
+
+
+Image(filename="302_figs/mos2_corrected_lc.png")
+
+
+# In[ ]:
+
+
+
+
 
 # 

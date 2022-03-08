@@ -23,6 +23,12 @@ Image(filename="2409_figs/pn_image.png")
 Image(filename="2409_figs/pn_lc.png")
 
 
+# In[2]:
+
+
+Image(filename="2409_figs/pn_corrected_lc.png")
+
+
 # In[4]:
 
 
@@ -45,6 +51,12 @@ Image(filename="2409_figs/mos1_image.png")
 Image(filename="2409_figs/mos1_lc.png")
 
 
+# In[3]:
+
+
+Image(filename="2409_figs/mos1_corrected_lc.png")
+
+
 # In[7]:
 
 
@@ -63,6 +75,12 @@ Image(filename="2408_figs/mos2_image.png")
 
 
 Image(filename="2409_figs/mos2_lc.png")
+
+
+# In[4]:
+
+
+Image(filename="2409_figs/mos2_corrected_lc.png")
 
 
 # In[10]:
