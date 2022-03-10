@@ -7,9 +7,11 @@
 from IPython.display import Image
 
 
-# # Fabian Data
+# # Final Figures
 
-# ## PN
+# ## Fabian Data
+
+# ### PN
 
 # Kerrdisk fit
 
@@ -27,7 +29,7 @@ Image(filename="Final_figs/fabian_pn_kerrdisk_v1.jpg")
 Image(filename="Final_figs/fabian_pn_relxill.jpg")
 
 
-# ## MOS
+# #### MOS
 
 # kerrdisk fit
 
@@ -45,9 +47,9 @@ Image(filename="Final_figs/fabian_mos_kerrdisk_v2.jpg")
 Image(filename="Final_figs/fabian_mos_relxill.jpg")
 
 
-# # Giorgio Data
+# ## Giorgio Data
 
-# ## PN
+# ### PN
 
 # laor2 fit
 
@@ -65,7 +67,7 @@ Image(filename="Final_figs/giorgio_pn_laor2_v1.jpg")
 Image(filename="Final_figs/giorgio_pn_kerrdisk_v1.jpg")
 
 
-# ## MOS
+# ### MOS
 
 # Laor2 fit
 
