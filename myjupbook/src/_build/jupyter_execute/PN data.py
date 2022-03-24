@@ -5,27 +5,6 @@
 
 # - - - -
 
-# ### Table of Contents
-# 
-# * [1. Initialisation](#initialisation)
-#     * [1.1 HEASOFT](#HEASOFT)
-#     * [1.2 SAS](#sas)
-# * [2. Importing the ODF](#ODF)
-#     * [2.1 Python Script](#section_2_1)
-#     * [2.2 Defining the path directions](#section_2_2)
-# * [3. Creating Image](#image)
-# * [4. Filtering the Data](#filter)   
-#     * [4.1 Lightcurve](#lightcurve)
-# * [5. Source Detection](#source)   
-# * [6. Checking for Pileup](#pileup)
-# * [7. Preparing the Spectrum](#specprepare)
-# * [8. XSPEC](#xspec)
-#     * [8.1 Fitting a Model](#model)
-#     * [8.2 Creating the Unfolded Spectrum](#unfolded)
-# * [9. Background Lightcurve](#bck_light)
-# * [10. Fitting a Model](#model)
-#     * [10.2 Kerrdisk + 2 gaussians](#kerrdisk_ext)
-
 # - - - -
 
 # In[2]:
@@ -34,7 +13,7 @@
 from IPython.display import Image
 
 
-# # Initialisation 
+# ## Initialisation 
 # 
 # ### HEASOFT
 
@@ -62,7 +41,7 @@ export SAS_CCF=/data/cluster4/jamie_and_jeton/xmm_obs/ccf.cif
 
 # This can then be initialised using the alias `sasinit` whenever a new session is created
 
-# # Importing the ODF
+# ## Importing the ODF
 # Initially the ODF was imported into the working directory in the shared file using startsas. Following section **Executing Startsas** at https://www.cosmos.esa.int/web/xmm-newton/sas-thread-startup-in-python
 # To do this, a python script was made which uses and *odfid* to import the ODF into a selected destination.
 
@@ -101,7 +80,7 @@ odfingest
 export SAS_ODF='/data/cluster4/jamie_and_jeton/work_dir/0301_0029740101_data/0301_0029740101_SCX00000SUM.SAS'
 
 
-# # Creating an Image
+# ## Creating an Image
 
 # To get a sense of what the data we are using looks like and comes from, an image of the source is made. 1st epproc is ran.
 
@@ -136,7 +115,7 @@ Image(filename="Figures/MCG-6-30-15_Source_Image.png")
 
 # The scale was set to **log** and the colour to **heat**.
 
-# ### Filtering the Data
+# ## Filtering the Data
 
 # In[ ]:
 
@@ -144,7 +123,7 @@ Image(filename="Figures/MCG-6-30-15_Source_Image.png")
 evselect table=EPIC.fits withfilteredset=yes expression='(PATTERN <= 4)&&(PI in [200:15000])' filteredset=EPIC_filtered.fits filtertype=expression keepfilteroutput=yes updateexposure=yes filterexposure=yes
 
 
-# ### Light Curve
+# ## Light Curve
 
 # Plotting a lightcurve using the filtered data:
 
@@ -192,7 +171,7 @@ Image(filename="Figures/MCG-6-30-15_un-filtered_light_curve.png")
 
 # There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.
 
-# #### Deep Minimum Light Curve
+# ### Deep Minimum Light Curve
 # To see how the data varies when the object is in a state of low flux, the data is restricted so that only counts taken between 1.13008x10$^{8}$ and 1.13015x10$^{8}$ are used.
 
 # In[ ]:
@@ -221,7 +200,7 @@ dsplot table=deepmin_lightcurve.fits x=TIME y=RATE
 Image(filename="Figures/MCG-6-30-15_deepmin_light_curve.png")
 
 
-# # Source Detection 
+# ## Source Detection 
 
 # The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded by using the regions "get information" option.
 
@@ -268,7 +247,7 @@ evselect table=EPIC_filt_time.fits withspectrumset=yes spectrumset=PNbackg_spec.
 backscale spectrumset=PNbackg_spec.fits badpixlocation=EPIC_filt_time.fits
 
 
-# # Pile Up
+# ## Pile Up
 
 # In[ ]:
 
@@ -293,7 +272,7 @@ gv EPIC_epat.ps
 Image(filename="Figures/MCG-6-30-15_Pileup.png")
 
 
-# # Preparing the Spectrum 
+# ## Preparing the Spectrum 
 # The calibration files, arf and rmf were created and grouped together to make using xspec easier
 
 # In[ ]:
@@ -314,7 +293,7 @@ arfgen spectrumset=PNsource_spec.fits arfset=PN.arf withrmfset=yes rmfset=PN.rmf
 specgroup spectrumset=PNsource_spec.fits mincounts=25 oversample=3 rmfset=PN.rmf arfset=PN.arf backgndset=PNbackg_spec.fits groupedset=PN_spectrum_grp.fits
 
 
-# # XSPEC 
+# ## XSPEC 
 
 # In[ ]:
 
@@ -567,7 +546,7 @@ PLT>
 XSPEC12>
 
 
-# # 9. Background lightcurve 
+# ## Background lightcurve 
 
 # A lightcurve is made to determine the prescence of any flaring events. A background region needs to be selected and a lightcurve plotted
 
@@ -632,7 +611,7 @@ dsplot table=background_lightcurve.fits x=TIME y=RATE &
 Image(filename="Figures/background lightcurve.png")
 
 
-# #  Fitting a line model 
+# ## Fitting a line model 
 
 # https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html
 
@@ -834,7 +813,7 @@ we [filename]
 Image(filename="Figures/Laor2_continuum_subtracted.jpg")
 
 
-# # Exclusion of central source region
+# ## Exclusion of central source region
 
 # With regard to pile up it will be good to have the light curves described above to be able to compare count rates in different observations. In the Fabian et al. (2002) paper they say (for revolutions 301-303) "The ratios of event patterns as a function of energy showed there is negligible pile-up in the pn data but the MOS data suffer slightly from pile-up. A comparison of the data extracted including and excluding events from the central 10 arcsec of the source region showed only a slight flattening (Delta Gamma ∼ 0.06) in the piled-up spec- trum. This small effect was ignored in order to increase the number of source counts." So if the count rates are comparable with the "new' and "old" data sets they are probably fine. However, we should reproduce their test of revolutions 301-303 and for the new data to see what we find (for both pn and MOS - they only did MOS).
 
