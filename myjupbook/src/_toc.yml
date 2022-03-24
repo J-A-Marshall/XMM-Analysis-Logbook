@@ -21,4 +21,5 @@ parts:
     - file: rev_2409
     - file: giorgio_combined
     - file: Final_Spectra
+    - file: all_revs
     

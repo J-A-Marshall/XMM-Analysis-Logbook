@@ -11,7 +11,7 @@ from IPython.display import Image
 
 # ---
 
-# ### Table of Contents
+# ## Table of Contents
 # 
 # * [1. Generating the events files](#event_files)
 # * [2. Creating an Image](#Image)
@@ -31,7 +31,7 @@ from IPython.display import Image
 #     * [6.2 MOS2](#xspec_mos2)
 #         * [6.2.1 Mos2 Unfolded Spectrum](#mos2_eeufs)
 
-# ### 1. Generating the Events Files<a class="anchor" id="events_files"></a>
+# # Generating the Events Files
 
 # To analyse the MOS data, the imaging events files first needed to be created. First the ODF location needed to be established
 
@@ -75,7 +75,7 @@ mv 0301_0029740101_EMOS1_S001_ImagingEvts.ds mos1.fits
 mv 0301_0029740101_EMOS2_S002_ImagingEvts.ds mos2.fits
 
 
-# ### 2. Creating an image<a class="anchor" id="image"></a>
+# ##  Creating an Image
 
 # In[ ]:
 
@@ -117,9 +117,9 @@ ds9 mos2_image.fits &
 Image(filename="Figures/MOS2_Image.png")
 
 
-# ### 3. Creating a Lightcurve<a class="anchor" id="lightcurve"></a>
+# ## Creating a Lightcurve
 
-# #### 3.1 Standard filters<a class="anchor" id="filters"></a>
+# ### Standard Filters
 
 # In[ ]:
 
@@ -139,7 +139,7 @@ evselect table=mos2.fits withfilteredset=yes expression='(PATTERN <= 12)&&(PI in
 
 
 
-# #### 3.2 Light Curve<a class="anchor" id="lightcurve"></a>
+# ### Light Curve
 
 # In[ ]:
 
@@ -181,7 +181,7 @@ dsplot table=mos2_lightcurve.fits x=TIME y=RATE
 Image(filename="Figures/mos2 lightcurve.png")
 
 
-# #### 3.3 Trimming the data<a class="anchor" id="trim"></a>
+# ### Trimming the Data
 
 # There is a flare in both the cameras after 1.1306e8 that will need to be removed
 
@@ -265,13 +265,13 @@ Image(filename="Figures/mos2 clean lightcurve.png")
 
 # With the flares at the end of the observations removed, the overall behaviour of the observation can be more clearly seen, although there are still many sharp increases in count rates that may be to do with additional background flares. An analysis of the background lightcurve is needed to detemrine this.
 
-# ### 4. Checking for Pileup<a class="anchor" id="pileup"></a>
+# ## Checking for Pileup
 
 # First the source and background regions need to be determined.
 # This thread was followed along with the abc guide:
 # https://www.cosmos.esa.int/web/xmm-newton/sas-thread-mos-spectrum
 
-# #### 4.1 MOS1<a class="anchor" id="mos1"></a>
+# ###  MOS1
 
 # In[ ]:
 
@@ -365,7 +365,7 @@ gv mos1_pileup.ps &
 Image(filename="Figures/mos1 pileup.png")
 
 
-# #### 4.2 MOS2<a class="anchor" id="mos2"></a>
+# ### MOS2
 
 # In[ ]:
 
@@ -431,9 +431,9 @@ gv mos2_pileup.ps &
 Image(filename="Figures/mos2 pileup.png")
 
 
-# ### 5. Preparing the Spectrum<a class="anchor" id="spec_prep"></a>
+# ## Preparing the Spectrum
 
-# #### 5.1 MOS1<a class="anchor" id="spec_prep_mos1"></a>
+# ### MOS1
 
 # In[ ]:
 
@@ -453,7 +453,7 @@ arfgen arfset=mos1.arf spectrumset=mos1_source_spec.fits withrmfset=yes rmfset=m
 specgroup spectrumset=mos1_source_spec.fits mincounts=25 oversample=3 rmfset=mos1.rmf arfset=mos1.arf backgndset=mos1_backg_spec.fits groupedset=mos1_spectrum_grp.fits
 
 
-# #### 5.2 MOS2<a class="anchor" id="spec_prep_mos2"></a>
+# ### MOS2
 
 # In[ ]:
 
@@ -473,9 +473,9 @@ arfgen arfset=mos2.arf spectrumset=mos2_source_spec.fits withrmfset=yes rmfset=m
 specgroup spectrumset=mos2_source_spec.fits mincounts=25 oversample=3 rmfset=mos2.rmf arfset=mos2.arf backgndset=mos2_backg_spec.fits groupedset=mos2_spectrum_grp.fits
 
 
-# ### 6. XSPEC<a class="anchor" id="xspec"></a>
+# ## XSPEC
 
-# #### 6.1 MOS1<a class="anchor" id="xspec_mos1"></a>
+# ### MOS1
 
 # In[ ]:
 
@@ -589,7 +589,7 @@ Image(filename="Figures/mos1_spec_v2.png")
 
 # This is a very messy residual graph... maybe the unfolded spectrum will look better
 
-# ##### 6.1.1 mos1 unfolded spectrum<a class="anchor" id="mos1_unfolded"></a>
+# ####  mos1 unfolded spectrum
 
 # In[ ]:
 
@@ -707,7 +707,7 @@ PLT> Rescale Y 0.01 0.03
 Image(filename="Figures/mos1_eeufs_scaled.png")
 
 
-# #### 6.2 MOS2<a class="anchor" id="xspec_mos2"></a>
+# #### MOS2
 
 # <img src="Figures/mos2_spectrum.png"/>
 
@@ -775,12 +775,12 @@ Image(filename="Figures/mos2_eeufs.png")
 Image(filename="Figures/mos2_eeufs_rescaled.png")
 
 
-# ### 7. Merging the MOS data<a class="anchor" id="merge"></a>
+# ## Merging the MOS Data
 
 # Following this thread:
 # https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epic-merging
 
-# ##### 7.1.1 mos1 files<a class="anchor" id="files_mos1"></a>
+# ### MOS1 Files
 
 # In[ ]:
 
@@ -818,7 +818,7 @@ rmfgen spectrumset=src_spectrum_mos1.ds rmfset=response_mos1.rmf withenergybins=
 arfgen spectrumset=src_spectrum_mos1.ds arfset=arf_mos1.arf withrmfset=yes rmfset=response_mos1.rmf
 
 
-# ##### 7.1.2 mos2 files<a class="anchor" id="files_mos2"></a>
+# ### MOS2 Files
 
 # In[ ]:
 
@@ -856,7 +856,7 @@ rmfgen spectrumset=src_spectrum_mos2.ds rmfset=response_mos2.rmf withenergybins=
 arfgen spectrumset=src_spectrum_mos2.ds arfset=arf_mos2.arf withrmfset=yes rmfset=response_mos2.rmf
 
 
-# #### 7.2 Combining the Spectral Files<a class="anchor" id="combining_files"></a>
+# ### Combining the Spectral Files
 
 # epicspeccombine pha="src_spectrum_mos1.ds src_spectrum_mos2.ds" bkg="bkg_spectrum_mos1.ds bkg_spectrum_mos2.ds" rmf="response_mos1.rmf response_mos2.rmf" arf="arf_mos1.arf arf_mos2.arf" filepha="src_spectrum_combined.ds" filebkg="bkg_spectrum_combined.ds" filersp="response_combined.rmf" allowHEdiff=yes
 
@@ -872,7 +872,7 @@ epicspeccombine pha="src_spectrum_mos1.ds src_spectrum_mos2.ds" bkg="bkg_spectru
 specgroup spectrumset=src_spectrum_combined.ds mincounts=25 oversample=3 rmfset=response_combined.rmf backgndset=bkg_spectrum_combined.ds groupedset=combined_spectrum.fits
 
 
-# #### 7.3 Fitting the Combined Spectrum<a class="anchor" id="fit_combined"></a>
+# ### Fitting the Combined Spectrum
 
 # In[ ]:
 
@@ -924,9 +924,9 @@ Image(filename="Figures/mos_combined_graph.png")
 # This is a very messy graph and it is difficult to see any detail in the residual panel.
 # Hopefully removing the background flares in the lightcurve can remedy this.
 
-# ### 9. Fitting Models <a class="anchor" id="models"></a>
+# ## Fitting Models 
 
-# #### 9.1 Laor2 <a class="anchor" id="laor2"></a>
+# ### Laor2 
 
 # The unmerged data from the mos 1 is fitted with a laor 2 model, following the same parameters chosen in model 4 of the Fabian 2002 paper. 
 
@@ -944,13 +944,13 @@ Image(filename="Figures/Mos1_laor2_graph.png")
 
 # There seems to be either an issue with the model parameters or the mos data itself. As the data points are not significantly deviating from the continuum line at E~5keV, it seems that the data itslef is incorrect, as it should exhibit the same behaviour as the PN data.
 
-# ### 8 Removing Background Flares <a class="anchor" id="bkf_flares"></a>
+# ## Removing Background Flares 
 
 # In the lightcurve for both the mos1 and mos2 cameras, there are many flares which could be affecting the data. First, a lightcurve of the background regions for each camera will be made and compared to the overall lightcurve found earlier.
 # 
 # Then the lightcurve will be filtered to exclude the flaring events arising from background data.
 
-# ####  mos1<a class="anchor" id="mos1_bkg"></a>
+# ###  MOS1
 
 # A lightcurve for the background in the mos1 camera is made using the background region found earlier.
 
@@ -1006,7 +1006,7 @@ dsplot table=mos1_background_lightcurve.fits x=TIME y=RATE &
 Image(filename="Figures/mos1_background_lightcurve_full_region.png")
 
 
-# ####  mos2<a class="anchor" id="mos2_bkg"></a>
+# ###  MOS2
 
 # In[ ]:
 
@@ -1068,9 +1068,9 @@ Image(filename="Figures/mos1_source_lightcurve.png")
 
 # 
 
-# # Lightcurve Correction
+# ## Lightcurve Correction
 
-# #### Source Region
+# ### Source Region
 
 # In[ ]:
 
@@ -1084,7 +1084,7 @@ evselect table=mos1_filtered.fits energycolumn=PI expression='((X,Y) IN circle(2
 evselect table=mos2_filtered.fits energycolumn=PI expression='((X,Y) IN circle(26189,27993,216.36))'  withrateset=yes rateset=mos2_source_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
 
 
-# #### Background Region
+# ### Background Region
 
 # In[ ]:
 
@@ -1098,7 +1098,7 @@ evselect table=mos1_filtered.fits energycolumn=PI expression='((X,Y) IN circle(2
 evselect table=mos2_filtered.fits energycolumn=PI expression='((X,Y) IN circle(26547.3,27542.6,241.67))'  withrateset=yes rateset=mos2_bkg_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
 
 
-# #### Correction
+# ### Correction
 
 # In[ ]:
 
