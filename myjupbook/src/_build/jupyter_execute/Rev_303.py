@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 from IPython.display import Image
@@ -22,6 +22,14 @@ from IPython.display import Image
 
 
 Image(filename="303_figs/pn_lc.png")
+
+
+# #### Corrected Lightcurve
+
+# In[2]:
+
+
+Image(filename="303_figs/pn_corrected_lc.png")
 
 
 # #### Pileup
@@ -56,7 +64,7 @@ Image(filename="303_figs/pn_pileup.png")
 
 # #### Spectrum
 
-# In[15]:
+# In[3]:
 
 
 Image(filename="303_figs/pn_laor2.png")
@@ -72,12 +80,24 @@ Image(filename="303_figs/pn_laor2.png")
 Image(filename="303_figs/mos1_lc.png")
 
 
-# ##### filtering for mos2
+# In[4]:
+
+
+Image(filename="303_figs/mos1_corrected_lc.png")
+
+
+# ##### Mos2
 
 # In[9]:
 
 
 Image(filename="303_figs/mos2_lc.png")
+
+
+# In[5]:
+
+
+Image(filename="303_figs/mos2_corrected_lc.png")
 
 
 # ### Pile up

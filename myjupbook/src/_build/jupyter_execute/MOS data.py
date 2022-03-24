@@ -31,7 +31,7 @@ from IPython.display import Image
 #     * [6.2 MOS2](#xspec_mos2)
 #         * [6.2.1 Mos2 Unfolded Spectrum](#mos2_eeufs)
 
-# # Generating the Events Files
+# ## Generating the Events Files
 
 # To analyse the MOS data, the imaging events files first needed to be created. First the ODF location needed to be established
 
