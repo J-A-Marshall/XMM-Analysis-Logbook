@@ -22,4 +22,5 @@ parts:
     - file: giorgio_combined
     - file: Final_Spectra
     - file: all_revs
+    - file: powerlaw
     
