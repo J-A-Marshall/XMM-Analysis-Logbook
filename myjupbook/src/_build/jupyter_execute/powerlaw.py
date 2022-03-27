@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # **Plotting a Broken Powerlaw Emissivity Profile** 
+# # Plotting a Broken Powerlaw Emissivity Profile
 
 # In[1]:
 
