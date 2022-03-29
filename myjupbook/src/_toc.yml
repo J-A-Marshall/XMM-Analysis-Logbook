@@ -22,6 +22,6 @@ parts:
     - file: giorgio_combined
     - file: Final_Spectra
     - file: all_revs
-    - file: mos_pileup
+    - file: mos_piledeup
     - file: powerlaw
     
