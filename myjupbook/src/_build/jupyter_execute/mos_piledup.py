@@ -79,13 +79,13 @@ evselect table=mos2_single_events.fits withfilteredset=yes filteredset=mos2_sing
 # In[ ]:
 
 
-backscale spectrumset=mos1_source_annulus_spectrum.fits badpixlocation=mos1_single_events.fits
+backscale spectrumset=mos1_source_annulus_spectrum.fits badpixlocation=mos1_clean.fits
 
 
 # In[ ]:
 
 
-backscale spectrumset=mos2_source_annulus_spectrum.fits badpixlocation=mos2_single_events.fits
+backscale spectrumset=mos2_source_annulus_spectrum.fits badpixlocation=mos2_clean.fits
 
 
 # #### Plotting Pileup 
