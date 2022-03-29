@@ -74,6 +74,8 @@ evselect table=mos1_single_events.fits withfilteredset=yes filteredset=mos1_sing
 evselect table=mos2_single_events.fits withfilteredset=yes filteredset=mos2_single_events_bkg_filtered.fits keepfilteroutput=yes filtertype=expression withspectrumset=yes spectrumset=mos2_single_events_backg_spec.fits energycolumn=PI spectralbinsize=5 withspecranges=yes specchannelmin=0 specchannelmax=11999 expression='((X,Y) IN circle(25243,24416,191))'
 
 
+# Run these ones though:
+
 # In[ ]:
 
 
