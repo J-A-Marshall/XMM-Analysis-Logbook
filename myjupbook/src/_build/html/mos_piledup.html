@@ -1,0 +1,722 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12. Correcting for Pileup in the Giorgio MOS Data &#8212; XMM Analysis Logbook</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/astrodefault.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/astrodefault.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13. Plotting a Broken Powerlaw Emissivity Profile" href="powerlaw.html" />
+    <link rel="prev" title="11. Combining Giorgio and Fabian Data" href="all_revs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">XMM Analysis Logbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="titlepage.html">
+   XMM-Newton Anlaysis Logbook
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analysis Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PN%20data.html">
+   1.
+   <strong>
+    Initial Analysis of the PN Data
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MOS%20data.html">
+   2.
+   <strong>
+    Analysing the MOS data
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Rev_2.html">
+   3.
+   <strong>
+    Revolution 302
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Rev_303.html">
+   4.
+   <strong>
+    Revolution 303
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Comb_spec.html">
+   5. Combining all Spectra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rev_2407.html">
+   6. Revolution 2407
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rev_2408.html">
+   7. Revolution 2408
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rev_2409.html">
+   8. Revolution 2409
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="giorgio_combined.html">
+   9. Giorgio Combined Spectra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Final_Spectra.html">
+   10. Final Figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="all_revs.html">
+   11. Combining Giorgio and Fabian Data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Correcting for Pileup in the Giorgio MOS Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="powerlaw.html">
+   13. Plotting a Broken Powerlaw Emissivity Profile
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/mos_piledup.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git/issues/new?title=Issue%20on%20page%20%2Fmos_piledup.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/J-A-Marshall/XMM-Analysis-Logbook.git/main?urlpath=tree/mos_piledup.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revolution-2407">
+   12.1. Revolution 2407
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#producing-the-pileup-figures">
+     12.1.1. Producing the pileup figures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#filtering-the-events-file-for-single-events-only">
+       12.1.1.1. Filtering the events file for single events only
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-centre-removed-source-regions">
+     12.1.2. Defining centre-removed source regions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#defining-the-background-regions">
+       12.1.2.1. Defining the background regions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plotting-pileup">
+       12.1.2.2. Plotting Pileup
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pileup-figures">
+     12.1.3. Pileup Figures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos1">
+       12.1.3.1. MOS1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mos2">
+       12.1.3.2. MOS2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corrected-lightcurves">
+     12.1.4. Corrected Lightcurves
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectra">
+     12.1.5. Spectra
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#preparing-the-spectra">
+       12.1.5.1. Preparing the Spectra
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="correcting-for-pileup-in-the-giorgio-mos-data">
+<h1><span class="section-number">12. </span>Correcting for Pileup in the Giorgio MOS Data<a class="headerlink" href="#correcting-for-pileup-in-the-giorgio-mos-data" title="Permalink to this headline">¶</a></h1>
+<p>The MOS data from the recent epoch is piled up and previous sources in the literature have excluded it for this reason. An attempt to correct for pileup effects is undertaken using the following procedures:</p>
+<ol class="simple">
+<li><p>Only filtering for single pixel events using a SAS quality flag of 0 rather than &lt;=12</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://academic.oup.com/mnras/article/382/1/194/983832">https://academic.oup.com/mnras/article/382/1/194/983832</a> states that using filtering of this type can mitigate pileup effects.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Excising the core of the PSF following - <a class="reference external" href="https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epatplot">https://www.cosmos.esa.int/web/xmm-newton/sas-thread-epatplot</a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Removing the cores of the source regions can act to lessen the effects of pileup</p></li>
+</ul>
+<p>Combining both of these effects may improve the quality of the data and spectra will be plotted and their fit parameters compared with the fits on the piledup data.</p>
+<div class="section" id="revolution-2407">
+<h2><span class="section-number">12.1. </span>Revolution 2407<a class="headerlink" href="#revolution-2407" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="producing-the-pileup-figures">
+<h3><span class="section-number">12.1.1. </span>Producing the pileup figures<a class="headerlink" href="#producing-the-pileup-figures" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="filtering-the-events-file-for-single-events-only">
+<h4><span class="section-number">12.1.1.1. </span>Filtering the events file for single events only<a class="headerlink" href="#filtering-the-events-file-for-single-events-only" title="Permalink to this headline">¶</a></h4>
+<p><strong>Ignore these commands</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN == 0)&amp;&amp;(PI in [200:10000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_single_events</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN == 0)&amp;&amp;(PI in [200:10000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_single_events</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Running through the process below using a single events file failed to produce a histogram in the pileup plot, so the standard filtered mos data set was used but the central region was still removed.</p>
+</div>
+</div>
+<div class="section" id="defining-centre-removed-source-regions">
+<h3><span class="section-number">12.1.2. </span>Defining centre-removed source regions<a class="headerlink" href="#defining-centre-removed-source-regions" title="Permalink to this headline">¶</a></h3>
+<p>Initially a 3’’ region was excised, equating to 61 physical units.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,61,260))&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,61,260))&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="defining-the-background-regions">
+<h4><span class="section-number">12.1.2.1. </span>Defining the background regions<a class="headerlink" href="#defining-the-background-regions" title="Permalink to this headline">¶</a></h4>
+<p>As the single events files did not work, the background set made previously was used. <strong>Ignore these commands</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_single_events</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_single_events_bkg_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_single_events_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(25243,24416,191))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_single_events</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_single_events_bkg_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_single_events_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(25243,24416,191))&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_single_events</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscale</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2_single_events</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-pileup">
+<h4><span class="section-number">12.1.2.2. </span>Plotting Pileup<a class="headerlink" href="#plotting-pileup" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epatplot</span> <span class="nb">set</span><span class="o">=</span><span class="n">mos1_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">plotfile</span><span class="o">=</span><span class="n">mos1_source_annulus_pileup</span><span class="o">.</span><span class="n">ps</span> <span class="n">useplotfile</span><span class="o">=</span><span class="n">yes</span> <span class="n">withbackgroundset</span><span class="o">=</span><span class="n">yes</span> <span class="n">backgroundset</span><span class="o">=</span><span class="n">mos1_bkg_region</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epatplot</span> <span class="nb">set</span><span class="o">=</span><span class="n">mos2_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">plotfile</span><span class="o">=</span><span class="n">mos2_source_annulus_pileup</span><span class="o">.</span><span class="n">ps</span> <span class="n">useplotfile</span><span class="o">=</span><span class="n">yes</span> <span class="n">withbackgroundset</span><span class="o">=</span><span class="n">yes</span> <span class="n">backgroundset</span><span class="o">=</span><span class="n">mos2_bkg_region</span><span class="o">.</span><span class="n">fits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The figures were plotted using <code class="docutils literal notranslate"><span class="pre">gv</span></code>.</p>
+</div>
+</div>
+<div class="section" id="pileup-figures">
+<h3><span class="section-number">12.1.3. </span>Pileup Figures<a class="headerlink" href="#pileup-figures" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="mos1">
+<h4><span class="section-number">12.1.3.1. </span>MOS1<a class="headerlink" href="#mos1" title="Permalink to this headline">¶</a></h4>
+<p>Central radius 3’’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_central_rad_61.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_29_0.png" src="_images/mos_piledup_29_0.png" />
+</div>
+</div>
+<p>Central radius 6’’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_central_rad_120.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_31_0.png" src="_images/mos_piledup_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_source_rad_120.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_32_0.png" src="_images/mos_piledup_32_0.png" />
+</div>
+</div>
+<p>Increasing the central core radius beyond this point will likely act to worsen the data due to loss of flux.</p>
+</div>
+<div class="section" id="mos2">
+<h4><span class="section-number">12.1.3.2. </span>MOS2<a class="headerlink" href="#mos2" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_mos2_rad_61.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_35_0.png" src="_images/mos_piledup_35_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_mos2_rad_120.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_36_0.png" src="_images/mos_piledup_36_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_mos2_source.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_37_0.png" src="_images/mos_piledup_37_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="corrected-lightcurves">
+<h3><span class="section-number">12.1.4. </span>Corrected Lightcurves<a class="headerlink" href="#corrected-lightcurves" title="Permalink to this headline">¶</a></h3>
+<p>To see the effect limiting the source region has on the flux, the lightcurves are plotted for both cameras.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,120,260))&quot;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos1_source_annulus_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,61,260))&quot;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_source_annulus_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The background lightcurves created previously were used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epiclccorr</span> <span class="n">srctslist</span><span class="o">=</span><span class="n">mos1_source_annulus_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">eventlist</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">outset</span><span class="o">=</span><span class="n">mos1_annulus_corrected_lc</span><span class="o">.</span><span class="n">lc</span> <span class="n">bkgtslist</span><span class="o">=</span><span class="n">mos1_bkg_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">withbkgset</span><span class="o">=</span><span class="n">yes</span> <span class="n">applyabsolutecorrections</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epiclccorr</span> <span class="n">srctslist</span><span class="o">=</span><span class="n">mos2_source_annulus_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">eventlist</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">outset</span><span class="o">=</span><span class="n">mos2_annulus_corrected_lc</span><span class="o">.</span><span class="n">lc</span> <span class="n">bkgtslist</span><span class="o">=</span><span class="n">mos2_bkg_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">withbkgset</span><span class="o">=</span><span class="n">yes</span> <span class="n">applyabsolutecorrections</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_annulus_corrected_lc</span><span class="o">.</span><span class="n">lc</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsplot</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_annulus_corrected_lc</span><span class="o">.</span><span class="n">lc</span> <span class="n">x</span><span class="o">=</span><span class="n">TIME</span> <span class="n">y</span><span class="o">=</span><span class="n">RATE</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_mos1_lc.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_47_0.png" src="_images/mos_piledup_47_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;pileup_correction/2407_mos2_lc.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/mos_piledup_48_0.png" src="_images/mos_piledup_48_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="spectra">
+<h3><span class="section-number">12.1.5. </span>Spectra<a class="headerlink" href="#spectra" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="preparing-the-spectra">
+<h4><span class="section-number">12.1.5.1. </span>Preparing the Spectra<a class="headerlink" href="#preparing-the-spectra" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos1_pileup_corr</span><span class="o">.</span><span class="n">rmf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2_pileup_corr</span><span class="o">.</span><span class="n">rmf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">arfset</span><span class="o">=</span><span class="n">mos1_pileup_corr</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos1_pileup_corr</span><span class="o">.</span><span class="n">rmf</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">detmaptype</span><span class="o">=</span><span class="n">psf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">arfset</span><span class="o">=</span><span class="n">mos2_pileup_corr</span><span class="o">.</span><span class="n">arf</span> <span class="n">withrmfset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2_pileup_corr</span><span class="o">.</span><span class="n">rmf</span> <span class="n">badpixlocation</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">detmaptype</span><span class="o">=</span><span class="n">psf</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="all_revs.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Combining Giorgio and Fabian Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="powerlaw.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Plotting a Broken Powerlaw Emissivity Profile</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Jamie Marshall<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
