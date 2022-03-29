@@ -401,6 +401,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-the-data">
+   12.4. Merging the data
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -613,7 +618,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,61,260))&quot;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_source_annulus_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,120,260))&quot;</span>  <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">mos2_source_annulus_lightcurve_raw</span><span class="o">.</span><span class="n">lc</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span>
 </pre></div>
 </div>
 </div>
@@ -722,7 +727,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2_pileup_corr</span><span class="o">.</span><span class="n">rmf</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmfgen</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_src_pileup_corr_spec</span><span class="o">.</span><span class="n">ds</span> <span class="n">rmfset</span><span class="o">=</span><span class="n">mos2_pileup_corr</span><span class="o">.</span><span class="n">rmf</span>
 </pre></div>
 </div>
 </div>
@@ -846,6 +851,10 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="merging-the-data">
+<h2><span class="section-number">12.4. </span>Merging the data<a class="headerlink" href="#merging-the-data" title="Permalink to this headline">¶</a></h2>
+<p>epicspeccombine pha=”301_mos1_source_spectrum.ds 301_mos2_source_spectrum.ds 302_mos1_source_spectrum.ds 302_mos2_source_spectrum.ds 303_mos1_source_spectrum.ds 303_mos2_source_spectrum.ds 2407_mos1_puc_source_spectrum.ds 2408_mos2_puc_source_spectrum.ds 2409_mos1_puc_source_spectrum.ds 2407_mos2_puc_source_spectrum.ds 2408_mos1_puc_source_spectrum.ds 2409_mos2_puc_source_spectrum.ds” bkg=”301_mos1_bkg_spectrum.ds 301_mos2_bkg_spectrum.ds 302_mos1_bkg_spectrum.ds 302_mos2_bkg_spectrum.ds 303_mos1_bkg_spectrum.ds 303_mos2_bkg_spectrum.ds 2407_mos1_bkg_spectrum.ds 2408_mos1_bkg_spectrum.ds 2409_mos1_bkg_spectrum.ds 2407_mos2_bkg_spectrum.ds 2408_mos2_bkg_spectrum.ds 2409_mos2_bkg_spectrum.ds” rmf=”301_mos1_response.rmf 301_mos2_response.rmf 302_mos1_response.rmf 302_mos2_response.rmf 303_mos1_response.rmf 303_mos2_response.rmf 2407_mos1_puc_response.rmf 2407_mos2_puc_response.rmf 2408_mos1_puc_response.rmf 2408_mos2_puc_response.rmf 2409_mos1_puc_response.rmf 2409_mos2_puc_response.rmf” arf=”301_mos1_arf.arf 301_mos2_arf.arf 302_mos1_arf.arf 302_mos2_arf.arf 303_mos1_arf.arf 303_mos2_arf.arf 2407_mos1_puc_arf.arf 2407_mos2_puc_arf.arf 2408_mos1_puc_arf.arf 2408_mos2_puc_arf.arf 2409_mos1_puc_arf.arf 2409_mos2_puc_arf.arf” filepha=”mos_puc_source_fab_and_giorg.ds” filebkg=”mos_puc_bkg_fab_and_giorg.ds” filersp=”mos_puc_response_fab_and_giorg.rmf”</p>
 </div>
 </div>
 

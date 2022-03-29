@@ -165,7 +165,7 @@ evselect table=mos1_filtered.fits energycolumn=PI expression="((X,Y) in ANNULUS(
 # In[ ]:
 
 
-evselect table=mos2_filtered.fits energycolumn=PI expression="((X,Y) in ANNULUS(25611,23916,61,260))"  withrateset=yes rateset=mos2_source_annulus_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
+evselect table=mos2_filtered.fits energycolumn=PI expression="((X,Y) in ANNULUS(25611,23916,120,260))"  withrateset=yes rateset=mos2_source_annulus_lightcurve_raw.lc timebinsize=100 makeratecolumn=yes maketimecolumn=yes
 
 
 # The background lightcurves created previously were used.
@@ -255,7 +255,7 @@ backscale spectrumset=mos2_src_pileup_corr_spec.ds badpixlocation=mos2_clean.fit
 # In[ ]:
 
 
-rmfgen spectrumset=mos2_source_annulus_spectrum.fits rmfset=mos2_pileup_corr.rmf
+rmfgen spectrumset=mos2_src_pileup_corr_spec.ds rmfset=mos2_pileup_corr.rmf
 
 
 # In[ ]:
@@ -351,3 +351,7 @@ Image(filename="pileup_correction/2408_mos2_lc.png")
 
 
 # 
+
+# ## Merging the data
+
+# epicspeccombine pha="301_mos1_source_spectrum.ds 301_mos2_source_spectrum.ds 302_mos1_source_spectrum.ds 302_mos2_source_spectrum.ds 303_mos1_source_spectrum.ds 303_mos2_source_spectrum.ds 2407_mos1_puc_source_spectrum.ds 2408_mos2_puc_source_spectrum.ds 2409_mos1_puc_source_spectrum.ds 2407_mos2_puc_source_spectrum.ds 2408_mos1_puc_source_spectrum.ds 2409_mos2_puc_source_spectrum.ds" bkg="301_mos1_bkg_spectrum.ds 301_mos2_bkg_spectrum.ds 302_mos1_bkg_spectrum.ds 302_mos2_bkg_spectrum.ds 303_mos1_bkg_spectrum.ds 303_mos2_bkg_spectrum.ds 2407_mos1_bkg_spectrum.ds 2408_mos1_bkg_spectrum.ds 2409_mos1_bkg_spectrum.ds 2407_mos2_bkg_spectrum.ds 2408_mos2_bkg_spectrum.ds 2409_mos2_bkg_spectrum.ds" rmf="301_mos1_response.rmf 301_mos2_response.rmf 302_mos1_response.rmf 302_mos2_response.rmf 303_mos1_response.rmf 303_mos2_response.rmf 2407_mos1_puc_response.rmf 2407_mos2_puc_response.rmf 2408_mos1_puc_response.rmf 2408_mos2_puc_response.rmf 2409_mos1_puc_response.rmf 2409_mos2_puc_response.rmf" arf="301_mos1_arf.arf 301_mos2_arf.arf 302_mos1_arf.arf 302_mos2_arf.arf 303_mos1_arf.arf 303_mos2_arf.arf 2407_mos1_puc_arf.arf 2407_mos2_puc_arf.arf 2408_mos1_puc_arf.arf 2408_mos2_puc_arf.arf 2409_mos1_puc_arf.arf 2409_mos2_puc_arf.arf" filepha="mos_puc_source_fab_and_giorg.ds" filebkg="mos_puc_bkg_fab_and_giorg.ds" filersp="mos_puc_response_fab_and_giorg.rmf"
