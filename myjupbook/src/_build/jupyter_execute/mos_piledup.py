@@ -24,7 +24,7 @@ from IPython.display import Image
 
 # #### Filtering the events file for single events only
 
-# **Ignore these commands**.
+# <span style="color:red">**Ignore these commands**</span>
 
 # In[ ]:
 
@@ -42,23 +42,25 @@ evselect table=mos2.fits withfilteredset=yes expression='(PATTERN == 0)&&(PI in 
 
 # ### Defining centre-removed source regions
 
-# Initially a 3'' region was excised, equating to 61 physical units.
+# Initially a 3'' region was excised, equating to 61 physical units. Then increased to 6'' or 120 in physical units.
 
 # In[ ]:
 
 
-evselect table=mos1_filtered.fits energycolumn='PI' withfilteredset=yes filteredset=mos1_source_annulus.fits keepfilteroutput=yes filtertype=expression withspectrumset=yes spectrumset=mos1_source_annulus_spectrum.fits spectralbinsize=5 withspecranges=yes specchannelmin=0 specchannelmax=11999 expression="((X,Y) in ANNULUS(25611,23916,61,260))"
+evselect table=mos1_clean.fits energycolumn='PI' withfilteredset=yes filteredset=mos1_source_annulus.fits keepfilteroutput=yes filtertype=expression withspectrumset=yes spectrumset=mos1_source_annulus_spectrum.fits spectralbinsize=5 withspecranges=yes specchannelmin=0 specchannelmax=11999 expression="((X,Y) in ANNULUS(25611,23916,120,260))"
 
 
 # In[ ]:
 
 
-evselect table=mos2_filtered.fits energycolumn='PI' withfilteredset=yes filteredset=mos2_source_annulus.fits keepfilteroutput=yes filtertype=expression withspectrumset=yes spectrumset=mos2_source_annulus_spectrum.fits spectralbinsize=5 withspecranges=yes specchannelmin=0 specchannelmax=11999 expression="((X,Y) in ANNULUS(25611,23916,61,260))"
+evselect table=mos2_clean.fits energycolumn='PI' withfilteredset=yes filteredset=mos2_source_annulus.fits keepfilteroutput=yes filtertype=expression withspectrumset=yes spectrumset=mos2_source_annulus_spectrum.fits spectralbinsize=5 withspecranges=yes specchannelmin=0 specchannelmax=11999 expression="((X,Y) in ANNULUS(25611,23916,120,260))"
 
 
 # #### Defining the background regions
 
-# As the single events files did not work, the background set made previously was used. **Ignore these commands**.
+# As the single events files did not work, the background set made previously was used. 
+
+# <span style="color:red">**Ignore these commands**</span>
 
 # In[ ]:
 
@@ -271,5 +273,11 @@ arfgen spectrumset=mos2_source_annulus_spectrum.fits arfset=mos2_pileup_corr.arf
 # rmf:         `mos1_pileup_corr.rmf` 
 # 
 # arf:         `mos1_pileup_corr.arf` 
+
+# 
+
+# ## Revolution 2408
+
+# ## Revolution 2409
 
 # 

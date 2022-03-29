@@ -367,6 +367,16 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revolution-2408">
+   12.2. Revolution 2408
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revolution-2409">
+   12.3. Revolution 2409
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -407,7 +417,7 @@
 <h3><span class="section-number">12.1.1. </span>Producing the pileup figures<a class="headerlink" href="#producing-the-pileup-figures" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="filtering-the-events-file-for-single-events-only">
 <h4><span class="section-number">12.1.1.1. </span>Filtering the events file for single events only<a class="headerlink" href="#filtering-the-events-file-for-single-events-only" title="Permalink to this headline">¶</a></h4>
-<p><strong>Ignore these commands</strong>.</p>
+<p><span style="color:red"><strong>Ignore these commands</strong></span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(PATTERN == 0)&amp;&amp;(PI in [200:10000])&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_single_events</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">updateexposure</span><span class="o">=</span><span class="n">yes</span> <span class="n">filterexposure</span><span class="o">=</span><span class="n">yes</span>
@@ -427,24 +437,25 @@
 </div>
 <div class="section" id="defining-centre-removed-source-regions">
 <h3><span class="section-number">12.1.2. </span>Defining centre-removed source regions<a class="headerlink" href="#defining-centre-removed-source-regions" title="Permalink to this headline">¶</a></h3>
-<p>Initially a 3’’ region was excised, equating to 61 physical units.</p>
+<p>Initially a 3’’ region was excised, equating to 61 physical units. Then increased to 6’’ or 120 in physical units.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,61,260))&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,120,260))&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,61,260))&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos2_clean</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="s1">&#39;PI&#39;</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos2_source_annulus</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos2_source_annulus_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;((X,Y) in ANNULUS(25611,23916,120,260))&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="defining-the-background-regions">
 <h4><span class="section-number">12.1.2.1. </span>Defining the background regions<a class="headerlink" href="#defining-the-background-regions" title="Permalink to this headline">¶</a></h4>
-<p>As the single events files did not work, the background set made previously was used. <strong>Ignore these commands</strong>.</p>
+<p>As the single events files did not work, the background set made previously was used.</p>
+<p><span style="color:red"><strong>Ignore these commands</strong></span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">mos1_single_events</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">mos1_single_events_bkg_filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">mos1_single_events_backg_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">11999</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(25243,24416,191))&#39;</span>
@@ -505,7 +516,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_29_0.png" src="_images/mos_piledup_29_0.png" />
+<img alt="_images/mos_piledup_30_0.png" src="_images/mos_piledup_30_0.png" />
 </div>
 </div>
 <p>Central radius 6’’</p>
@@ -516,7 +527,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_31_0.png" src="_images/mos_piledup_31_0.png" />
+<img alt="_images/mos_piledup_32_0.png" src="_images/mos_piledup_32_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -526,7 +537,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_32_0.png" src="_images/mos_piledup_32_0.png" />
+<img alt="_images/mos_piledup_33_0.png" src="_images/mos_piledup_33_0.png" />
 </div>
 </div>
 <p>Increasing the central core radius beyond this point will likely act to worsen the data due to loss of flux.</p>
@@ -540,7 +551,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_35_0.png" src="_images/mos_piledup_35_0.png" />
+<img alt="_images/mos_piledup_36_0.png" src="_images/mos_piledup_36_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -550,7 +561,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_36_0.png" src="_images/mos_piledup_36_0.png" />
+<img alt="_images/mos_piledup_37_0.png" src="_images/mos_piledup_37_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -560,7 +571,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_37_0.png" src="_images/mos_piledup_37_0.png" />
+<img alt="_images/mos_piledup_38_0.png" src="_images/mos_piledup_38_0.png" />
 </div>
 </div>
 </div>
@@ -618,7 +629,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_47_0.png" src="_images/mos_piledup_47_0.png" />
+<img alt="_images/mos_piledup_48_0.png" src="_images/mos_piledup_48_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -628,7 +639,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/mos_piledup_48_0.png" src="_images/mos_piledup_48_0.png" />
+<img alt="_images/mos_piledup_49_0.png" src="_images/mos_piledup_49_0.png" />
 </div>
 </div>
 </div>
@@ -706,6 +717,12 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="revolution-2408">
+<h2><span class="section-number">12.2. </span>Revolution 2408<a class="headerlink" href="#revolution-2408" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="revolution-2409">
+<h2><span class="section-number">12.3. </span>Revolution 2409<a class="headerlink" href="#revolution-2409" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
