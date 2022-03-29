@@ -280,6 +280,74 @@ arfgen spectrumset=mos2_source_annulus_spectrum.fits arfset=mos2_pileup_corr.arf
 
 # ## Revolution 2408
 
+# ### Pileup
+
+# Mos1
+
+# In[22]:
+
+
+Image(filename="pileup_correction/2408_mos1_pu.png")
+
+
+# mos2
+
+# In[23]:
+
+
+Image(filename="pileup_correction/2408_mos2_pu.png")
+
+
+# ### Lightcurves
+
+# Mos1
+
+# In[24]:
+
+
+Image(filename="pileup_correction/2408_mos1_lc.png")
+
+
+# Mos2
+
+# In[25]:
+
+
+Image(filename="pileup_correction/2408_mos2_lc.png")
+
+
 # ## Revolution 2409
+
+# ### Pileup
+
+# Mos1
+
+# In[28]:
+
+
+Image(filename="pileup_correction/mos1_2409_pileup.png")
+
+
+# Mos2
+
+# In[30]:
+
+
+Image(filename="pileup_correction/mos2_2409_pileup.png")
+
+
+# ### Lightcurves
+
+# In[33]:
+
+
+Image(filename="pileup_correction/2409_mos1_lc.png")
+
+
+# In[34]:
+
+
+Image(filename="pileup_correction/2408_mos2_lc.png")
+
 
 # 
