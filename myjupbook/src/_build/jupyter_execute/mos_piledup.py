@@ -206,10 +206,46 @@ Image(filename="pileup_correction/2407_mos2_lc.png")
 
 # #### Preparing the Spectra
 
+# ##### MOS1
+
 # In[ ]:
 
 
-rmfgen spectrumset=mos1_source_annulus_spectrum.fits rmfset=mos1_pileup_corr.rmf
+evselect table=mos1_clean.fits expression="((X,Y) in ANNULUS(25611,23916,120,260))" withspectrumset=yes spectrumset=mos1_src_pileup_corr_spec.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI 
+
+
+# In[ ]:
+
+
+backscale spectrumset=mos1_src_pileup_corr_spec.ds badpixlocation=mos1_clean.fits
+
+
+# Use previous background set `bkg_spectrum_mos1.ds`.
+
+# In[ ]:
+
+
+rmfgen spectrumset=mos1_src_pileup_corr_spec.ds rmfset=mos1_pileup_corr.rmf
+
+
+# In[ ]:
+
+
+arfgen spectrumset=mos1_src_pileup_corr_spec.ds arfset=mos1_pileup_corr.arf withrmfset=yes rmfset=mos1_pileup_corr.rmf badpixlocation=mos1_clean.fits detmaptype=psf
+
+
+# ##### MOS2
+
+# In[ ]:
+
+
+evselect table=mos2_clean.fits expression="((X,Y) in ANNULUS(25611,23916,120,260))" withspectrumset=yes spectrumset=mos2_src_pileup_corr_spec.ds spectralbinsize=5 specchannelmin=0 specchannelmax=11999 energycolumn=PI 
+
+
+# In[ ]:
+
+
+backscale spectrumset=mos2_src_pileup_corr_spec.ds badpixlocation=mos2_clean.fits
 
 
 # In[ ]:
@@ -221,13 +257,19 @@ rmfgen spectrumset=mos2_source_annulus_spectrum.fits rmfset=mos2_pileup_corr.rmf
 # In[ ]:
 
 
-arfgen spectrumset=mos1_source_annulus_spectrum.fits arfset=mos1_pileup_corr.arf withrmfset=yes rmfset=mos1_pileup_corr.rmf badpixlocation=mos1_filtered.fits detmaptype=psf
-
-
-# In[ ]:
-
-
 arfgen spectrumset=mos2_source_annulus_spectrum.fits arfset=mos2_pileup_corr.arf withrmfset=yes rmfset=mos2_pileup_corr.rmf badpixlocation=mos2_filtered.fits detmaptype=psf
 
+
+# 
+
+# The files that have been created needed to plot a spectrum in xspec and to merge all the mos data later are:
+# 
+# source:      `mos1_src_pileup_corr_spec.ds`
+# 
+# background:  `bkg_spectrum_mos1.ds`
+# 
+# rmf:         `mos1_pileup_corr.rmf` 
+# 
+# arf:         `mos1_pileup_corr.arf` 
 
 # 
