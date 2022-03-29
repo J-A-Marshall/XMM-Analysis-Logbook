@@ -229,7 +229,7 @@ backscale spectrumset=mos1_src_pileup_corr_spec.ds badpixlocation=mos1_clean.fit
 # In[ ]:
 
 
-rmfgen spectrumset=mos1_src_pileup_corr_spec.ds rmfset=mos1_pileup_corr.rmf
+rmfgen spectrumset=mos1_src_pileup_corr_spec.ds rmfset=mos1_pileup_corr.rmf withenergybins=yes energymin=0.1 energymax=12 nenergybins=1190
 
 
 # In[ ]:
@@ -255,13 +255,13 @@ backscale spectrumset=mos2_src_pileup_corr_spec.ds badpixlocation=mos2_clean.fit
 # In[ ]:
 
 
-rmfgen spectrumset=mos2_src_pileup_corr_spec.ds rmfset=mos2_pileup_corr.rmf
+rmfgen spectrumset=mos2_src_pileup_corr_spec.ds rmfset=mos2_pileup_corr.rmf withenergybins=yes energymin=0.1 energymax=12 nenergybins=1190
 
 
 # In[ ]:
 
 
-arfgen spectrumset=mos2_source_annulus_spectrum.fits arfset=mos2_pileup_corr.arf withrmfset=yes rmfset=mos2_pileup_corr.rmf badpixlocation=mos2_filtered.fits detmaptype=psf
+arfgen spectrumset=mos2_src_pileup_corr_spec.ds arfset=mos2_pileup_corr.arf withrmfset=yes rmfset=mos2_pileup_corr.rmf badpixlocation=mos2_clean.fits detmaptype=psf
 
 
 # 
@@ -354,4 +354,4 @@ Image(filename="pileup_correction/2408_mos2_lc.png")
 
 # ## Merging the data
 
-# epicspeccombine pha="301_mos1_source_spectrum.ds 301_mos2_source_spectrum.ds 302_mos1_source_spectrum.ds 302_mos2_source_spectrum.ds 303_mos1_source_spectrum.ds 303_mos2_source_spectrum.ds 2407_mos1_puc_source_spectrum.ds 2408_mos2_puc_source_spectrum.ds 2409_mos1_puc_source_spectrum.ds 2407_mos2_puc_source_spectrum.ds 2408_mos1_puc_source_spectrum.ds 2409_mos2_puc_source_spectrum.ds" bkg="301_mos1_bkg_spectrum.ds 301_mos2_bkg_spectrum.ds 302_mos1_bkg_spectrum.ds 302_mos2_bkg_spectrum.ds 303_mos1_bkg_spectrum.ds 303_mos2_bkg_spectrum.ds 2407_mos1_bkg_spectrum.ds 2408_mos1_bkg_spectrum.ds 2409_mos1_bkg_spectrum.ds 2407_mos2_bkg_spectrum.ds 2408_mos2_bkg_spectrum.ds 2409_mos2_bkg_spectrum.ds" rmf="301_mos1_response.rmf 301_mos2_response.rmf 302_mos1_response.rmf 302_mos2_response.rmf 303_mos1_response.rmf 303_mos2_response.rmf 2407_mos1_puc_response.rmf 2407_mos2_puc_response.rmf 2408_mos1_puc_response.rmf 2408_mos2_puc_response.rmf 2409_mos1_puc_response.rmf 2409_mos2_puc_response.rmf" arf="301_mos1_arf.arf 301_mos2_arf.arf 302_mos1_arf.arf 302_mos2_arf.arf 303_mos1_arf.arf 303_mos2_arf.arf 2407_mos1_puc_arf.arf 2407_mos2_puc_arf.arf 2408_mos1_puc_arf.arf 2408_mos2_puc_arf.arf 2409_mos1_puc_arf.arf 2409_mos2_puc_arf.arf" filepha="mos_puc_source_fab_and_giorg.ds" filebkg="mos_puc_bkg_fab_and_giorg.ds" filersp="mos_puc_response_fab_and_giorg.rmf"
+# epicspeccombine pha="301_mos1_source_spectrum.ds 301_mos2_source_spectrum.ds 302_mos1_source_spectrum.ds 302_mos2_source_spectrum.ds 303_mos1_source_spectrum.ds 303_mos2_source_spectrum.ds 2407_mos1_puc_source_spectrum.ds 2407_mos2_puc_source_spectrum.ds 2408_mos1_puc_source_spectrum.ds 2408_mos2_puc_source_spectrum.ds 2409_mos1_puc_source_spectrum.ds  2409_mos2_puc_source_spectrum.ds" bkg="301_mos1_bkg_spectrum.ds 301_mos2_bkg_spectrum.ds 302_mos1_bkg_spectrum.ds 302_mos2_bkg_spectrum.ds 303_mos1_bkg_spectrum.ds 303_mos2_bkg_spectrum.ds 2407_mos1_bkg_spectrum.ds 2407_mos2_bkg_spectrum.ds 2408_mos1_bkg_spectrum.ds 2408_mos2_bkg_spectrum.ds 2409_mos1_bkg_spectrum.ds 2409_mos2_bkg_spectrum.ds" rmf="301_mos1_response.rmf 301_mos2_response.rmf 302_mos1_response.rmf 302_mos2_response.rmf 303_mos1_response.rmf 303_mos2_response.rmf 2407_mos1_puc_response.rmf 2407_mos2_puc_response.rmf 2408_mos1_puc_response.rmf 2408_mos2_puc_response.rmf 2409_mos1_puc_response.rmf 2409_mos2_puc_response.rmf" arf="301_mos1_arf.arf 301_mos2_arf.arf 302_mos1_arf.arf 302_mos2_arf.arf 303_mos1_arf.arf 303_mos2_arf.arf 2407_mos1_puc_arf.arf 2407_mos2_puc_arf.arf 2408_mos1_puc_arf.arf 2408_mos2_puc_arf.arf 2409_mos1_puc_arf.arf 2409_mos2_puc_arf.arf" filepha="mos_puc_source_fab_and_giorg.ds" filebkg="mos_puc_bkg_fab_and_giorg.ds" filersp="mos_puc_response_fab_and_giorg.rmf"
