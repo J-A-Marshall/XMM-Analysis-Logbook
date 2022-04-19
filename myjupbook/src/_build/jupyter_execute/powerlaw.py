@@ -3,7 +3,7 @@
 
 # # Plotting a Broken Powerlaw Emissivity Profile
 
-# In[1]:
+# In[2]:
 
 
 import numpy as np 
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from IPython.display import Image
 
 
-# In[2]:
+# In[3]:
 
 
 plt.rc('font', family='serif')
@@ -21,7 +21,7 @@ plt.rc('ytick', labelsize='x-small')
 
 # Using the equations from: https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node141.html
 
-# In[3]:
+# In[4]:
 
 
 def broken_powerlaw(k,x,q1,q2,r_br):
@@ -34,25 +34,36 @@ def broken_powerlaw(k,x,q1,q2,r_br):
     return returnArray
 
 
-# In[4]:
+# In[37]:
 
 
-r_out = 400 # Outer accretion edge 
-k = 1 # Normalisation Constant
-q1 = 6 # Inner emissivity index
-q2 = 3 # Outer emissivity index
-r_br = 6 # Break radii 
+r_out = 400         # Outer accretion edge 
+k = 1               # Normalisation Constant
+q1 = 5.2            # Inner emissivity index
+q2 = 2.4            # Outer emissivity index
+r_br = 7            # Break radii
+q1_upper_err = 0.2
+q1_lower_err = 0.1  
+q2_upper_err = 0.2
+q2_lower_err = 0.1 
+r_br_upper_err = 1.4
+r_br_lower_err = 1.1
 
 x = np.linspace(1,r_out,r_out+1)
 y_dat = broken_powerlaw(k,x,q1,q2,r_br)
+# Calculating the upper and lower values the function can take
+y_upper_err = broken_powerlaw(k,x,q1+q1_upper_err,q2+q2_upper_err,r_br+r_br_upper_err)
+y_lower_err = broken_powerlaw(k,x,q1-q1_lower_err,q2-q2_lower_err,r_br-r_br_lower_err)
 
 
-# In[5]:
+# In[48]:
 
 
 # Log - log plot
 fig, ax = plt.subplots()
 ax.plot(x,y_dat,linewidth='1.5',color='k')
+# PLotting an error region using the lower and upper bounds for the power law parameters
+ax.fill_between(x,y_lower_err,y_upper_err,facecolor='r',alpha=0.3)
 ax.set_yscale('log')
 ax.set_xscale('log')
 ax.grid(True,which='both',axis='both',ls='--')
@@ -65,6 +76,7 @@ plt.show()
 # log-linear plot
 fig, ax = plt.subplots()
 ax.plot(x,y_dat,linewidth='1.5',color='k')
+ax.fill_between(x,y_lower_err,y_upper_err,facecolor='r',alpha=0.3)
 ax.set_yscale('log')
 ax.grid(True,which='both',axis='both',ls='--')
 ax.set_xlabel("Disk radius $(r_g)$")
@@ -74,13 +86,13 @@ plt.savefig('emissivity_curve_linear.png', dpi = 300)
 plt.show()
 
 
-# In[6]:
+# In[49]:
 
 
 Image('emissivity_curve_linear.png')
 
 
-# In[7]:
+# In[50]:
 
 
 Image('emissivity_curve_log.png')
@@ -88,7 +100,7 @@ Image('emissivity_curve_log.png')
 
 # ## Plotting emissivity profile for varying break radii
 
-# In[8]:
+# In[9]:
 
 
 # A list of break radii to plot
@@ -111,7 +123,7 @@ plt.show()
 Image('emissivity_curve_varied_log.png')
 
 
-# In[9]:
+# In[10]:
 
 
 for i in r_set:
@@ -133,7 +145,7 @@ Image('emissivity_curve_varied_linear.png')
 
 # ## Plotting emissivity profile for varying inner index
 
-# In[20]:
+# In[11]:
 
 
 # A list of q1 to plot
@@ -142,6 +154,7 @@ y_dat_list=[]
 for i in q_set:
     y_dat = broken_powerlaw(k,x,i,q2,r_br) 
     plt.plot(x,y_dat,label='q1 = {:.1f}'.format(i),ls='--')
+#plt.plot(x,y_dat[0:],label='q1 = {:.1f}'.format(i),ls='-', color='k')    
 plt.legend()
 plt.yscale('log')
 plt.xscale('log')
